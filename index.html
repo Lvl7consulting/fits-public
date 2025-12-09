@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITS Changelog Feed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 48px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+        
+        .about {
+            margin-bottom: 32px;
+            padding: 24px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .about h2 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+        
+        .about p {
+            color: #555;
+            margin-bottom: 12px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .feature {
+            padding: 16px;
+            background: #f0f4ff;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 4px;
+        }
+        
+        .links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .rss-icon {
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .links {
+                flex-direction: column;
+            }
+            
+            .btn {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 FITS</h1>
+        <p class="subtitle">Framework for Information & Technology Security</p>
+        
+        <div class="about">
+            <h2>About FITS</h2>
+            <p>
+                <strong>FITS</strong> is a comprehensive compliance and security management platform designed to help organizations 
+                manage their information security requirements, frameworks, and policies.
+            </p>
+            <p>
+                Built for compliance teams, security professionals, and auditors, FITS streamlines the process of 
+                implementing and maintaining security controls across multiple frameworks including ISO 27001, SOC 2, 
+                GDPR, and more.
+            </p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📋</div>
+                <div class="feature-title">Compliance</div>
+                <div>Multi-framework support</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-title">AI-Powered</div>
+                <div>Smart assessments</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Reporting</div>
+                <div>Real-time insights</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-title">Integration</div>
+                <div>Confluence & more</div>
+            </div>
+        </div>
+        
+        <h2 style="margin-bottom: 16px;">Changelog & Updates</h2>
+        <p style="margin-bottom: 24px; color: #555;">
+            Stay informed about the latest FITS updates, new features, and improvements. 
+            Subscribe to our RSS feed to get automatic updates in your feed reader or integrate with your website.
+        </p>
+        
+        <div class="links">
+            <a href="/fits-public/feeds/changelog.xml" class="btn btn-primary">
+                <span class="rss-icon">📡</span>
+                Subscribe to RSS Feed
+            </a>
+            <a href="/fits-public/changelog.md" class="btn btn-secondary">
+                View Full Changelog
+            </a>
+            <a href="https://github.com/Lvl7consulting/fits-public" class="btn btn-secondary">
+                GitHub Repository
+            </a>
+        </div>
+        
+        <footer>
+            <p>
+                <strong>Lvl7 Consulting</strong><br>
+                Framework for Information & Technology Security
+            </p>
+            <p style="margin-top: 8px;">
+                Automatically updated from 
+                <a href="https://github.com/Lvl7consulting/FITS" style="color: #667eea;">FITS</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
