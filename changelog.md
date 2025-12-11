@@ -7,6 +7,7 @@
 
 ### Changed
 - Enhanced pre-push hook: Added changelog validation to pre-push hook to ensure changelog entries are created when pushing to main branch
+- Updated changelog-required.
 
 ### Removed
 - Settings menu item from super admin user dropdown: Removed redundant settings option from user navigation menu to simplify interface
