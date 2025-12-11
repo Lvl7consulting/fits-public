@@ -1,5 +1,11 @@
 # FITS Changelog
 
+## [v8.3.6] - 2025-12-11
+
+### Changed
+- Removed changelog detail header secondary actions so the ellipsis dropdown no longer renders
+- Left the existing back navigation and header layout intact
+
 ## [v8.3.5] - 2025-12-11
 
 ### Added
