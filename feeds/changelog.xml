@@ -5,207 +5,207 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Dec 2025 10:38:03 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Dec 2025 10:48:54 GMT</lastBuildDate>
     <item>
       <title>FITS v8.3.5</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.5</link>
       <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.3.5</guid>
-      <description>• Settings menu item from user dropdown in navigation</description>
+      <description>• Removed: Settings menu item from super admin user dropdown: Removed redundant settings option from user navigation menu to simplify interface</description>
     </item>
     <item>
       <title>FITS v8.3.4</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.4</link>
       <pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.3.4</guid>
-      <description>• Public changelog RSS feed: Users can subscribe to FITS updates via RSS readers or integrate into websites like Squarespace
-• Automated changelog publishing: New releases automatically appear in the public RSS feed without manual steps
-• Public landing page: Provides FITS information and easy access to changelog feed for external users
-• Updated documentation with correct organization repository URLs for better clarity</description>
+      <description>• Added: Public changelog RSS feed: Users can subscribe to FITS updates via RSS readers or integrate into websites like Squarespace
+• Added: Automated changelog publishing: New releases automatically appear in the public RSS feed without manual steps
+• Added: Public landing page: Provides FITS information and easy access to changelog feed for external users
+• Changed: Updated documentation with correct organization repository URLs for better clarity</description>
     </item>
     <item>
       <title>FITS v8.3.3</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.3</link>
       <pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.3.3</guid>
-      <description>• Public changelog RSS feed: Users can subscribe to FITS updates via RSS readers or integrate into websites like Squarespace
-• Automated changelog publishing: New releases automatically appear in the public RSS feed without manual steps
-• Public landing page: Provides FITS information and easy access to changelog feed for external users</description>
+      <description>• Added: Public changelog RSS feed: Users can subscribe to FITS updates via RSS readers or integrate into websites like Squarespace
+• Added: Automated changelog publishing: New releases automatically appear in the public RSS feed without manual steps
+• Added: Public landing page: Provides FITS information and easy access to changelog feed for external users</description>
     </item>
     <item>
       <title>FITS v8.3.2</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.2</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.3.2</guid>
-      <description>• Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
-• Comprehensive test coverage: Login security features now have better test coverage to prevent regressions</description>
+      <description>• Added: Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
+• Added: Comprehensive test coverage: Login security features now have better test coverage to prevent regressions</description>
     </item>
     <item>
       <title>FITS v8.3.1</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.1</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.3.1</guid>
-      <description>• Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
-• Comprehensive test coverage: Login security features now have better test coverage to prevent regressions</description>
+      <description>• Security: Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
+• Security: Comprehensive test coverage: Login security features now have better test coverage to prevent regressions</description>
     </item>
     <item>
       <title>FITS v8.3.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.0</link>
       <pubDate>Thu, 04 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.3.0</guid>
-      <description>• Azure OAuth redirect URI: Fixed incorrect redirect URI detection that prevented Azure OAuth from working properly - now correctly detects IP or domain
-• Azure OAuth refresh tokens: Fixed missing refresh tokens by adding required offline_access scope, allowing long-lived sessions
-• Super admin user management: Fixed user edit redirects and user list display so super admins can properly manage users across tenants
-• Duplicate email sending: Fixed issue where clicking test email sent two emails instead of one
-• Transformers cache warning: Fixed deprecation warning that appeared during startup
-• Test email functionality: Email provider detail pages now have &quot;Send Test Email&quot; button that sends actual test emails to tenant admin for verification
-• Gmail email sending: Gmail provider now actually sends emails via Gmail API (previously returned success without sending)
-• Exchange email sending: Exchange provider now sends emails via Exchange API (previously returned success without sending)
-• Centralized user URLs: User navigation now uses role-based redirect logic for better user experience
-• Unified OAuth workflow: Removed separate &quot;Connect&quot; buttons - creating a provider now automatically initiates OAuth flow for simpler setup
-• Azure setup guide: Now dynamically displays the correct redirect URI based on current host, making setup easier
-• Email provider documentation: Updated to reflect the simplified OAuth workflow</description>
+      <description>• Fixed: Azure OAuth redirect URI: Fixed incorrect redirect URI detection that prevented Azure OAuth from working properly - now correctly detects IP or domain
+• Fixed: Azure OAuth refresh tokens: Fixed missing refresh tokens by adding required offline_access scope, allowing long-lived sessions
+• Fixed: Super admin user management: Fixed user edit redirects and user list display so super admins can properly manage users across tenants
+• Fixed: Duplicate email sending: Fixed issue where clicking test email sent two emails instead of one
+• Fixed: Transformers cache warning: Fixed deprecation warning that appeared during startup
+• Added: Test email functionality: Email provider detail pages now have &quot;Send Test Email&quot; button that sends actual test emails to tenant admin for verification
+• Added: Gmail email sending: Gmail provider now actually sends emails via Gmail API (previously returned success without sending)
+• Added: Exchange email sending: Exchange provider now sends emails via Exchange API (previously returned success without sending)
+• Added: Centralized user URLs: User navigation now uses role-based redirect logic for better user experience
+• Changed: Unified OAuth workflow: Removed separate &quot;Connect&quot; buttons - creating a provider now automatically initiates OAuth flow for simpler setup
+• Changed: Azure setup guide: Now dynamically displays the correct redirect URI based on current host, making setup easier
+• Changed: Email provider documentation: Updated to reflect the simplified OAuth workflow</description>
     </item>
     <item>
       <title>FITS v8.2.2</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.2.2</link>
       <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.2.2</guid>
-      <description>• User-selectable main project: Dashboard users can now choose which project to display as their main project for personalized views
-• Improved dashboard performance: Dashboard now loads significantly faster with optimized data retrieval
-• Dashboard query optimization: Eliminated performance bottlenecks that caused slow dashboard loading times
-• Enhanced dashboard caching: Better data organization reduces redundant queries and improves response times</description>
+      <description>• Added: User-selectable main project: Dashboard users can now choose which project to display as their main project for personalized views
+• Added: Improved dashboard performance: Dashboard now loads significantly faster with optimized data retrieval
+• Changed: Dashboard query optimization: Eliminated performance bottlenecks that caused slow dashboard loading times
+• Changed: Enhanced dashboard caching: Better data organization reduces redundant queries and improves response times</description>
     </item>
     <item>
       <title>FITS v8.2.1</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.2.1</link>
       <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.2.1</guid>
-      <description>• Scope publishing bug: Fixed critical issue where scopes with the same name in different projects could be published to the wrong project's Confluence space
-• Scope page identification: Scope pages now include project name in title to ensure unique identification and prevent cross-project confusion</description>
+      <description>• Fixed: Scope publishing bug: Fixed critical issue where scopes with the same name in different projects could be published to the wrong project's Confluence space
+• Fixed: Scope page identification: Scope pages now include project name in title to ensure unique identification and prevent cross-project confusion</description>
     </item>
     <item>
       <title>FITS v8.2.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.2.0</link>
       <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.2.0</guid>
-      <description>• Project unpublish validation: Unpublish button now properly checks for blocking relationships (assessments, templates) before allowing unpublish
-• Project detail view improvements: Better organization of project detail page components for improved usability
-• Error logging consistency: Project operations now have consistent error logging for easier troubleshooting
-• Project update error handling: Improved error messages and handling when project updates fail
-• Project deletion safety checks: System now prevents deleting projects that have scopes with assessments or assessment templates, preventing data loss
-• Enhanced project deletion: Two-step confirmation process for Confluence page deletion to prevent accidental data loss
-• Confluence page management: System now checks if Confluence pages exist before deletion and provides better feedback
-• Improved delete workflow: Better validation and user feedback throughout the project deletion process</description>
+      <description>• Changed: Project unpublish validation: Unpublish button now properly checks for blocking relationships (assessments, templates) before allowing unpublish
+• Changed: Project detail view improvements: Better organization of project detail page components for improved usability
+• Fixed: Error logging consistency: Project operations now have consistent error logging for easier troubleshooting
+• Fixed: Project update error handling: Improved error messages and handling when project updates fail
+• Added: Project deletion safety checks: System now prevents deleting projects that have scopes with assessments or assessment templates, preventing data loss
+• Added: Enhanced project deletion: Two-step confirmation process for Confluence page deletion to prevent accidental data loss
+• Added: Confluence page management: System now checks if Confluence pages exist before deletion and provides better feedback
+• Added: Improved delete workflow: Better validation and user feedback throughout the project deletion process</description>
     </item>
     <item>
       <title>FITS v8.1.2</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.1.2</link>
       <pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.1.2</guid>
-      <description>• Scope unpublish button: Fixed button remaining clickable when scope has assessments, which could cause data integrity issues
-• Delete button feedback: Fixed delete button not showing why it's disabled, leaving users confused about why they can't delete
-• Unpublish button messaging: Button now clearly displays &quot;Cannot unpublish (has assessments)&quot; when disabled, explaining why action is unavailable
-• Delete button messaging: Button now shows descriptive message like &quot;Cannot delete (has 2 assessments)&quot; when disabled, providing clear feedback to users</description>
+      <description>• Fixed: Scope unpublish button: Fixed button remaining clickable when scope has assessments, which could cause data integrity issues
+• Fixed: Delete button feedback: Fixed delete button not showing why it's disabled, leaving users confused about why they can't delete
+• Changed: Unpublish button messaging: Button now clearly displays &quot;Cannot unpublish (has assessments)&quot; when disabled, explaining why action is unavailable
+• Changed: Delete button messaging: Button now shows descriptive message like &quot;Cannot delete (has 2 assessments)&quot; when disabled, providing clear feedback to users</description>
     </item>
     <item>
       <title>FITS v8.1.1</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.1.1</link>
       <pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.1.1</guid>
-      <description>• Confluence status badges: Fixed badges showing raw markup text instead of clickable links, making them unusable
-• Dark mode readability: Fixed unreadable badge text in Confluence dark mode that made status information invisible
-• Table header visibility: Fixed missing text color in dark mode that made table headers invisible
-• Confluence status display: Replaced Confluence status macros with custom styled badges that work reliably in all themes
-• Badge theming: Improved badge styling to automatically adapt to both light and dark Confluence themes for better visibility
-• Environment links: Updated to use proper link elements that work correctly in all Confluence themes</description>
+      <description>• Fixed: Confluence status badges: Fixed badges showing raw markup text instead of clickable links, making them unusable
+• Fixed: Dark mode readability: Fixed unreadable badge text in Confluence dark mode that made status information invisible
+• Fixed: Table header visibility: Fixed missing text color in dark mode that made table headers invisible
+• Changed: Confluence status display: Replaced Confluence status macros with custom styled badges that work reliably in all themes
+• Changed: Badge theming: Improved badge styling to automatically adapt to both light and dark Confluence themes for better visibility
+• Changed: Environment links: Updated to use proper link elements that work correctly in all Confluence themes</description>
     </item>
     <item>
       <title>FITS v8.1.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.1.0</link>
       <pubDate>Thu, 27 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.1.0</guid>
-      <description>• JSON utilities error: Fixed syntax error that could cause application failures when processing JSON data
-• Docker standardization: Unified Docker base image across development and production environments for consistency and easier maintenance
-• Docker build performance: Improved build caching reduces build times and speeds up deployments
-• Deployment reliability: Enhanced error handling and improved deployment scripts reduce deployment failures</description>
+      <description>• Fixed: JSON utilities error: Fixed syntax error that could cause application failures when processing JSON data
+• Changed: Docker standardization: Unified Docker base image across development and production environments for consistency and easier maintenance
+• Changed: Docker build performance: Improved build caching reduces build times and speeds up deployments
+• Changed: Deployment reliability: Enhanced error handling and improved deployment scripts reduce deployment failures</description>
     </item>
     <item>
       <title>FITS v8.0.1</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.0.1</link>
       <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.0.1</guid>
-      <description>• Report download fallback: Fixed reports not downloading when API response was missing URLs - system now uses fallback mechanism
-• KPI dropdown behavior: Fixed dropdown staying open when clicking outside, which could cause multiple menus to remain visible
-• Report navigation: Improved handling of report downloads with better fallback support for backward compatibility
-• Code organization: Better separation of concerns improves maintainability and reduces bugs</description>
+      <description>• Fixed: Report download fallback: Fixed reports not downloading when API response was missing URLs - system now uses fallback mechanism
+• Fixed: KPI dropdown behavior: Fixed dropdown staying open when clicking outside, which could cause multiple menus to remain visible
+• Changed: Report navigation: Improved handling of report downloads with better fallback support for backward compatibility
+• Changed: Code organization: Better separation of concerns improves maintainability and reduces bugs</description>
     </item>
     <item>
       <title>FITS v8.0.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.0.0</link>
       <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.0.0</guid>
-      <description>• Documentation accuracy: Fixed documentation inconsistencies that could mislead developers about AI implementation details
-• AI provider capabilities: Fixed incorrect capability descriptions in UI that showed wrong information about provider features
-• AI provider configuration: Enhanced with integration mode support for better flexibility in provider setup
-• AI query optimization: Unified prompts and optimized queries across all AI tasks for better performance and consistency
-• Composite AI providers: New pattern allows combining chat and embedding providers for optimal AI functionality
-• Automatic embedding fallback: System automatically uses HuggingFace embeddings when providers don't have native embedding support
-• HuggingFace integration: Added HuggingFace embedding provider as automatic fallback for providers without native embeddings</description>
+      <description>• Fixed: Documentation accuracy: Fixed documentation inconsistencies that could mislead developers about AI implementation details
+• Fixed: AI provider capabilities: Fixed incorrect capability descriptions in UI that showed wrong information about provider features
+• Changed: AI provider configuration: Enhanced with integration mode support for better flexibility in provider setup
+• Changed: AI query optimization: Unified prompts and optimized queries across all AI tasks for better performance and consistency
+• Added: Composite AI providers: New pattern allows combining chat and embedding providers for optimal AI functionality
+• Added: Automatic embedding fallback: System automatically uses HuggingFace embeddings when providers don't have native embedding support
+• Added: HuggingFace integration: Added HuggingFace embedding provider as automatic fallback for providers without native embeddings</description>
     </item>
     <item>
       <title>FITS v7.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v7.9.0</link>
       <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v7.9.0</guid>
-      <description>• Changelog system: Implemented per-version changelog files for better organization and easier navigation
-• Changelog list view: Users can browse all versions with proper semantic version sorting
-• Changelog detail view: Each version has a dedicated page with markdown rendering for easy reading
-• Navigation access: Added navbar link for quick access to changelog from anywhere in the application
-• Release script security: Fixed shell variable injection vulnerability that could allow code execution
-• Version sorting: Fixed incorrect version ordering in changelog list - now uses proper semantic versioning</description>
+      <description>• Added: Changelog system: Implemented per-version changelog files for better organization and easier navigation
+• Added: Changelog list view: Users can browse all versions with proper semantic version sorting
+• Added: Changelog detail view: Each version has a dedicated page with markdown rendering for easy reading
+• Added: Navigation access: Added navbar link for quick access to changelog from anywhere in the application
+• Fixed: Release script security: Fixed shell variable injection vulnerability that could allow code execution
+• Fixed: Version sorting: Fixed incorrect version ordering in changelog list - now uses proper semantic versioning</description>
     </item>
     <item>
       <title>FITS v7.8.5</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v7.8.5</link>
       <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v7.8.5</guid>
-      <description>• Development server performance: Fixed CPU spike reaching 99% usage that made development environment unusable
-• Auto-reload optimization: Constrained auto-reload to template directories only, preventing unnecessary restarts
-• Uvicorn reload: Disabled uvicorn reload to prevent high CPU usage while maintaining browser auto-reload for HTML changes</description>
+      <description>• Fixed: Development server performance: Fixed CPU spike reaching 99% usage that made development environment unusable
+• Fixed: Auto-reload optimization: Constrained auto-reload to template directories only, preventing unnecessary restarts
+• Fixed: Uvicorn reload: Disabled uvicorn reload to prevent high CPU usage while maintaining browser auto-reload for HTML changes</description>
     </item>
     <item>
       <title>FITS v7.8.4</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v7.8.4</link>
       <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v7.8.4</guid>
-      <description>• Uvicorn reload error: Fixed NotImplementedError that prevented development server from reloading properly</description>
+      <description>• Fixed: Uvicorn reload error: Fixed NotImplementedError that prevented development server from reloading properly</description>
     </item>
     <item>
       <title>FITS v7.8.3</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v7.8.3</link>
       <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v7.8.3</guid>
-      <description>• Automated release management: Integrated changelog creation and versioning into release workflow for streamlined releases</description>
+      <description>• Added: Automated release management: Integrated changelog creation and versioning into release workflow for streamlined releases</description>
     </item>
     <item>
       <title>FITS v7.8.2</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v7.8.2</link>
       <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v7.8.2</guid>
-      <description>• Non-root container execution: All container services now run as non-root user, significantly reducing security attack surface
-• Read-only filesystem: Production containers use read-only root filesystem with explicit writable paths, preventing unauthorized file modifications
-• Capability reduction: Dropped unnecessary capabilities and added only required ones (NET_BIND_SERVICE) for minimal privilege principle
-• Production hardening: Production containers default to non-root user execution for enhanced security
-• Service execution: All application services (Celery, Daphne, nginx) now run as non-root user by default
-• Container security: Improved security posture through comprehensive container hardening measures</description>
+      <description>• Security: Non-root container execution: All container services now run as non-root user, significantly reducing security attack surface
+• Security: Read-only filesystem: Production containers use read-only root filesystem with explicit writable paths, preventing unauthorized file modifications
+• Security: Capability reduction: Dropped unnecessary capabilities and added only required ones (NET_BIND_SERVICE) for minimal privilege principle
+• Security: Production hardening: Production containers default to non-root user execution for enhanced security
+• Changed: Service execution: All application services (Celery, Daphne, nginx) now run as non-root user by default
+• Changed: Container security: Improved security posture through comprehensive container hardening measures</description>
     </item>
     <item>
       <title>FITS v7.11.7</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v7.11.7</link>
       <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v7.11.7</guid>
-      <description>• Production deployment failures: Fixed multiple critical issues causing container crash loops that prevented successful deployments</description>
+      <description>• Fixed: Production deployment failures: Fixed multiple critical issues causing container crash loops that prevented successful deployments</description>
     </item>
   </channel>
 </rss>

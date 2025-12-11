@@ -3,7 +3,7 @@
 ## [v8.3.5] - 2025-12-11
 
 ### Removed
-- Settings menu item from user dropdown in navigation
+- Settings menu item from super admin user dropdown: Removed redundant settings option from user navigation menu to simplify interface
 
 ## [v8.3.4] - 2025-12-09
 
