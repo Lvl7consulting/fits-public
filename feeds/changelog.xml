@@ -5,7 +5,14 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Dec 2025 16:43:59 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Dec 2025 17:26:26 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.3.7</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.3.7</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.3.7</guid>
+      <description>• Changed: ## Summary</description>
+    </item>
     <item>
       <title>FITS v8.3.6</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.6</link>
@@ -198,18 +205,6 @@
       <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v7.8.3</guid>
       <description>• Added: Automated release management: Integrated changelog creation and versioning into release workflow for streamlined releases</description>
-    </item>
-    <item>
-      <title>FITS v7.8.2</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v7.8.2</link>
-      <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v7.8.2</guid>
-      <description>• Security: Non-root container execution: All container services now run as non-root user, significantly reducing security attack surface
-• Security: Read-only filesystem: Production containers use read-only root filesystem with explicit writable paths, preventing unauthorized file modifications
-• Security: Capability reduction: Dropped unnecessary capabilities and added only required ones (NET_BIND_SERVICE) for minimal privilege principle
-• Security: Production hardening: Production containers default to non-root user execution for enhanced security
-• Changed: Service execution: All application services (Celery, Daphne, nginx) now run as non-root user by default
-• Changed: Container security: Improved security posture through comprehensive container hardening measures</description>
     </item>
   </channel>
 </rss>

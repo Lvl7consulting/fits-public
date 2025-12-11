@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.3.7] - 2025-12-11
+
+### Changed
+- ## Summary
+
 ## [v8.3.6] - 2025-12-11
 
 ### Changed
