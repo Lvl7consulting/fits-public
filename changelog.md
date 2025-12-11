@@ -2,6 +2,12 @@
 
 ## [v8.3.5] - 2025-12-11
 
+### Added
+- Automatic git hooks installation: Git hooks are now automatically installed from scripts/git-hooks/ to .
+
+### Changed
+- Enhanced pre-push hook: Added changelog validation to pre-push hook to ensure changelog entries are created when pushing to main branch
+
 ### Removed
 - Settings menu item from super admin user dropdown: Removed redundant settings option from user navigation menu to simplify interface
 
