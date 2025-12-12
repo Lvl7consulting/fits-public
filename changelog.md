@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.3.8] - 2025-12-12
+
+### Fixed
+- Fix generated-tenants directory permissions for Excel generation.
+
 ## [v8.3.7] - 2025-12-11
 
 ### Changed

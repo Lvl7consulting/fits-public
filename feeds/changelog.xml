@@ -5,7 +5,14 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Dec 2025 17:26:26 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Dec 2025 11:22:15 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.3.8</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.3.8</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.3.8</guid>
+      <description>• Fixed: Fix generated-tenants directory permissions for Excel generation.</description>
+    </item>
     <item>
       <title>FITS v8.3.7</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.7</link>
@@ -198,13 +205,6 @@
       <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
       <guid>fits-v7.8.4</guid>
       <description>• Fixed: Uvicorn reload error: Fixed NotImplementedError that prevented development server from reloading properly</description>
-    </item>
-    <item>
-      <title>FITS v7.8.3</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v7.8.3</link>
-      <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v7.8.3</guid>
-      <description>• Added: Automated release management: Integrated changelog creation and versioning into release workflow for streamlined releases</description>
     </item>
   </channel>
 </rss>
