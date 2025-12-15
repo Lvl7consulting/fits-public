@@ -1,5 +1,20 @@
 # FITS Changelog
 
+## [v8.3.9] - 2025-12-12
+
+### Changed
+- Removed legacy ADMIN role; system now uses only SUPER_ADMIN, TENANT_ADMIN, and USER roles
+
+### Fixed
+- Fixed 404 error on Excel template download for tenant admin users
+- Removed obsolete `/v2/` URL prefix checks from authentication middleware
+- Updated organization URL pattern matching in middleware to match current URL configuration
+- Replaced PII email logging with non-PII identifiers (user ID or hashed email) in orphaned session handler
+- Removed password change restriction for tenant admins; password changes are now allowed as security best practice
+- Replaced naive datetime.
+- Fixed user self-edit validation to compare UIDs instead of object references in tenant scoping middleware
+- Fixed DigitalOcean deploy scripts token handling + DNS preflight checks to support trusted SSL issuance per droplet subdomain
+
 ## [v8.3.8] - 2025-12-12
 
 ### Fixed
@@ -50,6 +65,11 @@
 ### Added
 - Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
 - Comprehensive test coverage: Login security features now have better test coverage to prevent regressions
+
+## [v8.3.10] - 2025-12-15
+
+### Added
+- feat: Enhanced DigitalOcean deployment with subdomain nginx configuration support and improved SSL certificate management
 
 ## [v8.3.1] - 2025-12-05
 
