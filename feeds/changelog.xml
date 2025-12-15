@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Dec 2025 14:15:02 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Dec 2025 14:42:29 GMT</lastBuildDate>
     <item>
       <title>FITS v8.3.9</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.9</link>
@@ -79,6 +79,13 @@
       <guid>fits-v8.3.2</guid>
       <description>• Added: Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
 • Added: Comprehensive test coverage: Login security features now have better test coverage to prevent regressions</description>
+    </item>
+    <item>
+      <title>FITS v8.3.12</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.3.12</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.3.12</guid>
+      <description>• Added: feat: Add Cursor hooks verification and setup tools</description>
     </item>
     <item>
       <title>FITS v8.3.11</title>
@@ -194,19 +201,6 @@
 • Fixed: KPI dropdown behavior: Fixed dropdown staying open when clicking outside, which could cause multiple menus to remain visible
 • Changed: Report navigation: Improved handling of report downloads with better fallback support for backward compatibility
 • Changed: Code organization: Better separation of concerns improves maintainability and reduces bugs</description>
-    </item>
-    <item>
-      <title>FITS v8.0.0</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.0.0</link>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.0.0</guid>
-      <description>• Fixed: Documentation accuracy: Fixed documentation inconsistencies that could mislead developers about AI implementation details
-• Fixed: AI provider capabilities: Fixed incorrect capability descriptions in UI that showed wrong information about provider features
-• Changed: AI provider configuration: Enhanced with integration mode support for better flexibility in provider setup
-• Changed: AI query optimization: Unified prompts and optimized queries across all AI tasks for better performance and consistency
-• Added: Composite AI providers: New pattern allows combining chat and embedding providers for optimal AI functionality
-• Added: Automatic embedding fallback: System automatically uses HuggingFace embeddings when providers don't have native embedding support
-• Added: HuggingFace integration: Added HuggingFace embedding provider as automatic fallback for providers without native embeddings</description>
     </item>
   </channel>
 </rss>

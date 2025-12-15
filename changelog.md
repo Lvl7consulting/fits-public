@@ -66,6 +66,11 @@
 - Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
 - Comprehensive test coverage: Login security features now have better test coverage to prevent regressions
 
+## [v8.3.12] - 2025-12-15
+
+### Added
+- feat: Add Cursor hooks verification and setup tools
+
 ## [v8.3.11] - 2025-12-15
 
 ### Fixed
