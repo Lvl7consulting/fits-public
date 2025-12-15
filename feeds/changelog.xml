@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Dec 2025 11:13:35 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Dec 2025 13:39:31 GMT</lastBuildDate>
     <item>
       <title>FITS v8.3.9</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.9</link>
@@ -79,6 +79,14 @@
       <guid>fits-v8.3.2</guid>
       <description>• Added: Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
 • Added: Comprehensive test coverage: Login security features now have better test coverage to prevent regressions</description>
+    </item>
+    <item>
+      <title>FITS v8.3.11</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.3.11</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.3.11</guid>
+      <description>• Fixed: Fixed tenant text clamping in super admin tenant list: removed redundant max-width Tailwind class and added text-overflow ellipsis for better browser compatibility
+• Fixed: Fixed pre-push hook bug where requirements-audit.</description>
     </item>
     <item>
       <title>FITS v8.3.10</title>
@@ -199,18 +207,6 @@
 • Added: Composite AI providers: New pattern allows combining chat and embedding providers for optimal AI functionality
 • Added: Automatic embedding fallback: System automatically uses HuggingFace embeddings when providers don't have native embedding support
 • Added: HuggingFace integration: Added HuggingFace embedding provider as automatic fallback for providers without native embeddings</description>
-    </item>
-    <item>
-      <title>FITS v7.9.0</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v7.9.0</link>
-      <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v7.9.0</guid>
-      <description>• Added: Changelog system: Implemented per-version changelog files for better organization and easier navigation
-• Added: Changelog list view: Users can browse all versions with proper semantic version sorting
-• Added: Changelog detail view: Each version has a dedicated page with markdown rendering for easy reading
-• Added: Navigation access: Added navbar link for quick access to changelog from anywhere in the application
-• Fixed: Release script security: Fixed shell variable injection vulnerability that could allow code execution
-• Fixed: Version sorting: Fixed incorrect version ordering in changelog list - now uses proper semantic versioning</description>
     </item>
   </channel>
 </rss>

@@ -66,6 +66,12 @@
 - Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
 - Comprehensive test coverage: Login security features now have better test coverage to prevent regressions
 
+## [v8.3.11] - 2025-12-15
+
+### Fixed
+- Fixed tenant text clamping in super admin tenant list: removed redundant max-width Tailwind class and added text-overflow ellipsis for better browser compatibility
+- Fixed pre-push hook bug where requirements-audit.
+
 ## [v8.3.10] - 2025-12-15
 
 ### Added
