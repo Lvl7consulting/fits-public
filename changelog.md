@@ -1,5 +1,22 @@
 # FITS Changelog
 
+## [v8.4.0] - 2025-12-17
+
+### Added
+- Policy template generation system: Complete workflow from intake questionnaire to final policy export
+- AI-powered content generation: Industry-specific policy content generation with user context injection
+- Intake questionnaire: User context collection system capturing regulatory requirements, technical environment, and risk tolerance before generation
+- Review workflow: Comprehensive review interface with approve, edit, and reject functionality for generated content
+- Live client-side search: Real-time search with highlighting in policy review list
+- Export functionality: DOCX and PDF export with improved table of contents and domain heading support
+- WebSocket integration: Real-time progress updates during policy generation
+- Modular architecture: Refactored codebase into focused files under 100 lines for better maintainability
+
+### Changed
+- Policy template generation workflow: Improved navigation and status display throughout the generation process
+- Form handler integration: Unified form handling across policy template views
+- Export service: Enhanced TOC generation and temporary file management utilities
+
 ## [v8.3.9] - 2025-12-12
 
 ### Changed

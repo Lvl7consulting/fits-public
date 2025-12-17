@@ -5,7 +5,24 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Dec 2025 14:42:29 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 01:38:38 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.4.0</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.0</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.4.0</guid>
+      <description>• Added: Policy template generation system: Complete workflow from intake questionnaire to final policy export
+• Added: AI-powered content generation: Industry-specific policy content generation with user context injection
+• Added: Intake questionnaire: User context collection system capturing regulatory requirements, technical environment, and risk tolerance before generation
+• Added: Review workflow: Comprehensive review interface with approve, edit, and reject functionality for generated content
+• Added: Live client-side search: Real-time search with highlighting in policy review list
+• Added: Export functionality: DOCX and PDF export with improved table of contents and domain heading support
+• Added: WebSocket integration: Real-time progress updates during policy generation
+• Added: Modular architecture: Refactored codebase into focused files under 100 lines for better maintainability
+• Changed: Policy template generation workflow: Improved navigation and status display throughout the generation process
+• Changed: Form handler integration: Unified form handling across policy template views
+• Changed: Export service: Enhanced TOC generation and temporary file management utilities</description>
+    </item>
     <item>
       <title>FITS v8.3.9</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.3.9</link>
@@ -191,16 +208,6 @@
 • Changed: Docker standardization: Unified Docker base image across development and production environments for consistency and easier maintenance
 • Changed: Docker build performance: Improved build caching reduces build times and speeds up deployments
 • Changed: Deployment reliability: Enhanced error handling and improved deployment scripts reduce deployment failures</description>
-    </item>
-    <item>
-      <title>FITS v8.0.1</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.0.1</link>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.0.1</guid>
-      <description>• Fixed: Report download fallback: Fixed reports not downloading when API response was missing URLs - system now uses fallback mechanism
-• Fixed: KPI dropdown behavior: Fixed dropdown staying open when clicking outside, which could cause multiple menus to remain visible
-• Changed: Report navigation: Improved handling of report downloads with better fallback support for backward compatibility
-• Changed: Code organization: Better separation of concerns improves maintainability and reduces bugs</description>
     </item>
   </channel>
 </rss>
