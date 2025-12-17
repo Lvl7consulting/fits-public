@@ -5,7 +5,14 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Dec 2025 10:39:53 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 10:47:57 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.4.4</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.4</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.4.4</guid>
+      <description>• Fixed: Fixed SCRIPT_DIR references in shell scripts to handle CRLF-fix temp copy scenario</description>
+    </item>
     <item>
       <title>FITS v8.4.3</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.4.3</link>
@@ -183,20 +190,6 @@
       <guid>fits-v8.2.1</guid>
       <description>• Fixed: Scope publishing bug: Fixed critical issue where scopes with the same name in different projects could be published to the wrong project's Confluence space
 • Fixed: Scope page identification: Scope pages now include project name in title to ensure unique identification and prevent cross-project confusion</description>
-    </item>
-    <item>
-      <title>FITS v8.2.0</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.2.0</link>
-      <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.2.0</guid>
-      <description>• Changed: Project unpublish validation: Unpublish button now properly checks for blocking relationships (assessments, templates) before allowing unpublish
-• Changed: Project detail view improvements: Better organization of project detail page components for improved usability
-• Fixed: Error logging consistency: Project operations now have consistent error logging for easier troubleshooting
-• Fixed: Project update error handling: Improved error messages and handling when project updates fail
-• Added: Project deletion safety checks: System now prevents deleting projects that have scopes with assessments or assessment templates, preventing data loss
-• Added: Enhanced project deletion: Two-step confirmation process for Confluence page deletion to prevent accidental data loss
-• Added: Confluence page management: System now checks if Confluence pages exist before deletion and provides better feedback
-• Added: Improved delete workflow: Better validation and user feedback throughout the project deletion process</description>
     </item>
   </channel>
 </rss>

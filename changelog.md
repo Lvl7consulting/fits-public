@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.4.4] - 2025-12-17
+
+### Fixed
+- Fixed SCRIPT_DIR references in shell scripts to handle CRLF-fix temp copy scenario
+
 ## [v8.4.3] - 2025-12-17
 
 ### Fixed
