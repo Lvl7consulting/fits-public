@@ -5,7 +5,14 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Dec 2025 10:26:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 10:35:14 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.4.2</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.2</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.4.2</guid>
+      <description>• Fixed: Fixed Docker entrypoint to strip CRLF at runtime for Windows volume mounts</description>
+    </item>
     <item>
       <title>FITS v8.4.1</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.4.1</link>
@@ -193,18 +200,6 @@
 • Fixed: Delete button feedback: Fixed delete button not showing why it's disabled, leaving users confused about why they can't delete
 • Changed: Unpublish button messaging: Button now clearly displays &quot;Cannot unpublish (has assessments)&quot; when disabled, explaining why action is unavailable
 • Changed: Delete button messaging: Button now shows descriptive message like &quot;Cannot delete (has 2 assessments)&quot; when disabled, providing clear feedback to users</description>
-    </item>
-    <item>
-      <title>FITS v8.1.1</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.1.1</link>
-      <pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.1.1</guid>
-      <description>• Fixed: Confluence status badges: Fixed badges showing raw markup text instead of clickable links, making them unusable
-• Fixed: Dark mode readability: Fixed unreadable badge text in Confluence dark mode that made status information invisible
-• Fixed: Table header visibility: Fixed missing text color in dark mode that made table headers invisible
-• Changed: Confluence status display: Replaced Confluence status macros with custom styled badges that work reliably in all themes
-• Changed: Badge theming: Improved badge styling to automatically adapt to both light and dark Confluence themes for better visibility
-• Changed: Environment links: Updated to use proper link elements that work correctly in all Confluence themes</description>
     </item>
   </channel>
 </rss>

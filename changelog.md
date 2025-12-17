@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.4.2] - 2025-12-17
+
+### Fixed
+- Fixed Docker entrypoint to strip CRLF at runtime for Windows volume mounts
+
 ## [v8.4.1] - 2025-12-17
 
 ### Fixed
