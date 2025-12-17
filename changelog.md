@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.4.3] - 2025-12-17
+
+### Fixed
+- Fixed CRLF handling to copy scripts to /tmp instead of modifying mounted volume
+
 ## [v8.4.2] - 2025-12-17
 
 ### Fixed
