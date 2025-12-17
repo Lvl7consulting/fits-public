@@ -5,7 +5,14 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Dec 2025 01:38:38 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 10:26:58 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.4.1</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.1</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.4.1</guid>
+      <description>• Fixed: Fixed Windows CRLF line ending issue in shell scripts by adding .</description>
+    </item>
     <item>
       <title>FITS v8.4.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.4.0</link>
@@ -198,16 +205,6 @@
 • Changed: Confluence status display: Replaced Confluence status macros with custom styled badges that work reliably in all themes
 • Changed: Badge theming: Improved badge styling to automatically adapt to both light and dark Confluence themes for better visibility
 • Changed: Environment links: Updated to use proper link elements that work correctly in all Confluence themes</description>
-    </item>
-    <item>
-      <title>FITS v8.1.0</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.1.0</link>
-      <pubDate>Thu, 27 Nov 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.1.0</guid>
-      <description>• Fixed: JSON utilities error: Fixed syntax error that could cause application failures when processing JSON data
-• Changed: Docker standardization: Unified Docker base image across development and production environments for consistency and easier maintenance
-• Changed: Docker build performance: Improved build caching reduces build times and speeds up deployments
-• Changed: Deployment reliability: Enhanced error handling and improved deployment scripts reduce deployment failures</description>
     </item>
   </channel>
 </rss>

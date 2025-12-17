@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.4.1] - 2025-12-17
+
+### Fixed
+- Fixed Windows CRLF line ending issue in shell scripts by adding .
+
 ## [v8.4.0] - 2025-12-17
 
 ### Added
