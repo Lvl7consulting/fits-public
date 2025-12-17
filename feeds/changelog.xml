@@ -5,7 +5,14 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Dec 2025 10:47:57 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 11:02:22 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.4.5</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.5</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.4.5</guid>
+      <description>• Fixed: Fixed import_data error where Space model composite_keys incorrectly included 'title' property that doesn't exist on the model</description>
+    </item>
     <item>
       <title>FITS v8.4.4</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.4.4</link>
@@ -182,14 +189,6 @@
 • Added: Improved dashboard performance: Dashboard now loads significantly faster with optimized data retrieval
 • Changed: Dashboard query optimization: Eliminated performance bottlenecks that caused slow dashboard loading times
 • Changed: Enhanced dashboard caching: Better data organization reduces redundant queries and improves response times</description>
-    </item>
-    <item>
-      <title>FITS v8.2.1</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.2.1</link>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.2.1</guid>
-      <description>• Fixed: Scope publishing bug: Fixed critical issue where scopes with the same name in different projects could be published to the wrong project's Confluence space
-• Fixed: Scope page identification: Scope pages now include project name in title to ensure unique identification and prevent cross-project confusion</description>
     </item>
   </channel>
 </rss>

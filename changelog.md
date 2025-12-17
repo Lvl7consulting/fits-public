@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.4.5] - 2025-12-17
+
+### Fixed
+- Fixed import_data error where Space model composite_keys incorrectly included 'title' property that doesn't exist on the model
+
 ## [v8.4.4] - 2025-12-17
 
 ### Fixed
