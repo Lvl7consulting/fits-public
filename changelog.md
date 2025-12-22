@@ -1,5 +1,49 @@
 # FITS Changelog
 
+## [v8.5.1] - 2025-12-22
+
+### Testing
+- Script follows existing DigitalOcean script patterns (`do-status.
+- Uses `ssh-common.
+- Tested interactive droplet selection
+- Tested dry-run mode
+- Tested confirmation prompt (moved to local script to fix stdin issue)
+- Verified safety checks work correctly
+
+### Added
+- **Safety checks**: Waits for unattended-upgrades to complete before proceeding
+- **Upgrade preview**: Shows what packages will be upgraded before execution
+- **Kernel update warnings**: Alerts user if kernel updates are included (may require reboot)
+- **Security-focused**: Only upgrades existing packages, doesn't install new ones
+- **Flexible execution**: Supports interactive, non-interactive, and dry-run modes
+- **Standard interface**: Follows same argument patterns as other DigitalOcean scripts
+
+### Changed
+- The script implements all features specified in the plan:
+- 1.
+- 2.
+- 3.
+- 4.
+- 5.
+- 6.
+- 7.
+- 8.
+- Changes follow canonical patterns as per @codex rules.
+- Created `scripts/devops/digitalocean/do-upgrade-system.
+- Implements `wait_for_unattended_upgrades()` function for safety (reused from do-remote-deploy.
+- Supports interactive droplet selection when `--ip` is not provided
+- Includes upgrade preview functionality showing upgradable packages with count and list
+- Interactive and non-interactive modes (`--yes` flag to skip confirmation)
+- Dry-run mode (`--dry-run` flag) for previewing upgrades without making changes
+- Uses `apt-get upgrade --only-upgrade -y` for security-focused upgrades (only upgrades existing packages)
+- Warns about kernel updates that may require reboot
+- Provides post-upgrade summary showing upgraded packages and kernel update warnings
+- Uses placeholder injection pattern (`__DRY_RUN__`, `__AUTO_YES__`) like other deployment scripts
+- Confirmation prompt moved to local script for proper stdin handling (fixes interactive prompt issue)
+
+### Security
+- Added `do-upgrade-system.
+
 ## [v8.5.0] - 2025-12-18
 
 ### Changed
