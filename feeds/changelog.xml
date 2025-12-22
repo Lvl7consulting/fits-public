@@ -5,7 +5,51 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Dec 2025 11:02:22 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Dec 2025 08:15:32 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.5.0</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.5.0</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.5.0</guid>
+      <description>• Changed: Refactored Policy model structure: split into core subfolder with model.
+• Changed: Renamed Policy model file from policy.
+• Changed: Updated all Policy model import paths throughout codebase
+• Added: Implemented intelligent policy template wizard with dynamic question generation
+• Added: Added back/forth navigation for policy template wizard
+• Added: Added overall progress indicator for policy template generation
+• Added: Added BCDR framework generation management command
+• Added: Added wizard chat mixin for thread-based assistant management
+• Added: Added wizard data mixin for Q&amp;A pair management
+• Added: Added dynamic question generator service
+• Added: Added thread manager for saving Q&amp;A pairs to assistant threads
+• Added: Added tool suggestions service for wizard
+• Added: Added framework context service
+• Added: Added policy template generator service
+• Added: Added comprehensive test coverage for wizard flow and chat functionality
+• Added: Added loading overlay with 90-second timeout for policy template creation
+• Added: Added Vite entry point for policy-template-create page
+• Fixed: Fixed fail-safe deletion check: can_be_deleted() now returns False on exception with full traceback logging
+• Fixed: Added proper exception logging for vectorStore deletion failures
+• Fixed: Removed incorrect async_to_sync wrapper from _create_wizard_assistant call
+• Fixed: Added COALESCE for pending_generation_count in Cypher query to prevent None returns
+• Fixed: Removed unused requirement parameter from _generate_with_thread function
+• Fixed: Added exception chaining suppression (from None) to ControlMissingError raise
+• Fixed: Removed duplicate Policy import in assessment_template/create.
+• Fixed: Removed unused organization parameter from handle_edit_and_regenerate
+• Fixed: Fixed button alignment on policy template review page
+• Fixed: Converted text inputs to textareas in policy template wizard for better UX
+• Removed: Removed PolicyIntakeAnswer model and related tests
+• Removed: Removed static intake questions and industry-specific question files
+• Removed: Removed old intake.
+• Removed: Removed intake_form.</description>
+    </item>
+    <item>
+      <title>FITS v8.4.6</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.6</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
+      <guid>fits-v8.4.6</guid>
+      <description>• Fixed: Fixed 8 code quality issues: fail-safe deletion check returns False on errors, proper exception logging for vectorStore deletion, removed incorrect async_to_sync wrapper, added COALESCE for null values in queries, removed unused parameters, added exception chaining suppression, removed duplicate imports</description>
+    </item>
     <item>
       <title>FITS v8.4.5</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.4.5</link>
@@ -161,34 +205,6 @@
       <guid>fits-v8.3.1</guid>
       <description>• Security: Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
 • Security: Comprehensive test coverage: Login security features now have better test coverage to prevent regressions</description>
-    </item>
-    <item>
-      <title>FITS v8.3.0</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.3.0</link>
-      <pubDate>Thu, 04 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.3.0</guid>
-      <description>• Fixed: Azure OAuth redirect URI: Fixed incorrect redirect URI detection that prevented Azure OAuth from working properly - now correctly detects IP or domain
-• Fixed: Azure OAuth refresh tokens: Fixed missing refresh tokens by adding required offline_access scope, allowing long-lived sessions
-• Fixed: Super admin user management: Fixed user edit redirects and user list display so super admins can properly manage users across tenants
-• Fixed: Duplicate email sending: Fixed issue where clicking test email sent two emails instead of one
-• Fixed: Transformers cache warning: Fixed deprecation warning that appeared during startup
-• Added: Test email functionality: Email provider detail pages now have &quot;Send Test Email&quot; button that sends actual test emails to tenant admin for verification
-• Added: Gmail email sending: Gmail provider now actually sends emails via Gmail API (previously returned success without sending)
-• Added: Exchange email sending: Exchange provider now sends emails via Exchange API (previously returned success without sending)
-• Added: Centralized user URLs: User navigation now uses role-based redirect logic for better user experience
-• Changed: Unified OAuth workflow: Removed separate &quot;Connect&quot; buttons - creating a provider now automatically initiates OAuth flow for simpler setup
-• Changed: Azure setup guide: Now dynamically displays the correct redirect URI based on current host, making setup easier
-• Changed: Email provider documentation: Updated to reflect the simplified OAuth workflow</description>
-    </item>
-    <item>
-      <title>FITS v8.2.2</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.2.2</link>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.2.2</guid>
-      <description>• Added: User-selectable main project: Dashboard users can now choose which project to display as their main project for personalized views
-• Added: Improved dashboard performance: Dashboard now loads significantly faster with optimized data retrieval
-• Changed: Dashboard query optimization: Eliminated performance bottlenecks that caused slow dashboard loading times
-• Changed: Enhanced dashboard caching: Better data organization reduces redundant queries and improves response times</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,51 @@
 # FITS Changelog
 
+## [v8.5.0] - 2025-12-18
+
+### Changed
+- Refactored Policy model structure: split into core subfolder with model.
+- Renamed Policy model file from policy.
+- Updated all Policy model import paths throughout codebase
+
+### Added
+- Implemented intelligent policy template wizard with dynamic question generation
+- Added back/forth navigation for policy template wizard
+- Added overall progress indicator for policy template generation
+- Added BCDR framework generation management command
+- Added wizard chat mixin for thread-based assistant management
+- Added wizard data mixin for Q&A pair management
+- Added dynamic question generator service
+- Added thread manager for saving Q&A pairs to assistant threads
+- Added tool suggestions service for wizard
+- Added framework context service
+- Added policy template generator service
+- Added comprehensive test coverage for wizard flow and chat functionality
+- Added loading overlay with 90-second timeout for policy template creation
+- Added Vite entry point for policy-template-create page
+
+### Fixed
+- Fixed fail-safe deletion check: can_be_deleted() now returns False on exception with full traceback logging
+- Added proper exception logging for vectorStore deletion failures
+- Removed incorrect async_to_sync wrapper from _create_wizard_assistant call
+- Added COALESCE for pending_generation_count in Cypher query to prevent None returns
+- Removed unused requirement parameter from _generate_with_thread function
+- Added exception chaining suppression (from None) to ControlMissingError raise
+- Removed duplicate Policy import in assessment_template/create.
+- Removed unused organization parameter from handle_edit_and_regenerate
+- Fixed button alignment on policy template review page
+- Converted text inputs to textareas in policy template wizard for better UX
+
+### Removed
+- Removed PolicyIntakeAnswer model and related tests
+- Removed static intake questions and industry-specific question files
+- Removed old intake.
+- Removed intake_form.
+
+## [v8.4.6] - 2025-12-18
+
+### Fixed
+- Fixed 8 code quality issues: fail-safe deletion check returns False on errors, proper exception logging for vectorStore deletion, removed incorrect async_to_sync wrapper, added COALESCE for null values in queries, removed unused parameters, added exception chaining suppression, removed duplicate imports
+
 ## [v8.4.5] - 2025-12-17
 
 ### Fixed
