@@ -1,5 +1,28 @@
 # FITS Changelog
 
+## [v8.5.2] - 2026-01-12
+
+### Testing
+- Added comprehensive tests for task notification helper
+- Verified data migration sets integration_mode on legacy nodes
+- Confirmed chat tasks are excluded from email notifications
+- Fixes: Chat nodes with None integration_mode causing property access errors
+- Fixes: Chat tasks sending email notifications for every message
+- @codex
+
+### Added
+- Configurable task notification exclusions via Django settings
+- Data migration ensures backward compatibility for existing Chat nodes
+
+### Changed
+- Add data migration to set integration_mode on legacy Chat nodes with None values
+- Move SKIP_EMAIL_NOTIFICATION_TASKS configuration from hardcoded list to Django settings for better configurability
+- Exclude chat-related tasks from email notifications:
+- policy_chat_process_message_celery_v1
+- policy_chat_rag_celery_v2
+- policy_gemini_chat_celery_v1
+- Fix chat integration_mode property access errors and prevent chat tasks from sending email notifications for every message.
+
 ## [v8.5.1] - 2025-12-22
 
 ### Testing
