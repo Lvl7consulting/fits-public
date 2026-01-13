@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.6.0] - 2026-01-13
+
+### Added
+- feat: implement super admin email provider management with OAuth support
+
 ## [v8.5.2] - 2026-01-12
 
 ### Testing
