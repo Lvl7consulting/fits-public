@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.6.3] - 2026-01-15
+
+### Fixed
+- Self-service import annotated Excel files failing in production
+
 ## [v8.6.2] - 2026-01-15
 
 ### Testing
