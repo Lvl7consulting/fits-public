@@ -1,5 +1,27 @@
 # FITS Changelog
 
+## [v8.6.1] - 2026-01-15
+
+### Testing
+- No functional changes to the public API
+- Thread-safety improvements ensure consistent behavior in production
+- DEBUG mode continues to work as expected for development
+- @codex
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+
+### Changed
+- **Chores**
+- Updated build configuration to include content hashes in asset filenames for improved cache management
+- Enhanced asset loading mechanism across application templates
+- <sub>✏️ Tip: You can customize this high-level summary in your review settings.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- Remove global `_vite_manifest` variable
+- Add `functools.
+- Preserve DEBUG mode behavior of always loading fresh manifests
+- Refactor code to eliminate duplication and improve maintainability
+- Fixes thread-safety issue in Vite manifest caching by replacing global mutable variable with functools.
+- The `_get_vite_manifest` function was using a global mutable `_vite_manifest` variable that could cause race conditions in multi-threaded Django environments.
+
 ## [v8.6.0] - 2026-01-13
 
 ### Added
