@@ -1,5 +1,41 @@
 # FITS Changelog
 
+## [v8.6.4] - 2026-01-15
+
+### 4. Technical Implementation
+- **Skipped rows tracking**: Added to RecursiveDataLoader with detailed logging
+- **New API endpoint**: `GET /api/v1/imports/{job_uid}/download-skipped/`
+- **Database changes**: Added `skipped_rows_report` and `skipped_rows_count` fields
+- **UI updates**: Import status shows completion with skipped row counts
+- `app/services/imports/ai_validator.
+- `app/tasks/imports/self_service/ai_validation/validation.
+- `app/libs/recursive_data_loader_helper/` - Added skip tracking
+- `app/models/imports/` - Added skipped rows storage fields
+- `app/tasks/imports/self_service/data_processing.
+- `app/api/v1/imports/downloads.
+- `app/templates/v2/pages/organizations/imports/validation_results.
+- `app/views/client/organizations/imports/validation_results.
+- Pre-commit checks passed
+- All linter errors resolved
+- Code compiles successfully
+
+### 3. User Experience Improvements
+- **Import always proceeds**: Unless there are critical file-level issues
+- **Downloadable skipped rows report**: Excel file showing exactly what was skipped and why
+- **Clear status messaging**: Shows import completed with X rows skipped
+- **Full auditability**: Users can download reports to see what happened to each row
+
+### 2. Import Processing Enhancements
+- **Row skipping logic**: Invalid rows are logged and skipped, processing continues
+- **Comprehensive tracking**: Every skipped row is recorded with reason and original data
+- **Duplicate handling**: Existing records are updated instead of blocking (merge semantics)
+
+### 1. AI Validation Behavior Changes
+- **Duplicates**: Now treated as warnings (update existing records) instead of blocking errors
+- **Missing required fields**: Warnings that skip rows instead of blocking import
+- **Referential integrity**: Parent not found issues skip rows instead of blocking
+- **Only critical file/config errors still block**: Malformed Excel, invalid configs, etc.
+
 ## [v8.6.3] - 2026-01-15
 
 ### Fixed
