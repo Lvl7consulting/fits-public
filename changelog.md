@@ -1,5 +1,25 @@
 # FITS Changelog
 
+## [v8.6.2] - 2026-01-15
+
+### Testing
+- All curl commands include proper headers (`Content-Type: application/json`)
+- Commands target `/api/v1/milestones/test-complete` endpoint as specified
+- Error scenarios include invalid milestone IDs and missing required fields
+- Email failure simulation via test headers for controlled testing
+
+### Added
+- Direct executable testing commands that reviewers can run immediately
+- Comprehensive coverage of success, partial failure, and error scenarios
+- Simulation of email service downtime for graceful degradation testing
+- Proper HTTP headers and payload formatting for API testing
+
+### Changed
+- **Testing Documentation**: Replaced abstract testing scenarios with concrete curl examples in `03-testing.
+- **Manual Testing Scenarios**: Added executable commands for all milestone completion outcomes:
+- **Documentation Restructuring**: Split investigation docs into focused `01a-investigation-decisions.
+- Enhanced milestone email notification testing documentation with concrete, executable curl commands for comprehensive manual testing coverage.
+
 ## [v8.6.1] - 2026-01-15
 
 ### Testing

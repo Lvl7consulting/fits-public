@@ -5,7 +5,25 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2026 12:27:16 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jan 2026 14:54:39 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.6.2</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.6.2</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.6.2</guid>
+      <description>• Testing: All curl commands include proper headers (`Content-Type: application/json`)
+• Testing: Commands target `/api/v1/milestones/test-complete` endpoint as specified
+• Testing: Error scenarios include invalid milestone IDs and missing required fields
+• Testing: Email failure simulation via test headers for controlled testing
+• Added: Direct executable testing commands that reviewers can run immediately
+• Added: Comprehensive coverage of success, partial failure, and error scenarios
+• Added: Simulation of email service downtime for graceful degradation testing
+• Added: Proper HTTP headers and payload formatting for API testing
+• Changed: **Testing Documentation**: Replaced abstract testing scenarios with concrete curl examples in `03-testing.
+• Changed: **Manual Testing Scenarios**: Added executable commands for all milestone completion outcomes:
+• Changed: **Documentation Restructuring**: Split investigation docs into focused `01a-investigation-decisions.
+• Changed: Enhanced milestone email notification testing documentation with concrete, executable curl commands for comprehensive manual testing coverage.</description>
+    </item>
     <item>
       <title>FITS v8.6.1</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.6.1</link>
@@ -257,14 +275,6 @@
       <description>• Added: Public changelog RSS feed: Users can subscribe to FITS updates via RSS readers or integrate into websites like Squarespace
 • Added: Automated changelog publishing: New releases automatically appear in the public RSS feed without manual steps
 • Added: Public landing page: Provides FITS information and easy access to changelog feed for external users</description>
-    </item>
-    <item>
-      <title>FITS v8.3.2</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.3.2</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.3.2</guid>
-      <description>• Added: Enhanced authentication security testing: Improved reliability of login security features including account locking and suspicious login detection
-• Added: Comprehensive test coverage: Login security features now have better test coverage to prevent regressions</description>
     </item>
   </channel>
 </rss>
