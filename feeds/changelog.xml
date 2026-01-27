@@ -5,7 +5,24 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2026 17:16:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 22:31:09 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.6.5</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.6.5</link>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.6.5</guid>
+      <description>• Fixed: Fixed GitHub Actions CI pipeline failing to start FITS service within timeout
+• Fixed: Fixed SQLite dependency issue in health endpoint causing CI failures
+• Fixed: Fixed Docker image not rebuilding from latest code in CI (added --build flag)
+• Fixed: Fixed linting failures when ruff/black not installed in container
+• Changed: Increased service startup timeout from 60s to 180s with detailed progress logging
+• Changed: Refactored CI workflow to use `scripts/test.
+• Changed: Switched dev/CI session engine to signed cookies to eliminate SQLite dependency
+• Added: Added Prettier for TypeScript/JavaScript code formatting
+• Added: Added security audit command (`.
+• Added: Added comprehensive debug logging on CI service startup failures
+• Added: Added container status checks during service health polling</description>
+    </item>
     <item>
       <title>FITS v8.6.4</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.6.4</link>
@@ -285,16 +302,6 @@
       <guid>fits-v8.3.6</guid>
       <description>• Changed: Removed changelog detail header secondary actions so the ellipsis dropdown no longer renders
 • Changed: Left the existing back navigation and header layout intact</description>
-    </item>
-    <item>
-      <title>FITS v8.3.5</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.3.5</link>
-      <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.3.5</guid>
-      <description>• Added: Automatic git hooks installation: Git hooks are now automatically installed from scripts/git-hooks/ to .
-• Changed: Enhanced pre-push hook: Added changelog validation to pre-push hook to ensure changelog entries are created when pushing to main branch
-• Changed: Updated changelog-required.
-• Removed: Settings menu item from super admin user dropdown: Removed redundant settings option from user navigation menu to simplify interface</description>
     </item>
   </channel>
 </rss>

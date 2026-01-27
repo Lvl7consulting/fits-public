@@ -1,5 +1,24 @@
 # FITS Changelog
 
+## [v8.6.5] - 2026-01-23
+
+### Fixed
+- Fixed GitHub Actions CI pipeline failing to start FITS service within timeout
+- Fixed SQLite dependency issue in health endpoint causing CI failures
+- Fixed Docker image not rebuilding from latest code in CI (added --build flag)
+- Fixed linting failures when ruff/black not installed in container
+
+### Changed
+- Increased service startup timeout from 60s to 180s with detailed progress logging
+- Refactored CI workflow to use `scripts/test.
+- Switched dev/CI session engine to signed cookies to eliminate SQLite dependency
+
+### Added
+- Added Prettier for TypeScript/JavaScript code formatting
+- Added security audit command (`.
+- Added comprehensive debug logging on CI service startup failures
+- Added container status checks during service health polling
+
 ## [v8.6.4] - 2026-01-15
 
 ### 4. Technical Implementation
