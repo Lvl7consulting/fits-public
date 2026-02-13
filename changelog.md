@@ -1,5 +1,28 @@
 # FITS Changelog
 
+## [v8.7.2] - 2026-02-13
+
+### Added
+- Added TXT file support for AI questionnaire uploads.
+
+## [v8.7.1] - 2026-01-28
+
+### Changed
+- Framework import commands (ISO 27001, CIS, NIS2, DORA, EU AI Act) now set `is_system=True`
+- Edit/delete buttons hidden in UI for system frameworks
+- CRUD operations on system frameworks return 403 Forbidden
+
+### Testing
+- 13 unit tests for model-level protection
+- View-level protection tests for frameworks, controls, and requirements
+
+### Added
+- System framework protection to prevent modification of imported ISMS frameworks
+- `is_system` property on Framework model to mark system frameworks as immutable
+- `is_system_framework()` helper method on FrameworkMember base class
+- "System Framework" badge displayed on framework detail pages
+- Comprehensive unit tests for model and view-level protection
+
 ## [v8.6.5] - 2026-01-23
 
 ### Fixed
