@@ -1,5 +1,73 @@
 # FITS Changelog
 
+## [v8.7.5] - 2026-02-13
+
+### Changed
+- **New Features**
+- System frameworks now hide Add, Edit and Delete actions while keeping View available.
+- Quick navigation and detail pages omit Add/Edit for system frameworks.
+- **Improvements**
+- Header action menus no longer show empty primary or secondary entries, reducing unused/disabled controls.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] All 26 existing system framework protection tests pass
+- [ ] Navigate to a system framework control detail — no Edit/Delete header actions, no Add/Edit requirement buttons
+- [ ] Navigate to a system framework requirement detail — no Edit/Delete header actions, no "Add Another Requirement" link
+- [ ] Non-system frameworks still show all actions as before
+- Made with [Cursor](https://cursor.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Closes UI gaps left after the system framework protection feature (#351).
+- Hide Add/Edit/Delete buttons on control and requirement detail pages for system frameworks
+- Make `include_delete_action` a property and `get_primary_action()` return `None` for system frameworks in both `FrameworkControlDetailView` and `FrameworkRequirementDetailView`
+- Wrap template action links in `{% if not framework.
+
+## [v8.7.4] - 2026-02-13
+
+### Changed
+- Framework import commands (ISO 27001, CIS, NIS2, DORA, EU AI Act) now set `is_system=True`
+- Edit/delete buttons hidden in UI for system frameworks
+- CRUD operations on system frameworks return 403 Forbidden
+- 13 unit tests for model-level protection
+- View-level protection tests for frameworks, controls, and requirements
+
+### Added
+- System framework protection to prevent modification of imported ISMS frameworks
+- `is_system` property on Framework model to mark system frameworks as immutable
+- `is_system_framework()` helper method on FrameworkMember base class
+- "System Framework" badge displayed on framework detail pages
+- Comprehensive unit tests for model and view-level protection
+
+## [v8.7.3] - 2026-02-13
+
+### Added
+- **`.
+- Determines version bump type from PR labels (`release:patch` / `release:minor` / `release:major`; defaults to patch)
+- Calculates next semver from latest git tag
+- Updates `version.
+- Generates changelog entry from PR description via `changelog_manager.
+- Commits version bump, creates git tag, creates GitHub Release
+- Builds production Docker image and pushes to GHCR (`ghcr.
+- Dispatches `publish-changelog.
+- **GitHub labels**: `release:patch`, `release:minor`, `release:major` created on the repo
+
+### Changed
+- **New Features**
+- Upload questionnaires as plain-text (.
+- Automated release & changelog publishing with optional manual trigger.
+- Richer dashboard compliance analysis: risk indicators, recommendations, trends.
+- **Improvements**
+- Drag-and-drop file uploads with improved previews and validation.
+- System frameworks are now protected from modification/deletion.
+- Numerous UI, navigation and dashboard rendering refinements for robustness and usability.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- **`.
+- **`scripts/devops/github/release.
+- **`.
+- Made with [Cursor](https://cursor.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Automate the entire release process via GitHub Actions when a PR is merged to `main`
+- Replace manual `release.
+- Build and push Docker images to GHCR as part of the release
+
 ## [v8.7.2] - 2026-02-13
 
 ### Added
