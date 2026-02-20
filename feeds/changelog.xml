@@ -5,7 +5,14 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Feb 2026 09:30:46 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 11:53:18 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.7.7</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.7</link>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.7</guid>
+      <description>• Changed: …ixes</description>
+    </item>
     <item>
       <title>FITS v8.7.6</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.7.6</link>
@@ -347,13 +354,6 @@
       <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.4.3</guid>
       <description>• Fixed: Fixed CRLF handling to copy scripts to /tmp instead of modifying mounted volume</description>
-    </item>
-    <item>
-      <title>FITS v8.4.2</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.2</link>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.4.2</guid>
-      <description>• Fixed: Fixed Docker entrypoint to strip CRLF at runtime for Windows volume mounts</description>
     </item>
   </channel>
 </rss>

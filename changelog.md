@@ -1,5 +1,10 @@
 # FITS Changelog
 
+## [v8.7.7] - 2026-02-20
+
+### Changed
+- …ixes
+
 ## [v8.7.6] - 2026-02-20
 
 ### Changed
