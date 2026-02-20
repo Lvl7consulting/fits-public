@@ -1,5 +1,25 @@
 # FITS Changelog
 
+## [v8.7.6] - 2026-02-20
+
+### Changed
+- **Improvements**
+- Enhanced organization context resolution with improved fallback mechanisms for non-organization users
+- Strengthened user role detection with additional verification layers
+- Improved error handling and logging for more reliable system diagnostics
+- **Updates**
+- Refined developer tooling rules for better code guidance
+- <!-- end of auto-generated comment: release notes by coderabbit.
+
+### Security
+- …r mixin rules
+- Added descriptions to clarify the purpose of the rules for container security hardening and relationship manager mixin.
+- Changed `alwaysApply` to false for both rules to allow for more flexible application.
+- Enhanced comments in the OrganizationMiddleware to improve clarity on user roles and organization context handling.
+- Introduced a new method `_is_non_org_user` to streamline the identification of users who do not require organization context.
+- Updated navigation context retrieval to include a fallback for users not yet enhanced by the auth middleware.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+
 ## [v8.7.5] - 2026-02-13
 
 ### Changed
