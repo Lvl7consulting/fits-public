@@ -1,5 +1,17 @@
 # FITS Changelog
 
+## [v8.7.8] - 2026-02-25
+
+### Changed
+- **New Features**
+- Added `--list-keys` flag to the deployment script to display available SSH public keys with deterministic indexing, enabling easier key selection for deployments.
+- **Chores**
+- Fixed file ownership permissions for Vite build output in container images and deployment initialization.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- …rors
+- Sort SSH keys alphabetically for stable --key-index mapping, add --list-keys flag.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+
 ## [v8.7.7] - 2026-02-20
 
 ### Changed
