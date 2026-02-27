@@ -5,7 +5,25 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Feb 2026 12:53:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 08:08:22 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.7.9</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.9</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.9</guid>
+      <description>• Fixed: **CSS missing on deployed server**: Tailwind purged all utility classes (responsive `sm:`, `lg:`, hover `hover:`, dark mode `dark:`, and many base utilities) because templates weren't in the container at build time
+• Fixed: Root cause: Dockerfile ran Vite build before `COPY .
+• Changed: Optimized Tailwind CSS configuration by consolidating content paths and removing redundant references, reducing build complexity
+• Changed: Enhanced Docker build process to properly include template and template tag directories, ensuring complete asset compilation
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] Verified locally: CSS builds correctly with all Tailwind utilities retained
+• Changed: [ ] CI build produces image with working CSS (check after merge)
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: `production/Dockerfile`: add `COPY app/templates/` and `COPY app/templatetags/` before the Vite build step
+• Changed: `app/static/tailwind.
+• Changed: Copy `app/templates/` and `app/templatetags/` into the Docker image **before** `npm run vite:build` so Tailwind can scan HTML templates during CSS purge
+• Changed: Remove stale `tailwind.</description>
+    </item>
     <item>
       <title>FITS v8.7.8</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.7.8</link>
@@ -123,6 +141,13 @@
       <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.2</guid>
       <description>• Added: Added TXT file support for AI questionnaire uploads.</description>
+    </item>
+    <item>
+      <title>FITS v8.7.10</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.10</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.10</guid>
+      <description>• Changed: Unit test generation was requested by @bbalvl7.</description>
     </item>
     <item>
       <title>FITS v8.7.1</title>
@@ -347,20 +372,6 @@
       <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
       <guid>fits-v8.4.6</guid>
       <description>• Fixed: Fixed 8 code quality issues: fail-safe deletion check returns False on errors, proper exception logging for vectorStore deletion, removed incorrect async_to_sync wrapper, added COALESCE for null values in queries, removed unused parameters, added exception chaining suppression, removed duplicate imports</description>
-    </item>
-    <item>
-      <title>FITS v8.4.5</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.5</link>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.4.5</guid>
-      <description>• Fixed: Fixed import_data error where Space model composite_keys incorrectly included 'title' property that doesn't exist on the model</description>
-    </item>
-    <item>
-      <title>FITS v8.4.4</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.4</link>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.4.4</guid>
-      <description>• Fixed: Fixed SCRIPT_DIR references in shell scripts to handle CRLF-fix temp copy scenario</description>
     </item>
   </channel>
 </rss>

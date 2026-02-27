@@ -1,5 +1,23 @@
 # FITS Changelog
 
+## [v8.7.9] - 2026-02-27
+
+### Fixed
+- **CSS missing on deployed server**: Tailwind purged all utility classes (responsive `sm:`, `lg:`, hover `hover:`, dark mode `dark:`, and many base utilities) because templates weren't in the container at build time
+- Root cause: Dockerfile ran Vite build before `COPY .
+
+### Changed
+- Optimized Tailwind CSS configuration by consolidating content paths and removing redundant references, reducing build complexity
+- Enhanced Docker build process to properly include template and template tag directories, ensuring complete asset compilation
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] Verified locally: CSS builds correctly with all Tailwind utilities retained
+- [ ] CI build produces image with working CSS (check after merge)
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- `production/Dockerfile`: add `COPY app/templates/` and `COPY app/templatetags/` before the Vite build step
+- `app/static/tailwind.
+- Copy `app/templates/` and `app/templatetags/` into the Docker image **before** `npm run vite:build` so Tailwind can scan HTML templates during CSS purge
+- Remove stale `tailwind.
+
 ## [v8.7.8] - 2026-02-25
 
 ### Changed
@@ -109,6 +127,11 @@
 
 ### Added
 - Added TXT file support for AI questionnaire uploads.
+
+## [v8.7.10] - 2026-02-27
+
+### Changed
+- Unit test generation was requested by @bbalvl7.
 
 ## [v8.7.1] - 2026-01-28
 
