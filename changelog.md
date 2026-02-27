@@ -128,6 +128,26 @@
 ### Added
 - Added TXT file support for AI questionnaire uploads.
 
+## [v8.7.11] - 2026-02-27
+
+### Fixed
+- Stale `DO_API_TOKEN` reference removed from `hz-deploy.
+- FQDN resolution discrepancy: `hz-deploy.
+- SCP of `/etc/ssl/fits/` certs now stages to `/tmp` first to work with non-root SSH users
+
+### Added
+- `hz-migrate-from-do.
+- `scripts/devops/lib/hetzner_api_token_loader.
+
+### Changed
+- `hz-deploy.
+- `hz-logs.
+- `hz-manager.
+- `do-deploy-core.
+- `hz-import.
+- `hetzner-api.
+- Refactor the Hetzner deployment toolchain to mirror the DigitalOcean pattern: `hz-deploy.
+
 ## [v8.7.10] - 2026-02-27
 
 ### Changed

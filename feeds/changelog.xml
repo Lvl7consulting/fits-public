@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Feb 2026 08:08:49 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 12:08:16 GMT</lastBuildDate>
     <item>
       <title>FITS v8.7.9</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.7.9</link>
@@ -141,6 +141,24 @@
       <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.2</guid>
       <description>• Added: Added TXT file support for AI questionnaire uploads.</description>
+    </item>
+    <item>
+      <title>FITS v8.7.11</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.11</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.11</guid>
+      <description>• Fixed: Stale `DO_API_TOKEN` reference removed from `hz-deploy.
+• Fixed: FQDN resolution discrepancy: `hz-deploy.
+• Fixed: SCP of `/etc/ssl/fits/` certs now stages to `/tmp` first to work with non-root SSH users
+• Added: `hz-migrate-from-do.
+• Added: `scripts/devops/lib/hetzner_api_token_loader.
+• Changed: `hz-deploy.
+• Changed: `hz-logs.
+• Changed: `hz-manager.
+• Changed: `do-deploy-core.
+• Changed: `hz-import.
+• Changed: `hetzner-api.
+• Changed: Refactor the Hetzner deployment toolchain to mirror the DigitalOcean pattern: `hz-deploy.</description>
     </item>
     <item>
       <title>FITS v8.7.10</title>
@@ -365,13 +383,6 @@
 • Removed: Removed static intake questions and industry-specific question files
 • Removed: Removed old intake.
 • Removed: Removed intake_form.</description>
-    </item>
-    <item>
-      <title>FITS v8.4.6</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.4.6</link>
-      <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.4.6</guid>
-      <description>• Fixed: Fixed 8 code quality issues: fail-safe deletion check returns False on errors, proper exception logging for vectorStore deletion, removed incorrect async_to_sync wrapper, added COALESCE for null values in queries, removed unused parameters, added exception chaining suppression, removed duplicate imports</description>
     </item>
   </channel>
 </rss>
