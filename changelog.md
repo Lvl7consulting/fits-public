@@ -128,6 +128,34 @@
 ### Added
 - Added TXT file support for AI questionnaire uploads.
 
+## [v8.7.12] - 2026-03-05
+
+### Changed
+- **New Features**
+- Policy Factory: upload documents to auto-analyze, generate compliance-aware plans, assemble factory templates, export full policy DOCX, view gap coverage maps, and generate remediation action plans.
+- AI-driven TopicPlan & Planner to scope generation and create reusable templates.
+- **UI/UX Enhancements**
+- Multi-file drag‑and‑drop upload with processing overlay; wizard shows AI-suggested answers with “Use this” action and per-question context; resume-wizard badge.
+- **Industry**
+- Added Telecommunications (plus Legal, Transportation) and related policy types.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Upload a document on Policy Factory create page — verify overlay appears with countdown and steps
+- [ ] Submit form — verify no double overlay and `beforeunload` fires only during processing
+- [ ] Step through wizard — verify structured questions (select/multiselect), pre-selected options, relevant_context card, and suggestion "Use this" button
+- [ ] Confirm page — verify human-readable labels (not snake_case) for structured answers
+- [ ] Open a review section — verify URL updates to `#review-{uid}`
+- [ ] Reload the review page with hash in URL — verify modal auto-opens to correct section
+- [ ] Share hash URL with a colleague and confirm it opens the right section
+- [ ] Leave a policy wizard unfinished — verify "Incomplete" badge and "Continue Wizard" link in policy list
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- **Policy Factory**: Full AI-driven pipeline — document upload, compliance context extraction, topic-based wizard, and policy generation
+- **AI Framework Matching**: Semantic matching with deduplication, handles aliases, translations, and abbreviations
+- **Topic-Based Wizard**: `TopicPlan` drives question generation, structured question types (boolean/select/multiselect), document-aware pre-selection, dynamic `relevant_context` per question, and answer label resolution
+- **UI/UX**: Processing overlay with countdown + `beforeunload` guard, canonical card frame, selected option highlighting, minimalist review modal (ghost buttons, wider/taller), multi-file drag-and-drop
+- **Review Deep-Linking**: URL hash (`#review-{uid}`) updated on open/navigate, restored on reload/share — enables sharing exact review section with colleagues
+- **Recovery**: Incomplete wizard policies show "Continue Wizard" link in policy list
+- **TDD**: 100+ new tests across extractor, wizard, topic plan, question types, coverage map, and action plan
+
 ## [v8.7.11] - 2026-02-27
 
 ### Fixed

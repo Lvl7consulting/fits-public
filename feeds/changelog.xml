@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Mar 2026 14:48:12 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2026 14:53:46 GMT</lastBuildDate>
     <item>
       <title>FITS v8.7.9</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.7.9</link>
@@ -141,6 +141,36 @@
       <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.2</guid>
       <description>• Added: Added TXT file support for AI questionnaire uploads.</description>
+    </item>
+    <item>
+      <title>FITS v8.7.12</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.12</link>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.12</guid>
+      <description>• Changed: **New Features**
+• Changed: Policy Factory: upload documents to auto-analyze, generate compliance-aware plans, assemble factory templates, export full policy DOCX, view gap coverage maps, and generate remediation action plans.
+• Changed: AI-driven TopicPlan &amp; Planner to scope generation and create reusable templates.
+• Changed: **UI/UX Enhancements**
+• Changed: Multi-file drag‑and‑drop upload with processing overlay; wizard shows AI-suggested answers with “Use this” action and per-question context; resume-wizard badge.
+• Changed: **Industry**
+• Changed: Added Telecommunications (plus Legal, Transportation) and related policy types.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Upload a document on Policy Factory create page — verify overlay appears with countdown and steps
+• Changed: [ ] Submit form — verify no double overlay and `beforeunload` fires only during processing
+• Changed: [ ] Step through wizard — verify structured questions (select/multiselect), pre-selected options, relevant_context card, and suggestion &quot;Use this&quot; button
+• Changed: [ ] Confirm page — verify human-readable labels (not snake_case) for structured answers
+• Changed: [ ] Open a review section — verify URL updates to `#review-{uid}`
+• Changed: [ ] Reload the review page with hash in URL — verify modal auto-opens to correct section
+• Changed: [ ] Share hash URL with a colleague and confirm it opens the right section
+• Changed: [ ] Leave a policy wizard unfinished — verify &quot;Incomplete&quot; badge and &quot;Continue Wizard&quot; link in policy list
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: **Policy Factory**: Full AI-driven pipeline — document upload, compliance context extraction, topic-based wizard, and policy generation
+• Changed: **AI Framework Matching**: Semantic matching with deduplication, handles aliases, translations, and abbreviations
+• Changed: **Topic-Based Wizard**: `TopicPlan` drives question generation, structured question types (boolean/select/multiselect), document-aware pre-selection, dynamic `relevant_context` per question, and answer label resolution
+• Changed: **UI/UX**: Processing overlay with countdown + `beforeunload` guard, canonical card frame, selected option highlighting, minimalist review modal (ghost buttons, wider/taller), multi-file drag-and-drop
+• Changed: **Review Deep-Linking**: URL hash (`#review-{uid}`) updated on open/navigate, restored on reload/share — enables sharing exact review section with colleagues
+• Changed: **Recovery**: Incomplete wizard policies show &quot;Continue Wizard&quot; link in policy list
+• Changed: **TDD**: 100+ new tests across extractor, wizard, topic plan, question types, coverage map, and action plan</description>
     </item>
     <item>
       <title>FITS v8.7.11</title>
@@ -346,43 +376,6 @@
 • Changed: Uses placeholder injection pattern (`__DRY_RUN__`, `__AUTO_YES__`) like other deployment scripts
 • Changed: Confirmation prompt moved to local script for proper stdin handling (fixes interactive prompt issue)
 • Security: Added `do-upgrade-system.</description>
-    </item>
-    <item>
-      <title>FITS v8.5.0</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.5.0</link>
-      <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.5.0</guid>
-      <description>• Changed: Refactored Policy model structure: split into core subfolder with model.
-• Changed: Renamed Policy model file from policy.
-• Changed: Updated all Policy model import paths throughout codebase
-• Added: Implemented intelligent policy template wizard with dynamic question generation
-• Added: Added back/forth navigation for policy template wizard
-• Added: Added overall progress indicator for policy template generation
-• Added: Added BCDR framework generation management command
-• Added: Added wizard chat mixin for thread-based assistant management
-• Added: Added wizard data mixin for Q&amp;A pair management
-• Added: Added dynamic question generator service
-• Added: Added thread manager for saving Q&amp;A pairs to assistant threads
-• Added: Added tool suggestions service for wizard
-• Added: Added framework context service
-• Added: Added policy template generator service
-• Added: Added comprehensive test coverage for wizard flow and chat functionality
-• Added: Added loading overlay with 90-second timeout for policy template creation
-• Added: Added Vite entry point for policy-template-create page
-• Fixed: Fixed fail-safe deletion check: can_be_deleted() now returns False on exception with full traceback logging
-• Fixed: Added proper exception logging for vectorStore deletion failures
-• Fixed: Removed incorrect async_to_sync wrapper from _create_wizard_assistant call
-• Fixed: Added COALESCE for pending_generation_count in Cypher query to prevent None returns
-• Fixed: Removed unused requirement parameter from _generate_with_thread function
-• Fixed: Added exception chaining suppression (from None) to ControlMissingError raise
-• Fixed: Removed duplicate Policy import in assessment_template/create.
-• Fixed: Removed unused organization parameter from handle_edit_and_regenerate
-• Fixed: Fixed button alignment on policy template review page
-• Fixed: Converted text inputs to textareas in policy template wizard for better UX
-• Removed: Removed PolicyIntakeAnswer model and related tests
-• Removed: Removed static intake questions and industry-specific question files
-• Removed: Removed old intake.
-• Removed: Removed intake_form.</description>
     </item>
   </channel>
 </rss>
