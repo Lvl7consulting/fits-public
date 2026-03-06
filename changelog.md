@@ -1,5 +1,28 @@
 # FITS Changelog
 
+## [v8.8.0] - 2026-03-04
+
+### Added
+- **Collapsible sidebar**: Toggle button (chevron) at the bottom of the sidebar collapses it to an icon-only strip (`4.
+- **Organization selector in navbar**: Multi-organization users now see a compact dropdown in the top navbar (`#navbar-org-selector`) instead of the sidebar.
+- **Theme toggle and Version link in sidebar**: The dark/light mode toggle and version info are now integrated as the last items in each role's sidebar card.
+
+### Changed
+- **Sidebar icons**: Replaced gradient-colored icon containers with flat, monochrome Heroicons outline SVGs (`stroke="currentColor"`, `stroke-width="1.
+- **Single sidebar card per role**: Removed separate dark-mode card and version-info card from `base.
+- **Tenant admin Quick Actions**: "Create Organization" and "Create User" quick-action links now use the same sidebar item component format (monochrome icon + label) as the rest of the navigation.
+- **Super admin sidebar**: Removed colored header/badge; replaced with a plain uppercase section label that hides in collapsed mode.
+
+### Files changed
+- `app/templates/v2/components/sidebar_item_component.
+- `app/templates/v2/components/sidebar_regular_user.
+- `app/templates/v2/components/sidebar_tenant_admin.
+- `app/templates/v2/pages/base.
+- `app/static/src/styles/navigation.
+- `app/static/src/pages/sidebar-collapse.
+- `app/static/src/pages/sidebar-entry.
+- `e2e-playwright/tests/multi-organization-assignment/multi-org-assignment.
+
 ## [v8.7.9] - 2026-02-27
 
 ### Fixed

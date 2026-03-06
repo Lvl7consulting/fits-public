@@ -5,7 +5,28 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Mar 2026 14:53:46 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 11:00:50 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.8.0</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.0</link>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.0</guid>
+      <description>• Added: **Collapsible sidebar**: Toggle button (chevron) at the bottom of the sidebar collapses it to an icon-only strip (`4.
+• Added: **Organization selector in navbar**: Multi-organization users now see a compact dropdown in the top navbar (`#navbar-org-selector`) instead of the sidebar.
+• Added: **Theme toggle and Version link in sidebar**: The dark/light mode toggle and version info are now integrated as the last items in each role's sidebar card.
+• Changed: **Sidebar icons**: Replaced gradient-colored icon containers with flat, monochrome Heroicons outline SVGs (`stroke=&quot;currentColor&quot;`, `stroke-width=&quot;1.
+• Changed: **Single sidebar card per role**: Removed separate dark-mode card and version-info card from `base.
+• Changed: **Tenant admin Quick Actions**: &quot;Create Organization&quot; and &quot;Create User&quot; quick-action links now use the same sidebar item component format (monochrome icon + label) as the rest of the navigation.
+• Changed: **Super admin sidebar**: Removed colored header/badge; replaced with a plain uppercase section label that hides in collapsed mode.
+• Files changed: `app/templates/v2/components/sidebar_item_component.
+• Files changed: `app/templates/v2/components/sidebar_regular_user.
+• Files changed: `app/templates/v2/components/sidebar_tenant_admin.
+• Files changed: `app/templates/v2/pages/base.
+• Files changed: `app/static/src/styles/navigation.
+• Files changed: `app/static/src/pages/sidebar-collapse.
+• Files changed: `app/static/src/pages/sidebar-entry.
+• Files changed: `e2e-playwright/tests/multi-organization-assignment/multi-org-assignment.</description>
+    </item>
     <item>
       <title>FITS v8.7.9</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.7.9</link>
@@ -336,46 +357,6 @@
 • Changed: policy_chat_rag_celery_v2
 • Changed: policy_gemini_chat_celery_v1
 • Changed: Fix chat integration_mode property access errors and prevent chat tasks from sending email notifications for every message.</description>
-    </item>
-    <item>
-      <title>FITS v8.5.1</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.5.1</link>
-      <pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate>
-      <guid>fits-v8.5.1</guid>
-      <description>• Testing: Script follows existing DigitalOcean script patterns (`do-status.
-• Testing: Uses `ssh-common.
-• Testing: Tested interactive droplet selection
-• Testing: Tested dry-run mode
-• Testing: Tested confirmation prompt (moved to local script to fix stdin issue)
-• Testing: Verified safety checks work correctly
-• Added: **Safety checks**: Waits for unattended-upgrades to complete before proceeding
-• Added: **Upgrade preview**: Shows what packages will be upgraded before execution
-• Added: **Kernel update warnings**: Alerts user if kernel updates are included (may require reboot)
-• Added: **Security-focused**: Only upgrades existing packages, doesn't install new ones
-• Added: **Flexible execution**: Supports interactive, non-interactive, and dry-run modes
-• Added: **Standard interface**: Follows same argument patterns as other DigitalOcean scripts
-• Changed: The script implements all features specified in the plan:
-• Changed: 1.
-• Changed: 2.
-• Changed: 3.
-• Changed: 4.
-• Changed: 5.
-• Changed: 6.
-• Changed: 7.
-• Changed: 8.
-• Changed: Changes follow canonical patterns as per @codex rules.
-• Changed: Created `scripts/devops/digitalocean/do-upgrade-system.
-• Changed: Implements `wait_for_unattended_upgrades()` function for safety (reused from do-remote-deploy.
-• Changed: Supports interactive droplet selection when `--ip` is not provided
-• Changed: Includes upgrade preview functionality showing upgradable packages with count and list
-• Changed: Interactive and non-interactive modes (`--yes` flag to skip confirmation)
-• Changed: Dry-run mode (`--dry-run` flag) for previewing upgrades without making changes
-• Changed: Uses `apt-get upgrade --only-upgrade -y` for security-focused upgrades (only upgrades existing packages)
-• Changed: Warns about kernel updates that may require reboot
-• Changed: Provides post-upgrade summary showing upgraded packages and kernel update warnings
-• Changed: Uses placeholder injection pattern (`__DRY_RUN__`, `__AUTO_YES__`) like other deployment scripts
-• Changed: Confirmation prompt moved to local script for proper stdin handling (fixes interactive prompt issue)
-• Security: Added `do-upgrade-system.</description>
     </item>
   </channel>
 </rss>
