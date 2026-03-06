@@ -151,6 +151,58 @@
 ### Added
 - Added TXT file support for AI questionnaire uploads.
 
+## [v8.7.15] - 2026-03-06
+
+### Changed
+- **New Features**
+- Enhanced activity tracking with real-time data sources for unified dashboard.
+- Added recent entity queries for improved visibility into system usage.
+- **Bug Fixes**
+- Fixed race condition in dashboard data loading.
+- Prevented duplicate data calculation in unified dashboard metrics.
+- Improved system health status reporting accuracy.
+- **Security**
+- Implemented per-user access control for organization dashboards with 403 error handling.
+- Scoped cache keys by user to prevent unauthorized data access.
+- **Removals**
+- Removed experimental trend data generator (returns empty for now).
+- Removed debug logging from production dashboard.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Verify dashboard loads for a normal org user (no 500 errors)
+- [ ] Verify accessing another org's dashboard returns 403
+- [ ] Verify super admin dashboard health check shows correct status
+- [ ] Verify recent activity shows real data (not placeholders)
+- [ ] Run unit tests: `pytest app/api/v1/dashboard/tests/ app/services/queries/tests/test_user_queries.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+
+### Removed
+- `dashboard-debug.
+- Dead webpack `<script>` comment from `dashboard.
+
+### Fixed
+- `unified/main.
+- `activity_trackers.
+- `data_generators.
+- `formatters.
+- `super_admin/dashboard.
+- `super_admin/dashboard.
+- `set_main_project.
+- `api/v1/dashboard/main.
+- `dashboard-data-service.
+- `user_queries.
+
+### Security
+- `chart_queries.
+- `api/v1/dashboard/main.
+- `api/v1/dashboard/set_main_project.
+- Cache key changed from `hash()` (non-deterministic across Gunicorn workers) to `','.
+- **P0 Security**: Fixed cross-tenant data leaks in chart queries and missing org membership checks on dashboard API endpoints
+- **P1 Data**: Fixed KPI doubling bug, replaced synthetic/hardcoded data with real Cypher queries
+- **P2 Logic**: Fixed missing `User` import (silent NameError on every health check), phantom validator call, health status precedence bug, and template key mismatch
+- **P2 Perf**: Replaced unbounded `.
+- **P3 Cleanup**: Removed dead debug file, dead webpack comment, fixed frontend memory leak and no-op refresh stub
+- **Tests**: Added 100 unit tests (0 pre-existing) covering all fixes
+
 ## [v8.7.14] - 2026-03-06
 
 ### Security

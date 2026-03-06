@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2026 11:24:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 13:30:32 GMT</lastBuildDate>
     <item>
       <title>FITS v8.8.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.8.0</link>
@@ -162,6 +162,54 @@
       <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.2</guid>
       <description>• Added: Added TXT file support for AI questionnaire uploads.</description>
+    </item>
+    <item>
+      <title>FITS v8.7.15</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.15</link>
+      <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.15</guid>
+      <description>• Changed: **New Features**
+• Changed: Enhanced activity tracking with real-time data sources for unified dashboard.
+• Changed: Added recent entity queries for improved visibility into system usage.
+• Changed: **Bug Fixes**
+• Changed: Fixed race condition in dashboard data loading.
+• Changed: Prevented duplicate data calculation in unified dashboard metrics.
+• Changed: Improved system health status reporting accuracy.
+• Changed: **Security**
+• Changed: Implemented per-user access control for organization dashboards with 403 error handling.
+• Changed: Scoped cache keys by user to prevent unauthorized data access.
+• Changed: **Removals**
+• Changed: Removed experimental trend data generator (returns empty for now).
+• Changed: Removed debug logging from production dashboard.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Verify dashboard loads for a normal org user (no 500 errors)
+• Changed: [ ] Verify accessing another org's dashboard returns 403
+• Changed: [ ] Verify super admin dashboard health check shows correct status
+• Changed: [ ] Verify recent activity shows real data (not placeholders)
+• Changed: [ ] Run unit tests: `pytest app/api/v1/dashboard/tests/ app/services/queries/tests/test_user_queries.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Removed: `dashboard-debug.
+• Removed: Dead webpack `&lt;script&gt;` comment from `dashboard.
+• Fixed: `unified/main.
+• Fixed: `activity_trackers.
+• Fixed: `data_generators.
+• Fixed: `formatters.
+• Fixed: `super_admin/dashboard.
+• Fixed: `super_admin/dashboard.
+• Fixed: `set_main_project.
+• Fixed: `api/v1/dashboard/main.
+• Fixed: `dashboard-data-service.
+• Fixed: `user_queries.
+• Security: `chart_queries.
+• Security: `api/v1/dashboard/main.
+• Security: `api/v1/dashboard/set_main_project.
+• Security: Cache key changed from `hash()` (non-deterministic across Gunicorn workers) to `','.
+• Security: **P0 Security**: Fixed cross-tenant data leaks in chart queries and missing org membership checks on dashboard API endpoints
+• Security: **P1 Data**: Fixed KPI doubling bug, replaced synthetic/hardcoded data with real Cypher queries
+• Security: **P2 Logic**: Fixed missing `User` import (silent NameError on every health check), phantom validator call, health status precedence bug, and template key mismatch
+• Security: **P2 Perf**: Replaced unbounded `.
+• Security: **P3 Cleanup**: Removed dead debug file, dead webpack comment, fixed frontend memory leak and no-op refresh stub
+• Security: **Tests**: Added 100 unit tests (0 pre-existing) covering all fixes</description>
     </item>
     <item>
       <title>FITS v8.7.14</title>
@@ -332,28 +380,6 @@
 • Changed: **Manual Testing Scenarios**: Added executable commands for all milestone completion outcomes:
 • Changed: **Documentation Restructuring**: Split investigation docs into focused `01a-investigation-decisions.
 • Changed: Enhanced milestone email notification testing documentation with concrete, executable curl commands for comprehensive manual testing coverage.</description>
-    </item>
-    <item>
-      <title>FITS v8.6.1</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.6.1</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.6.1</guid>
-      <description>• Testing: No functional changes to the public API
-• Testing: Thread-safety improvements ensure consistent behavior in production
-• Testing: DEBUG mode continues to work as expected for development
-• Testing: @codex
-• Testing: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: **Chores**
-• Changed: Updated build configuration to include content hashes in asset filenames for improved cache management
-• Changed: Enhanced asset loading mechanism across application templates
-• Changed: &lt;sub&gt;✏️ Tip: You can customize this high-level summary in your review settings.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: Remove global `_vite_manifest` variable
-• Changed: Add `functools.
-• Changed: Preserve DEBUG mode behavior of always loading fresh manifests
-• Changed: Refactor code to eliminate duplication and improve maintainability
-• Changed: Fixes thread-safety issue in Vite manifest caching by replacing global mutable variable with functools.
-• Changed: The `_get_vite_manifest` function was using a global mutable `_vite_manifest` variable that could cause race conditions in multi-threaded Django environments.</description>
     </item>
   </channel>
 </rss>
