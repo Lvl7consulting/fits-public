@@ -151,6 +151,21 @@
 ### Added
 - Added TXT file support for AI questionnaire uploads.
 
+## [v8.7.13] - 2026-03-06
+
+### Changed
+- **Audit Template rename**: 8 HTML templates + 13 Python views updated
+- **Icons aligned with sidebar**: `icon-questionnaire`, `icon-framework`, `icon-assessment-template`, `icon-project`, `icon-application`, `icon-search`
+- **New**: `icon-lightbulb.
+- **New**: `icon-clipboard-check.
+- **Removed**: `icon-sparkles.
+- `chat_search.
+- Policy Factory views updated to use `lightbulb` icon matching sidebar
+- Rename "Assessment Template" → "Audit Template" across all UI display strings (templates, view titles, breadcrumbs, report headers) — logic/code names unchanged
+- Align all page header icons with canonical left sidebar icons
+- Fix broken AI Chat Search header (blank gradient circle)
+- Fix missing `icon-clipboard-check.
+
 ## [v8.7.12] - 2026-03-05
 
 ### Changed

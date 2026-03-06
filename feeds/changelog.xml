@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2026 11:00:50 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 11:03:04 GMT</lastBuildDate>
     <item>
       <title>FITS v8.8.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.8.0</link>
@@ -162,6 +162,23 @@
       <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.2</guid>
       <description>• Added: Added TXT file support for AI questionnaire uploads.</description>
+    </item>
+    <item>
+      <title>FITS v8.7.13</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.13</link>
+      <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.13</guid>
+      <description>• Changed: **Audit Template rename**: 8 HTML templates + 13 Python views updated
+• Changed: **Icons aligned with sidebar**: `icon-questionnaire`, `icon-framework`, `icon-assessment-template`, `icon-project`, `icon-application`, `icon-search`
+• Changed: **New**: `icon-lightbulb.
+• Changed: **New**: `icon-clipboard-check.
+• Changed: **Removed**: `icon-sparkles.
+• Changed: `chat_search.
+• Changed: Policy Factory views updated to use `lightbulb` icon matching sidebar
+• Changed: Rename &quot;Assessment Template&quot; → &quot;Audit Template&quot; across all UI display strings (templates, view titles, breadcrumbs, report headers) — logic/code names unchanged
+• Changed: Align all page header icons with canonical left sidebar icons
+• Changed: Fix broken AI Chat Search header (blank gradient circle)
+• Changed: Fix missing `icon-clipboard-check.</description>
     </item>
     <item>
       <title>FITS v8.7.12</title>
@@ -336,27 +353,6 @@
       <pubDate>Tue, 13 Jan 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.6.0</guid>
       <description>• Added: feat: implement super admin email provider management with OAuth support</description>
-    </item>
-    <item>
-      <title>FITS v8.5.2</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.5.2</link>
-      <pubDate>Mon, 12 Jan 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.5.2</guid>
-      <description>• Testing: Added comprehensive tests for task notification helper
-• Testing: Verified data migration sets integration_mode on legacy nodes
-• Testing: Confirmed chat tasks are excluded from email notifications
-• Testing: Fixes: Chat nodes with None integration_mode causing property access errors
-• Testing: Fixes: Chat tasks sending email notifications for every message
-• Testing: @codex
-• Added: Configurable task notification exclusions via Django settings
-• Added: Data migration ensures backward compatibility for existing Chat nodes
-• Changed: Add data migration to set integration_mode on legacy Chat nodes with None values
-• Changed: Move SKIP_EMAIL_NOTIFICATION_TASKS configuration from hardcoded list to Django settings for better configurability
-• Changed: Exclude chat-related tasks from email notifications:
-• Changed: policy_chat_process_message_celery_v1
-• Changed: policy_chat_rag_celery_v2
-• Changed: policy_gemini_chat_celery_v1
-• Changed: Fix chat integration_mode property access errors and prevent chat tasks from sending email notifications for every message.</description>
     </item>
   </channel>
 </rss>
