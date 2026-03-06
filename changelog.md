@@ -151,6 +151,14 @@
 ### Added
 - Added TXT file support for AI questionnaire uploads.
 
+## [v8.7.14] - 2026-03-06
+
+### Security
+- **CVE-2026-25528**: Fixed in langsmith >= 0.
+
+### Changed
+- Upgrades `langsmith` from `0.
+
 ## [v8.7.13] - 2026-03-06
 
 ### Changed
