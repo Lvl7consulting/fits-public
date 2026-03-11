@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2026 13:30:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 16:20:06 GMT</lastBuildDate>
     <item>
       <title>FITS v8.8.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.8.0</link>
@@ -162,6 +162,36 @@
       <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.2</guid>
       <description>• Added: Added TXT file support for AI questionnaire uploads.</description>
+    </item>
+    <item>
+      <title>FITS v8.7.16</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.16</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.16</guid>
+      <description>• Changed: **New Features**
+• Changed: Added Submission Analysis page: new interim review stage displaying submitted content, uploaded files, AI findings, compliance gaps, topic plan, and optional deeper evaluation before entering the questionnaire wizard.
+• Changed: Implemented Deeper Evaluation option providing document quality scores, coverage assessment, and improvement recommendations.
+• Changed: Added AI assistant model selection and management capability in policy settings.
+• Changed: Introduced dynamic question limits based on detected topic count for more intelligent question planning.
+• Changed: Added policy sections accordion view organizing instructions by control and requirement.
+• Changed: **Improvements**
+• Changed: Enhanced AI assistant model fallback logic with intelligent version sorting and error recovery.
+• Changed: Improved wizard navigation supporting question history traversal.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] Unit tests for dynamic model sorting and fallback (`test_assistant_ops.
+• Changed: [x] Unit tests for assistant model view (`test_assistant_model_view.
+• Changed: [x] Unit tests for policy sections view (`test_sections_view.
+• Changed: [x] Unit tests for analysis view, deeper evaluation, submission metadata
+• Changed: [x] Unit tests for wizard navigation, question generation, compute max questions
+• Changed: [x] Unit tests for instruction grouping accordion
+• Changed: [x] All 1121 tests passing in CI pre-commit hook
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: **Analysis interim stage**: New step between form submission and questionnaire that shows compliance context analysis, gap inventory, document evaluation, and estimated question count before proceeding
+• Changed: **Dynamic AI model selection**: Assistant creation now discovers all available models from the OpenAI account, sorts by version descending (best-first), and tries each until one is accepted — no more hardcoded fallback lists
+• Changed: **Post-creation model change**: Users can change the assistant's model after finalization via a dropdown on the policy detail page
+• Changed: **Policy sections page**: Grouped accordion view of ActionableInstructions available for any policy with instructions (not just template-generated), reusing shared grouping logic with the review page
+• Changed: **Wizard improvements**: Topic-driven dynamic question limits, option strength indicators, progress bar fixes, navigation/URL tracking fixes
+• Changed: **Sidebar fix**: Wrapped localStorage in try/catch to prevent CSP/private browsing errors</description>
     </item>
     <item>
       <title>FITS v8.7.15</title>
@@ -362,24 +392,6 @@
       <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.6.3</guid>
       <description>• Fixed: Self-service import annotated Excel files failing in production</description>
-    </item>
-    <item>
-      <title>FITS v8.6.2</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.6.2</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.6.2</guid>
-      <description>• Testing: All curl commands include proper headers (`Content-Type: application/json`)
-• Testing: Commands target `/api/v1/milestones/test-complete` endpoint as specified
-• Testing: Error scenarios include invalid milestone IDs and missing required fields
-• Testing: Email failure simulation via test headers for controlled testing
-• Added: Direct executable testing commands that reviewers can run immediately
-• Added: Comprehensive coverage of success, partial failure, and error scenarios
-• Added: Simulation of email service downtime for graceful degradation testing
-• Added: Proper HTTP headers and payload formatting for API testing
-• Changed: **Testing Documentation**: Replaced abstract testing scenarios with concrete curl examples in `03-testing.
-• Changed: **Manual Testing Scenarios**: Added executable commands for all milestone completion outcomes:
-• Changed: **Documentation Restructuring**: Split investigation docs into focused `01a-investigation-decisions.
-• Changed: Enhanced milestone email notification testing documentation with concrete, executable curl commands for comprehensive manual testing coverage.</description>
     </item>
   </channel>
 </rss>

@@ -151,6 +151,34 @@
 ### Added
 - Added TXT file support for AI questionnaire uploads.
 
+## [v8.7.16] - 2026-03-11
+
+### Changed
+- **New Features**
+- Added Submission Analysis page: new interim review stage displaying submitted content, uploaded files, AI findings, compliance gaps, topic plan, and optional deeper evaluation before entering the questionnaire wizard.
+- Implemented Deeper Evaluation option providing document quality scores, coverage assessment, and improvement recommendations.
+- Added AI assistant model selection and management capability in policy settings.
+- Introduced dynamic question limits based on detected topic count for more intelligent question planning.
+- Added policy sections accordion view organizing instructions by control and requirement.
+- **Improvements**
+- Enhanced AI assistant model fallback logic with intelligent version sorting and error recovery.
+- Improved wizard navigation supporting question history traversal.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] Unit tests for dynamic model sorting and fallback (`test_assistant_ops.
+- [x] Unit tests for assistant model view (`test_assistant_model_view.
+- [x] Unit tests for policy sections view (`test_sections_view.
+- [x] Unit tests for analysis view, deeper evaluation, submission metadata
+- [x] Unit tests for wizard navigation, question generation, compute max questions
+- [x] Unit tests for instruction grouping accordion
+- [x] All 1121 tests passing in CI pre-commit hook
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- **Analysis interim stage**: New step between form submission and questionnaire that shows compliance context analysis, gap inventory, document evaluation, and estimated question count before proceeding
+- **Dynamic AI model selection**: Assistant creation now discovers all available models from the OpenAI account, sorts by version descending (best-first), and tries each until one is accepted — no more hardcoded fallback lists
+- **Post-creation model change**: Users can change the assistant's model after finalization via a dropdown on the policy detail page
+- **Policy sections page**: Grouped accordion view of ActionableInstructions available for any policy with instructions (not just template-generated), reusing shared grouping logic with the review page
+- **Wizard improvements**: Topic-driven dynamic question limits, option strength indicators, progress bar fixes, navigation/URL tracking fixes
+- **Sidebar fix**: Wrapped localStorage in try/catch to prevent CSP/private browsing errors
+
 ## [v8.7.15] - 2026-03-06
 
 ### Changed
