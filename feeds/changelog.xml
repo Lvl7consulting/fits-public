@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 16:34:36 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 17:10:20 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,15 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.2</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.2</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.2</guid>
+      <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
+• Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
+• Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
     </item>
     <item>
       <title>FITS v8.8.1</title>
@@ -385,22 +394,6 @@
       <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.10</guid>
       <description>• Changed: Unit test generation was requested by @bbalvl7.</description>
-    </item>
-    <item>
-      <title>FITS v8.7.1</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.1</link>
-      <pubDate>Wed, 28 Jan 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.1</guid>
-      <description>• Changed: Framework import commands (ISO 27001, CIS, NIS2, DORA, EU AI Act) now set `is_system=True`
-• Changed: Edit/delete buttons hidden in UI for system frameworks
-• Changed: CRUD operations on system frameworks return 403 Forbidden
-• Testing: 13 unit tests for model-level protection
-• Testing: View-level protection tests for frameworks, controls, and requirements
-• Added: System framework protection to prevent modification of imported ISMS frameworks
-• Added: `is_system` property on Framework model to mark system frameworks as immutable
-• Added: `is_system_framework()` helper method on FrameworkMember base class
-• Added: &quot;System Framework&quot; badge displayed on framework detail pages
-• Added: Comprehensive unit tests for model and view-level protection</description>
     </item>
   </channel>
 </rss>

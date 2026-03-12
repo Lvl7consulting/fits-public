@@ -9,6 +9,13 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.2] - 2026-03-12
+
+### Deferred (2 alerts — require separate LCEL migration)
+- [x] All 1430 unit tests pass
+- [x] `npm audit` reports 0 vulnerabilities
+- [x] `pip install -r requirements.
+
 ## [v8.8.1] - 2026-03-12
 
 ### Fixed
