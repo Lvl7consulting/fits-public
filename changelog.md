@@ -9,6 +9,23 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.7] - 2026-03-12
+
+### Changed
+- **New Features**
+- Added a "Delete Question" action in the answer editor with confirmation, safe question preview, CSRF-protected deletion, and user notifications.
+- **Bug Fixes**
+- Ensured questionnaire status updates reload the latest model state before marking processing/ready/failed to reduce consistency issues.
+- **Refactor**
+- Centralized CSRF token retrieval across the frontend to a single utility, replacing many in-file implementations.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Upload a questionnaire document
+- [ ] While it's processing, select a policy from the dropdown
+- [ ] Verify the policy selection persists after the page reloads upon processing completion
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Adds `self.
+- Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`
+
 ## [v8.8.6] - 2026-03-12
 
 ### Changed

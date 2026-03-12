@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 19:30:27 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 20:14:47 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,25 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.7</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.7</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.7</guid>
+      <description>• Changed: **New Features**
+• Changed: Added a &quot;Delete Question&quot; action in the answer editor with confirmation, safe question preview, CSRF-protected deletion, and user notifications.
+• Changed: **Bug Fixes**
+• Changed: Ensured questionnaire status updates reload the latest model state before marking processing/ready/failed to reduce consistency issues.
+• Changed: **Refactor**
+• Changed: Centralized CSRF token retrieval across the frontend to a single utility, replacing many in-file implementations.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Upload a questionnaire document
+• Changed: [ ] While it's processing, select a policy from the dropdown
+• Changed: [ ] Verify the policy selection persists after the page reloads upon processing completion
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Adds `self.
+• Changed: Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`</description>
     </item>
     <item>
       <title>FITS v8.8.6</title>
@@ -380,14 +399,6 @@
 • Security: **P2 Perf**: Replaced unbounded `.
 • Security: **P3 Cleanup**: Removed dead debug file, dead webpack comment, fixed frontend memory leak and no-op refresh stub
 • Security: **Tests**: Added 100 unit tests (0 pre-existing) covering all fixes</description>
-    </item>
-    <item>
-      <title>FITS v8.7.14</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.14</link>
-      <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.14</guid>
-      <description>• Security: **CVE-2026-25528**: Fixed in langsmith &gt;= 0.
-• Changed: Upgrades `langsmith` from `0.</description>
     </item>
   </channel>
 </rss>
