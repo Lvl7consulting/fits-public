@@ -11,12 +11,22 @@
 
 ## [v8.8.0] - 2026-03-04
 
+### Security
+- Bump version to v8.
+- Add changelog entries for 4 commits that landed on main without a PR: employee/server security hardening, CRUD form fixes, view improvements, and accessor migrations
+
 ### Added
 - **Collapsible sidebar**: Toggle button (chevron) at the bottom of the sidebar collapses it to an icon-only strip (`4.
 - **Organization selector in navbar**: Multi-organization users now see a compact dropdown in the top navbar (`#navbar-org-selector`) instead of the sidebar.
 - **Theme toggle and Version link in sidebar**: The dark/light mode toggle and version info are now integrated as the last items in each role's sidebar card.
 
 ### Changed
+- [x] No code changes, version bump only
+- [x] Changelog renders correctly at `/changelog/`
+- `version.
+- `package.
+- `CHANGELOG.
+- `changelogs/v8.
 - **Sidebar icons**: Replaced gradient-colored icon containers with flat, monochrome Heroicons outline SVGs (`stroke="currentColor"`, `stroke-width="1.
 - **Single sidebar card per role**: Removed separate dark-mode card and version-info card from `base.
 - **Tenant admin Quick Actions**: "Create Organization" and "Create User" quick-action links now use the same sidebar item component format (monochrome icon + label) as the rest of the navigation.
