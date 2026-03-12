@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 17:48:38 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 18:34:45 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,24 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.4</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.4</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.4</guid>
+      <description>• Changed: **New Features**
+• Changed: Added progress indicator that displays when processing questionnaires.
+• Changed: **Bug Fixes**
+• Changed: Added user notifications for WebSocket connection errors to keep users informed of connectivity issues.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Upload a questionnaire file, then immediately navigate to its detail page -- verify the progress bar appears with &quot;Processing questionnaire.
+• Changed: [ ] On the detail page, verify that when the WebSocket connection is active, &quot;Generate All Answers&quot; works normally
+• Changed: [ ] Simulate a WebSocket disconnect (e.
+• Changed: [ ] Verify the same error toast appears when clicking individual &quot;Regenerate Answer&quot; buttons while disconnected
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
+• Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
     </item>
     <item>
       <title>FITS v8.8.3</title>
@@ -384,24 +402,6 @@
 • Changed: **Review Deep-Linking**: URL hash (`#review-{uid}`) updated on open/navigate, restored on reload/share — enables sharing exact review section with colleagues
 • Changed: **Recovery**: Incomplete wizard policies show &quot;Continue Wizard&quot; link in policy list
 • Changed: **TDD**: 100+ new tests across extractor, wizard, topic plan, question types, coverage map, and action plan</description>
-    </item>
-    <item>
-      <title>FITS v8.7.11</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.11</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.11</guid>
-      <description>• Fixed: Stale `DO_API_TOKEN` reference removed from `hz-deploy.
-• Fixed: FQDN resolution discrepancy: `hz-deploy.
-• Fixed: SCP of `/etc/ssl/fits/` certs now stages to `/tmp` first to work with non-root SSH users
-• Added: `hz-migrate-from-do.
-• Added: `scripts/devops/lib/hetzner_api_token_loader.
-• Changed: `hz-deploy.
-• Changed: `hz-logs.
-• Changed: `hz-manager.
-• Changed: `do-deploy-core.
-• Changed: `hz-import.
-• Changed: `hetzner-api.
-• Changed: Refactor the Hetzner deployment toolchain to mirror the DigitalOcean pattern: `hz-deploy.</description>
     </item>
   </channel>
 </rss>

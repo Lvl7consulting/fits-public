@@ -9,6 +9,22 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.4] - 2026-03-12
+
+### Changed
+- **New Features**
+- Added progress indicator that displays when processing questionnaires.
+- **Bug Fixes**
+- Added user notifications for WebSocket connection errors to keep users informed of connectivity issues.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Upload a questionnaire file, then immediately navigate to its detail page -- verify the progress bar appears with "Processing questionnaire.
+- [ ] On the detail page, verify that when the WebSocket connection is active, "Generate All Answers" works normally
+- [ ] Simulate a WebSocket disconnect (e.
+- [ ] Verify the same error toast appears when clicking individual "Regenerate Answer" buttons while disconnected
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
+- Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
+
 ## [v8.8.3] - 2026-03-12
 
 ### Changed
