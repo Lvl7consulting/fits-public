@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Mar 2026 16:20:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 15:24:55 GMT</lastBuildDate>
     <item>
       <title>FITS v8.8.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.8.0</link>
@@ -162,6 +162,38 @@
       <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.2</guid>
       <description>• Added: Added TXT file support for AI questionnaire uploads.</description>
+    </item>
+    <item>
+      <title>FITS v8.7.17</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.17</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.7.17</guid>
+      <description>• Changed: **New Features**
+• Changed: New publish workflow and reliable publisher UI with recovery/progress controls; policy template detail-level and audit-template options; post-generation consolidation.
+• Changed: Orphaned access cleanup: per-actor remove action on employee pages.
+• Changed: **Bug Fixes**
+• Changed: Stronger WebSocket auth/connection guards, improved error reporting, and de-duplicated ping handling.
+• Changed: **Improvements**
+• Changed: Enum-backed task statuses (PROCESSING, WARNING); centralized WebSocket/envelope/session helpers; safer scheduled page reloads; server listings now show domain/IPv4; simplified employee create/update form handling.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] `test_delegates_to_helper` passes with new return-value assertion
+• Changed: [x] `test_policy_create_rag_fallback_matches_consumer` exercises real consumer import
+• Changed: [x] All resolve_channel_group tests pass
+• Changed: [x] No TypeScript lint errors in modified files
+• Changed: [x] Pre-existing lint failures in unrelated files (settings, celery config) are unchanged
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: **WebSocket type safety**: Extended `Meta` interface with `resource_id`/`resource_type`, removed all `as any` casts across 5 files
+• Changed: **Error handling**: Re-throw in `initializeWebSocketConnection` for proper caller cleanup; surface unhandled errors in template question generator; fix null dereference in `buildCancelEnvelope` via optional chaining
+• Changed: **Publisher refactor**: Split monolithic `reliable-publisher.
+• Changed: **Celery/consumer alignment**: Standardize channel group resolution, progress manager signatures, and task event bus usage across v1/v2 tasks
+• Changed: **Scope publisher fix**: Changed no-environments condition from `task_failed` (which triggers failure UI) to `task_progress` warning (allows continued processing)
+• Changed: **Test improvements**: Fixed tautology test, added missing return-value assertion, added tests for page counter, scope publisher, progress managers, envelope, ws-helpers, and more
+• Changed: **Template fix**: Corrected `{% block javascript %}` to `{% block extra_js %}` in employee update template
+• Changed: Resolve WebSocket consumer/task inconsistencies across publishers, evaluators, and chat handlers
+• Changed: Refactor ReliablePublisher into modular helper-subfolder pattern (657-line monolith → 7 focused files)
+• Changed: Add `resource_id`/`resource_type` to TypeScript `Meta` interface, eliminating 7 unsafe `as any` casts
+• Changed: Fix error propagation in `initializeWebSocketConnection` so callers can execute cleanup
+• Changed: Add comprehensive test coverage: unit tests for envelope, helpers, publisher config, operation handlers</description>
     </item>
     <item>
       <title>FITS v8.7.16</title>
@@ -385,13 +417,6 @@
 • 1. AI Validation Behavior Changes: **Missing required fields**: Warnings that skip rows instead of blocking import
 • 1. AI Validation Behavior Changes: **Referential integrity**: Parent not found issues skip rows instead of blocking
 • 1. AI Validation Behavior Changes: **Only critical file/config errors still block**: Malformed Excel, invalid configs, etc.</description>
-    </item>
-    <item>
-      <title>FITS v8.6.3</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.6.3</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.6.3</guid>
-      <description>• Fixed: Self-service import annotated Excel files failing in production</description>
     </item>
   </channel>
 </rss>

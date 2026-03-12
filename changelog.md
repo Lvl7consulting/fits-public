@@ -151,6 +151,36 @@
 ### Added
 - Added TXT file support for AI questionnaire uploads.
 
+## [v8.7.17] - 2026-03-12
+
+### Changed
+- **New Features**
+- New publish workflow and reliable publisher UI with recovery/progress controls; policy template detail-level and audit-template options; post-generation consolidation.
+- Orphaned access cleanup: per-actor remove action on employee pages.
+- **Bug Fixes**
+- Stronger WebSocket auth/connection guards, improved error reporting, and de-duplicated ping handling.
+- **Improvements**
+- Enum-backed task statuses (PROCESSING, WARNING); centralized WebSocket/envelope/session helpers; safer scheduled page reloads; server listings now show domain/IPv4; simplified employee create/update form handling.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] `test_delegates_to_helper` passes with new return-value assertion
+- [x] `test_policy_create_rag_fallback_matches_consumer` exercises real consumer import
+- [x] All resolve_channel_group tests pass
+- [x] No TypeScript lint errors in modified files
+- [x] Pre-existing lint failures in unrelated files (settings, celery config) are unchanged
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- **WebSocket type safety**: Extended `Meta` interface with `resource_id`/`resource_type`, removed all `as any` casts across 5 files
+- **Error handling**: Re-throw in `initializeWebSocketConnection` for proper caller cleanup; surface unhandled errors in template question generator; fix null dereference in `buildCancelEnvelope` via optional chaining
+- **Publisher refactor**: Split monolithic `reliable-publisher.
+- **Celery/consumer alignment**: Standardize channel group resolution, progress manager signatures, and task event bus usage across v1/v2 tasks
+- **Scope publisher fix**: Changed no-environments condition from `task_failed` (which triggers failure UI) to `task_progress` warning (allows continued processing)
+- **Test improvements**: Fixed tautology test, added missing return-value assertion, added tests for page counter, scope publisher, progress managers, envelope, ws-helpers, and more
+- **Template fix**: Corrected `{% block javascript %}` to `{% block extra_js %}` in employee update template
+- Resolve WebSocket consumer/task inconsistencies across publishers, evaluators, and chat handlers
+- Refactor ReliablePublisher into modular helper-subfolder pattern (657-line monolith → 7 focused files)
+- Add `resource_id`/`resource_type` to TypeScript `Meta` interface, eliminating 7 unsafe `as any` casts
+- Fix error propagation in `initializeWebSocketConnection` so callers can execute cleanup
+- Add comprehensive test coverage: unit tests for envelope, helpers, publisher config, operation handlers
+
 ## [v8.7.16] - 2026-03-11
 
 ### Changed
