@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 16:00:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 16:34:36 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,20 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.1</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.1</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.1</guid>
+      <description>• Fixed: **List page UI gap**: `can_delete` was hardcoded to `True` and `update_url`/`delete_url` were always set, making edit/delete actions appear for system frameworks
+• Fixed: Now consistent with the detail page which already guards with `{% if not framework.
+• Changed: [x] All 19 existing system protection tests pass (model-level + view-level)
+• Changed: [ ] Verify system frameworks on list page no longer show edit/delete icons
+• Changed: [ ] Verify user-created frameworks still show edit/delete icons
+• Changed: Protection was already in place at the view layer (403 responses) and model layer (`ValueError` on save/delete), but the list page UI did not hide the buttons.
+• Changed: Fix system framework protection gap on the frameworks list page where edit and delete icons were visible and clickable for system frameworks (`is_system=True`)
+• Changed: Gate `update_url`, `delete_url`, and `can_delete` on `not fw.</description>
     </item>
     <item>
       <title>FITS v8.8.0</title>
@@ -387,23 +401,6 @@
 • Added: `is_system_framework()` helper method on FrameworkMember base class
 • Added: &quot;System Framework&quot; badge displayed on framework detail pages
 • Added: Comprehensive unit tests for model and view-level protection</description>
-    </item>
-    <item>
-      <title>FITS v8.6.5</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.6.5</link>
-      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.6.5</guid>
-      <description>• Fixed: Fixed GitHub Actions CI pipeline failing to start FITS service within timeout
-• Fixed: Fixed SQLite dependency issue in health endpoint causing CI failures
-• Fixed: Fixed Docker image not rebuilding from latest code in CI (added --build flag)
-• Fixed: Fixed linting failures when ruff/black not installed in container
-• Changed: Increased service startup timeout from 60s to 180s with detailed progress logging
-• Changed: Refactored CI workflow to use `scripts/test.
-• Changed: Switched dev/CI session engine to signed cookies to eliminate SQLite dependency
-• Added: Added Prettier for TypeScript/JavaScript code formatting
-• Added: Added security audit command (`.
-• Added: Added comprehensive debug logging on CI service startup failures
-• Added: Added container status checks during service health polling</description>
     </item>
   </channel>
 </rss>

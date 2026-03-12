@@ -9,6 +9,20 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.1] - 2026-03-12
+
+### Fixed
+- **List page UI gap**: `can_delete` was hardcoded to `True` and `update_url`/`delete_url` were always set, making edit/delete actions appear for system frameworks
+- Now consistent with the detail page which already guards with `{% if not framework.
+
+### Changed
+- [x] All 19 existing system protection tests pass (model-level + view-level)
+- [ ] Verify system frameworks on list page no longer show edit/delete icons
+- [ ] Verify user-created frameworks still show edit/delete icons
+- Protection was already in place at the view layer (403 responses) and model layer (`ValueError` on save/delete), but the list page UI did not hide the buttons.
+- Fix system framework protection gap on the frameworks list page where edit and delete icons were visible and clickable for system frameworks (`is_system=True`)
+- Gate `update_url`, `delete_url`, and `can_delete` on `not fw.
+
 ## [v8.8.0] - 2026-03-04
 
 ### Security
