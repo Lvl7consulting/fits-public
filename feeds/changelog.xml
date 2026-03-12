@@ -5,7 +5,18 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 15:24:55 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 15:57:14 GMT</lastBuildDate>
+    <item>
+      <title>FITS v8.9.0</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.9.0</guid>
+      <description>• Fixed: **Employee CRUD**: Form validation fixes, security scoping for organization-bound queries, orphaned actor cleanup with per-actor delete action
+• Fixed: **Employee/Server hardening**: Deduplication in `get_applications_and_environments` using `(app, actor)` pairs; null-role guards in `get_projects`/`get_scopes`; sort by `(role, name)`; accessor migrations from `.
+• Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
+• Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
+• Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
     <item>
       <title>FITS v8.8.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.8.0</link>
@@ -385,38 +396,6 @@
 • Added: Added security audit command (`.
 • Added: Added comprehensive debug logging on CI service startup failures
 • Added: Added container status checks during service health polling</description>
-    </item>
-    <item>
-      <title>FITS v8.6.4</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.6.4</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.6.4</guid>
-      <description>• 4. Technical Implementation: **Skipped rows tracking**: Added to RecursiveDataLoader with detailed logging
-• 4. Technical Implementation: **New API endpoint**: `GET /api/v1/imports/{job_uid}/download-skipped/`
-• 4. Technical Implementation: **Database changes**: Added `skipped_rows_report` and `skipped_rows_count` fields
-• 4. Technical Implementation: **UI updates**: Import status shows completion with skipped row counts
-• 4. Technical Implementation: `app/services/imports/ai_validator.
-• 4. Technical Implementation: `app/tasks/imports/self_service/ai_validation/validation.
-• 4. Technical Implementation: `app/libs/recursive_data_loader_helper/` - Added skip tracking
-• 4. Technical Implementation: `app/models/imports/` - Added skipped rows storage fields
-• 4. Technical Implementation: `app/tasks/imports/self_service/data_processing.
-• 4. Technical Implementation: `app/api/v1/imports/downloads.
-• 4. Technical Implementation: `app/templates/v2/pages/organizations/imports/validation_results.
-• 4. Technical Implementation: `app/views/client/organizations/imports/validation_results.
-• 4. Technical Implementation: Pre-commit checks passed
-• 4. Technical Implementation: All linter errors resolved
-• 4. Technical Implementation: Code compiles successfully
-• 3. User Experience Improvements: **Import always proceeds**: Unless there are critical file-level issues
-• 3. User Experience Improvements: **Downloadable skipped rows report**: Excel file showing exactly what was skipped and why
-• 3. User Experience Improvements: **Clear status messaging**: Shows import completed with X rows skipped
-• 3. User Experience Improvements: **Full auditability**: Users can download reports to see what happened to each row
-• 2. Import Processing Enhancements: **Row skipping logic**: Invalid rows are logged and skipped, processing continues
-• 2. Import Processing Enhancements: **Comprehensive tracking**: Every skipped row is recorded with reason and original data
-• 2. Import Processing Enhancements: **Duplicate handling**: Existing records are updated instead of blocking (merge semantics)
-• 1. AI Validation Behavior Changes: **Duplicates**: Now treated as warnings (update existing records) instead of blocking errors
-• 1. AI Validation Behavior Changes: **Missing required fields**: Warnings that skip rows instead of blocking import
-• 1. AI Validation Behavior Changes: **Referential integrity**: Parent not found issues skip rows instead of blocking
-• 1. AI Validation Behavior Changes: **Only critical file/config errors still block**: Malformed Excel, invalid configs, etc.</description>
     </item>
   </channel>
 </rss>

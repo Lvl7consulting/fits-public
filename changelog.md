@@ -1,5 +1,14 @@
 # FITS Changelog
 
+## [v8.9.0] - 2026-03-12
+
+### Fixed
+- **Employee CRUD**: Form validation fixes, security scoping for organization-bound queries, orphaned actor cleanup with per-actor delete action
+- **Employee/Server hardening**: Deduplication in `get_applications_and_environments` using `(app, actor)` pairs; null-role guards in `get_projects`/`get_scopes`; sort by `(role, name)`; accessor migrations from `.
+- **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
+- **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
+- **Server list**: Guard against missing IPv4 in list metadata
+
 ## [v8.8.0] - 2026-03-04
 
 ### Added
