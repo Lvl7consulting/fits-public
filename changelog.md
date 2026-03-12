@@ -9,6 +9,20 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.8] - 2026-03-12
+
+### Changed
+- **Chores**
+- Improved asset caching behavior to ensure users receive the latest version of resources when updates are deployed, reducing unnecessary downloads.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Verify Vite build produces hashed chunk filenames
+- [ ] Verify entry files keep stable names (e.
+- [ ] Confirm pages load correctly after deploy (no 404s on chunks)
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Adds `[hash]` to `chunkFileNames` in `vite.
+- Entry files keep stable names since templates already cache-bust with `?v=` timestamps
+- Fixes stale browser cache when shared chunk content changes but filename stays the same
+
 ## [v8.8.7] - 2026-03-12
 
 ### Changed

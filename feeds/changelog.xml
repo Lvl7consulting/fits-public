@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 20:14:47 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 20:47:14 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,22 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.8</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.8</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.8</guid>
+      <description>• Changed: **Chores**
+• Changed: Improved asset caching behavior to ensure users receive the latest version of resources when updates are deployed, reducing unnecessary downloads.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Verify Vite build produces hashed chunk filenames
+• Changed: [ ] Verify entry files keep stable names (e.
+• Changed: [ ] Confirm pages load correctly after deploy (no 404s on chunks)
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Adds `[hash]` to `chunkFileNames` in `vite.
+• Changed: Entry files keep stable names since templates already cache-bust with `?v=` timestamps
+• Changed: Fixes stale browser cache when shared chunk content changes but filename stays the same</description>
     </item>
     <item>
       <title>FITS v8.8.7</title>
@@ -351,54 +367,6 @@
 • Changed: **Policy sections page**: Grouped accordion view of ActionableInstructions available for any policy with instructions (not just template-generated), reusing shared grouping logic with the review page
 • Changed: **Wizard improvements**: Topic-driven dynamic question limits, option strength indicators, progress bar fixes, navigation/URL tracking fixes
 • Changed: **Sidebar fix**: Wrapped localStorage in try/catch to prevent CSP/private browsing errors</description>
-    </item>
-    <item>
-      <title>FITS v8.7.15</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.15</link>
-      <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.15</guid>
-      <description>• Changed: **New Features**
-• Changed: Enhanced activity tracking with real-time data sources for unified dashboard.
-• Changed: Added recent entity queries for improved visibility into system usage.
-• Changed: **Bug Fixes**
-• Changed: Fixed race condition in dashboard data loading.
-• Changed: Prevented duplicate data calculation in unified dashboard metrics.
-• Changed: Improved system health status reporting accuracy.
-• Changed: **Security**
-• Changed: Implemented per-user access control for organization dashboards with 403 error handling.
-• Changed: Scoped cache keys by user to prevent unauthorized data access.
-• Changed: **Removals**
-• Changed: Removed experimental trend data generator (returns empty for now).
-• Changed: Removed debug logging from production dashboard.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] Verify dashboard loads for a normal org user (no 500 errors)
-• Changed: [ ] Verify accessing another org's dashboard returns 403
-• Changed: [ ] Verify super admin dashboard health check shows correct status
-• Changed: [ ] Verify recent activity shows real data (not placeholders)
-• Changed: [ ] Run unit tests: `pytest app/api/v1/dashboard/tests/ app/services/queries/tests/test_user_queries.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Removed: `dashboard-debug.
-• Removed: Dead webpack `&lt;script&gt;` comment from `dashboard.
-• Fixed: `unified/main.
-• Fixed: `activity_trackers.
-• Fixed: `data_generators.
-• Fixed: `formatters.
-• Fixed: `super_admin/dashboard.
-• Fixed: `super_admin/dashboard.
-• Fixed: `set_main_project.
-• Fixed: `api/v1/dashboard/main.
-• Fixed: `dashboard-data-service.
-• Fixed: `user_queries.
-• Security: `chart_queries.
-• Security: `api/v1/dashboard/main.
-• Security: `api/v1/dashboard/set_main_project.
-• Security: Cache key changed from `hash()` (non-deterministic across Gunicorn workers) to `','.
-• Security: **P0 Security**: Fixed cross-tenant data leaks in chart queries and missing org membership checks on dashboard API endpoints
-• Security: **P1 Data**: Fixed KPI doubling bug, replaced synthetic/hardcoded data with real Cypher queries
-• Security: **P2 Logic**: Fixed missing `User` import (silent NameError on every health check), phantom validator call, health status precedence bug, and template key mismatch
-• Security: **P2 Perf**: Replaced unbounded `.
-• Security: **P3 Cleanup**: Removed dead debug file, dead webpack comment, fixed frontend memory leak and no-op refresh stub
-• Security: **Tests**: Added 100 unit tests (0 pre-existing) covering all fixes</description>
     </item>
   </channel>
 </rss>
