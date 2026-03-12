@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 20:47:14 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 21:20:06 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,25 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.9</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.9</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.9</guid>
+      <description>• Changed: **New Features**
+• Changed: Added user notifications to confirm successful questionnaire saves and alert users to save failures
+• Changed: **Bug Fixes**
+• Changed: Improved error handling with more informative messages when save operations encounter issues
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Navigate to a questionnaire detail page with generated answers
+• Changed: [ ] Edit an answer field and click Save — verify success toast appears and changes persist after reload
+• Changed: [ ] Verify the Save button works for answers whose UIDs start with letters (a-f)
+• Changed: [ ] Verify error toast appears when save fails (e.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Added missing `X-CSRFToken` header to `AnswerSaver.
+• Changed: Fixed answer URL lookup in `CardHandler.
+• Changed: Added user-facing success/error toast notifications via `NotificationSystem` so save results are visible</description>
     </item>
     <item>
       <title>FITS v8.8.8</title>
@@ -337,36 +356,6 @@
 • Changed: Add `resource_id`/`resource_type` to TypeScript `Meta` interface, eliminating 7 unsafe `as any` casts
 • Changed: Fix error propagation in `initializeWebSocketConnection` so callers can execute cleanup
 • Changed: Add comprehensive test coverage: unit tests for envelope, helpers, publisher config, operation handlers</description>
-    </item>
-    <item>
-      <title>FITS v8.7.16</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.16</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.16</guid>
-      <description>• Changed: **New Features**
-• Changed: Added Submission Analysis page: new interim review stage displaying submitted content, uploaded files, AI findings, compliance gaps, topic plan, and optional deeper evaluation before entering the questionnaire wizard.
-• Changed: Implemented Deeper Evaluation option providing document quality scores, coverage assessment, and improvement recommendations.
-• Changed: Added AI assistant model selection and management capability in policy settings.
-• Changed: Introduced dynamic question limits based on detected topic count for more intelligent question planning.
-• Changed: Added policy sections accordion view organizing instructions by control and requirement.
-• Changed: **Improvements**
-• Changed: Enhanced AI assistant model fallback logic with intelligent version sorting and error recovery.
-• Changed: Improved wizard navigation supporting question history traversal.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [x] Unit tests for dynamic model sorting and fallback (`test_assistant_ops.
-• Changed: [x] Unit tests for assistant model view (`test_assistant_model_view.
-• Changed: [x] Unit tests for policy sections view (`test_sections_view.
-• Changed: [x] Unit tests for analysis view, deeper evaluation, submission metadata
-• Changed: [x] Unit tests for wizard navigation, question generation, compute max questions
-• Changed: [x] Unit tests for instruction grouping accordion
-• Changed: [x] All 1121 tests passing in CI pre-commit hook
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: **Analysis interim stage**: New step between form submission and questionnaire that shows compliance context analysis, gap inventory, document evaluation, and estimated question count before proceeding
-• Changed: **Dynamic AI model selection**: Assistant creation now discovers all available models from the OpenAI account, sorts by version descending (best-first), and tries each until one is accepted — no more hardcoded fallback lists
-• Changed: **Post-creation model change**: Users can change the assistant's model after finalization via a dropdown on the policy detail page
-• Changed: **Policy sections page**: Grouped accordion view of ActionableInstructions available for any policy with instructions (not just template-generated), reusing shared grouping logic with the review page
-• Changed: **Wizard improvements**: Topic-driven dynamic question limits, option strength indicators, progress bar fixes, navigation/URL tracking fixes
-• Changed: **Sidebar fix**: Wrapped localStorage in try/catch to prevent CSP/private browsing errors</description>
     </item>
   </channel>
 </rss>

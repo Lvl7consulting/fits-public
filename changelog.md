@@ -9,6 +9,23 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.9] - 2026-03-12
+
+### Changed
+- **New Features**
+- Added user notifications to confirm successful questionnaire saves and alert users to save failures
+- **Bug Fixes**
+- Improved error handling with more informative messages when save operations encounter issues
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Navigate to a questionnaire detail page with generated answers
+- [ ] Edit an answer field and click Save — verify success toast appears and changes persist after reload
+- [ ] Verify the Save button works for answers whose UIDs start with letters (a-f)
+- [ ] Verify error toast appears when save fails (e.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Added missing `X-CSRFToken` header to `AnswerSaver.
+- Fixed answer URL lookup in `CardHandler.
+- Added user-facing success/error toast notifications via `NotificationSystem` so save results are visible
+
 ## [v8.8.8] - 2026-03-12
 
 ### Changed
