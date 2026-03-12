@@ -9,6 +9,20 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.6] - 2026-03-12
+
+### Changed
+- **Style**
+- Improved layout and positioning of questionnaire display in review and editor modes to better preserve surrounding layout structure.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Open a questionnaire that has no generated answers (review mode) — verify "Generate All Answers" button now works
+- [ ] Open a questionnaire that already has answers (editor mode) — verify everything still works as before
+- [ ] Verify review mode UI (question list, section toggles) still renders correctly inside the editor container
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
+- Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
+- Move the div outside the conditional so it always renders with the required data attributes.
+
 ## [v8.8.5] - 2026-03-12
 
 ### Changed

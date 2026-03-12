@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 19:11:45 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 19:30:27 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,22 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.6</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.6</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.6</guid>
+      <description>• Changed: **Style**
+• Changed: Improved layout and positioning of questionnaire display in review and editor modes to better preserve surrounding layout structure.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Open a questionnaire that has no generated answers (review mode) — verify &quot;Generate All Answers&quot; button now works
+• Changed: [ ] Open a questionnaire that already has answers (editor mode) — verify everything still works as before
+• Changed: [ ] Verify review mode UI (question list, section toggles) still renders correctly inside the editor container
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
+• Changed: Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the &quot;Generate All Answers&quot; button had no click handler — this is the root cause of the button doing nothing on production.
+• Changed: Move the div outside the conditional so it always renders with the required data attributes.</description>
     </item>
     <item>
       <title>FITS v8.8.5</title>
@@ -372,23 +388,6 @@
       <guid>fits-v8.7.14</guid>
       <description>• Security: **CVE-2026-25528**: Fixed in langsmith &gt;= 0.
 • Changed: Upgrades `langsmith` from `0.</description>
-    </item>
-    <item>
-      <title>FITS v8.7.13</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.13</link>
-      <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.13</guid>
-      <description>• Changed: **Audit Template rename**: 8 HTML templates + 13 Python views updated
-• Changed: **Icons aligned with sidebar**: `icon-questionnaire`, `icon-framework`, `icon-assessment-template`, `icon-project`, `icon-application`, `icon-search`
-• Changed: **New**: `icon-lightbulb.
-• Changed: **New**: `icon-clipboard-check.
-• Changed: **Removed**: `icon-sparkles.
-• Changed: `chat_search.
-• Changed: Policy Factory views updated to use `lightbulb` icon matching sidebar
-• Changed: Rename &quot;Assessment Template&quot; → &quot;Audit Template&quot; across all UI display strings (templates, view titles, breadcrumbs, report headers) — logic/code names unchanged
-• Changed: Align all page header icons with canonical left sidebar icons
-• Changed: Fix broken AI Chat Search header (blank gradient circle)
-• Changed: Fix missing `icon-clipboard-check.</description>
     </item>
   </channel>
 </rss>
