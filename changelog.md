@@ -9,6 +9,21 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.5] - 2026-03-12
+
+### Changed
+- **Bug Fixes**
+- Automatically reloads the questionnaire editor after background tasks complete, ensuring users see up-to-date content without manual refresh.
+- Refined progress indicator behavior so it appears only while processing, reducing spurious or misleading progress displays.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Upload a questionnaire file, navigate to its detail page while still processing
+- [ ] Verify the progress bar shows "Processing questionnaire.
+- [ ] Wait for parsing to complete -- verify the page reloads automatically after ~1.
+- [ ] Verify "Generate All Answers" bulk generation still reloads correctly after completion
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- When a questionnaire is in "processing" state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
+- Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.
+
 ## [v8.8.4] - 2026-03-12
 
 ### Changed

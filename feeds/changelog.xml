@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 18:34:45 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 19:11:45 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,23 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.5</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.5</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.5</guid>
+      <description>• Changed: **Bug Fixes**
+• Changed: Automatically reloads the questionnaire editor after background tasks complete, ensuring users see up-to-date content without manual refresh.
+• Changed: Refined progress indicator behavior so it appears only while processing, reducing spurious or misleading progress displays.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Upload a questionnaire file, navigate to its detail page while still processing
+• Changed: [ ] Verify the progress bar shows &quot;Processing questionnaire.
+• Changed: [ ] Wait for parsing to complete -- verify the page reloads automatically after ~1.
+• Changed: [ ] Verify &quot;Generate All Answers&quot; bulk generation still reloads correctly after completion
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: When a questionnaire is in &quot;processing&quot; state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
+• Changed: Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.</description>
     </item>
     <item>
       <title>FITS v8.8.4</title>
@@ -372,36 +389,6 @@
 • Changed: Align all page header icons with canonical left sidebar icons
 • Changed: Fix broken AI Chat Search header (blank gradient circle)
 • Changed: Fix missing `icon-clipboard-check.</description>
-    </item>
-    <item>
-      <title>FITS v8.7.12</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.12</link>
-      <pubDate>Thu, 05 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.12</guid>
-      <description>• Changed: **New Features**
-• Changed: Policy Factory: upload documents to auto-analyze, generate compliance-aware plans, assemble factory templates, export full policy DOCX, view gap coverage maps, and generate remediation action plans.
-• Changed: AI-driven TopicPlan &amp; Planner to scope generation and create reusable templates.
-• Changed: **UI/UX Enhancements**
-• Changed: Multi-file drag‑and‑drop upload with processing overlay; wizard shows AI-suggested answers with “Use this” action and per-question context; resume-wizard badge.
-• Changed: **Industry**
-• Changed: Added Telecommunications (plus Legal, Transportation) and related policy types.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] Upload a document on Policy Factory create page — verify overlay appears with countdown and steps
-• Changed: [ ] Submit form — verify no double overlay and `beforeunload` fires only during processing
-• Changed: [ ] Step through wizard — verify structured questions (select/multiselect), pre-selected options, relevant_context card, and suggestion &quot;Use this&quot; button
-• Changed: [ ] Confirm page — verify human-readable labels (not snake_case) for structured answers
-• Changed: [ ] Open a review section — verify URL updates to `#review-{uid}`
-• Changed: [ ] Reload the review page with hash in URL — verify modal auto-opens to correct section
-• Changed: [ ] Share hash URL with a colleague and confirm it opens the right section
-• Changed: [ ] Leave a policy wizard unfinished — verify &quot;Incomplete&quot; badge and &quot;Continue Wizard&quot; link in policy list
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: **Policy Factory**: Full AI-driven pipeline — document upload, compliance context extraction, topic-based wizard, and policy generation
-• Changed: **AI Framework Matching**: Semantic matching with deduplication, handles aliases, translations, and abbreviations
-• Changed: **Topic-Based Wizard**: `TopicPlan` drives question generation, structured question types (boolean/select/multiselect), document-aware pre-selection, dynamic `relevant_context` per question, and answer label resolution
-• Changed: **UI/UX**: Processing overlay with countdown + `beforeunload` guard, canonical card frame, selected option highlighting, minimalist review modal (ghost buttons, wider/taller), multi-file drag-and-drop
-• Changed: **Review Deep-Linking**: URL hash (`#review-{uid}`) updated on open/navigate, restored on reload/share — enables sharing exact review section with colleagues
-• Changed: **Recovery**: Incomplete wizard policies show &quot;Continue Wizard&quot; link in policy list
-• Changed: **TDD**: 100+ new tests across extractor, wizard, topic plan, question types, coverage map, and action plan</description>
     </item>
   </channel>
 </rss>
