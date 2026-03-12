@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2026 17:10:20 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 17:48:38 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -16,6 +16,21 @@
 • Fixed: **Server detail**: Lazy-resolved caching (`_ensure_resolved`) to avoid repeated DB hits; null-safe breadcrumbs and back-URL when environment/application missing
 • Fixed: **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 • Fixed: **Server list**: Guard against missing IPv4 in list metadata</description>
+    </item>
+    <item>
+      <title>FITS v8.8.3</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.3</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.3</guid>
+      <description>• Changed: [x] `migrate_data --list` shows `migrate_system_frameworks` at order 100
+• Changed: [x] `migrate_system_frameworks --dry-run` completes 6/6
+• Changed: [x] `migrate_system_frameworks` (live) refreshes all 6 existing frameworks without errors
+• Changed: [x] Docker production build succeeds
+• Changed: **New file**: `app/management/commands/migrate_system_frameworks.
+• Changed: **Modified**: All 6 `generate_*_framework.
+• Changed: New `migrate_system_frameworks` data migration that orchestrates all 6 `generate_*_framework` commands, auto-discovered by `migrate_data` on every deploy
+• Changed: Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
+• Changed: Fixes BCDR framework missing `is_system=True` on initial creation</description>
     </item>
     <item>
       <title>FITS v8.8.2</title>
@@ -387,13 +402,6 @@
 • Changed: `hz-import.
 • Changed: `hetzner-api.
 • Changed: Refactor the Hetzner deployment toolchain to mirror the DigitalOcean pattern: `hz-deploy.</description>
-    </item>
-    <item>
-      <title>FITS v8.7.10</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.10</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.10</guid>
-      <description>• Changed: Unit test generation was requested by @bbalvl7.</description>
     </item>
   </channel>
 </rss>

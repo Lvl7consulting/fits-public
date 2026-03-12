@@ -9,6 +9,19 @@
 - **View improvements**: Standardized `json_error` signatures, proper exception imports, `get_object_or_404` usage, caching guards across employee/server views
 - **Server list**: Guard against missing IPv4 in list metadata
 
+## [v8.8.3] - 2026-03-12
+
+### Changed
+- [x] `migrate_data --list` shows `migrate_system_frameworks` at order 100
+- [x] `migrate_system_frameworks --dry-run` completes 6/6
+- [x] `migrate_system_frameworks` (live) refreshes all 6 existing frameworks without errors
+- [x] Docker production build succeeds
+- **New file**: `app/management/commands/migrate_system_frameworks.
+- **Modified**: All 6 `generate_*_framework.
+- New `migrate_system_frameworks` data migration that orchestrates all 6 `generate_*_framework` commands, auto-discovered by `migrate_data` on every deploy
+- Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
+- Fixes BCDR framework missing `is_system=True` on initial creation
+
 ## [v8.8.2] - 2026-03-12
 
 ### Deferred (2 alerts — require separate LCEL migration)
