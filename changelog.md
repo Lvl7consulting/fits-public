@@ -122,6 +122,41 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.14] - 2026-03-13
+
+### Fixed
+- Stale `chat_manager.
+- Neo4j UID passed as vector_store_id instead of OpenAI `vs_*` ID (3 consumers)
+- `additionalProperties: false` missing from structured JSON schemas
+- Chat completion green toast notification shown unnecessarily
+- [x] 1,543+ unit tests pass (pre-commit hook runs full suite)
+- [x] All new TDD tests cover Responses API flows: streaming, structured output, file_search, vector store ops
+- [x] Vector store ID resolution tests verify OpenAI `vs_*` IDs used (not Neo4j UIDs)
+- [x] Sync Knowledge Base view tests: success, non-finalized rejection, service error handling
+- [ ] Manual: send chat message, verify streaming response with no green toast
+- [ ] Manual: sync knowledge base on finalized policy, verify vector store updated
+- [ ] Manual: verify policy analysis/gap closing still works end-to-end
+
+### Removed
+- `AIAssistantManager`, `AIChatManager`, `ai_factory`, `ai_assistant_ops`, `ai_chat_ops/`, `ai_thread_ops`, `ai_context_managers`
+- `question_generation_models.
+- Legacy `vector_store/files.
+- All legacy Assistants API test files
+- Deprecated model fields and their read sites
+
+### Changed
+- All AI consumers/tasks now use `OpenAIResponsesManager` instead of `AIAssistantManager`/`AIChatManager`
+- Chat model uses `last_response_id` instead of `thread_id` for conversation continuity
+- Policy finalization checks `VectorStore` relationship instead of `openai_assistant_id`
+- `cleanup_ai_resources` management command updated for Responses API
+- Vector store ID resolution uses `vectorStore.
+
+### Added
+- `OpenAIResponsesManager` — thin wrapper around `client.
+- `PolicySyncKnowledgeBaseView` + URL route + TypeScript handler with confirmation modal
+- ~2,800 lines of new TDD tests across 20+ test files covering all migrated flows
+- Stream event type debug logging in `stream_response`
+
 ## [v8.8.13] - 2026-03-13
 
 ### Changed
