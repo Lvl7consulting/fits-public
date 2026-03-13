@@ -122,6 +122,21 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.16] - 2026-03-13
+
+### Fixed
+- Neo4j `CartesianProduct` INFORMATION notification: `MATCH (them), (us) WHERE elementId(them)=$them and elementId(us)=$self MERGE(us)-[r:\`ADDRESSES\`]->(them)` — now silenced across all call sites
+
+### Changed
+- [x] 9 new unit tests in `app/services/queries/tests/test_instruction_connect_relationships.
+- [x] Existing connection tests updated to assert delegation to `InstructionQueries.
+- [x] All 13 tests pass (`pytest` inside container)
+- **`app/services/queries/instruction_queries.
+- **`app/tasks/v1/policy_template_generation/ai_generation/content_saver.
+- **`app/tasks/v1/policy_processing/instruction_handling.
+- Replaces neomodel's `.
+- Introduces `InstructionQueries.
+
 ## [v8.8.15] - 2026-03-13
 
 ### Changed

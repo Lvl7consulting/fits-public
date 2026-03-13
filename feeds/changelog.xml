@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 16:40:53 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 17:20:30 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -145,6 +145,21 @@
       <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
 • Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
 • Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.16</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.16</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.16</guid>
+      <description>• Fixed: Neo4j `CartesianProduct` INFORMATION notification: `MATCH (them), (us) WHERE elementId(them)=$them and elementId(us)=$self MERGE(us)-[r:\`ADDRESSES\`]-&gt;(them)` — now silenced across all call sites
+• Changed: [x] 9 new unit tests in `app/services/queries/tests/test_instruction_connect_relationships.
+• Changed: [x] Existing connection tests updated to assert delegation to `InstructionQueries.
+• Changed: [x] All 13 tests pass (`pytest` inside container)
+• Changed: **`app/services/queries/instruction_queries.
+• Changed: **`app/tasks/v1/policy_template_generation/ai_generation/content_saver.
+• Changed: **`app/tasks/v1/policy_processing/instruction_handling.
+• Changed: Replaces neomodel's `.
+• Changed: Introduces `InstructionQueries.</description>
     </item>
     <item>
       <title>FITS v8.8.15</title>
@@ -350,13 +365,6 @@
 • Changed: …rors
 • Changed: Sort SSH keys alphabetically for stable --key-index mapping, add --list-keys flag.
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
-    </item>
-    <item>
-      <title>FITS v8.7.7</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.7</link>
-      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.7</guid>
-      <description>• Changed: …ixes</description>
     </item>
   </channel>
 </rss>
