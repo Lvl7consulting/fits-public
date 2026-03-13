@@ -122,6 +122,28 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.10] - 2026-03-13
+
+### Changed
+- **New Features**
+- Visual "Processing.
+- Buttons now show distinct busy (spinning/disabled) and ready states so progress and availability are clearer
+- **Bug Fixes / Behavior**
+- Stop action now performs a gentler cancellation flow and cleans up the UI on confirmation
+- Improved handling of empty or malformed assistant responses with clearer error signaling
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Navigate to a policy detail page and click "Analyze Framework Compliance"
+- [ ] Verify the progress bar appears smoothly without a page reload
+- [ ] Verify the "Analyze" button switches to "Analyzing.
+- [ ] Verify the stop button appears in the status card
+- [ ] Verify the page reloads only once when analysis completes (final_completion)
+- [ ] Verify clicking "Stop Analysis" still works correctly
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Removed the `schedulePageReload(1500)` that fired when the "Policy processing initiated!" WebSocket message arrived, causing a jarring progress bar flash
+- Both button states (active and analyzing/busy) are now pre-rendered in the template with `hidden` class toggling, and a new `switchToAnalyzingUI()` function toggles them dynamically when analysis starts
+- The stop button, analyzing badges, and disabled buttons are all shown instantly via JS instead of waiting for a page reload
+- The proper `final_completion` reload (when all tasks finish) remains unchanged
+
 ## [v8.8.1] - 2026-03-12
 
 ### Fixed
