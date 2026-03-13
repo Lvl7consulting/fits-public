@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 17:52:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 18:45:23 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -145,6 +145,16 @@
       <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
 • Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
 • Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.18</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.18</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.18</guid>
+      <description>• Changed: [x] Tested on both dev and demo environments during live policy processing
+• Changed: Adds `scripts/development/diagnose_channel_layer.
+• Changed: Works with read-only containers via stdin piping
+• Changed: Useful for debugging WebSocket consumers (policy processing, document evaluation, publishing, etc.</description>
     </item>
     <item>
       <title>FITS v8.8.17</title>
@@ -344,24 +354,6 @@
 • Files changed: `app/static/src/pages/sidebar-collapse.
 • Files changed: `app/static/src/pages/sidebar-entry.
 • Files changed: `e2e-playwright/tests/multi-organization-assignment/multi-org-assignment.</description>
-    </item>
-    <item>
-      <title>FITS v8.7.9</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.9</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.9</guid>
-      <description>• Fixed: **CSS missing on deployed server**: Tailwind purged all utility classes (responsive `sm:`, `lg:`, hover `hover:`, dark mode `dark:`, and many base utilities) because templates weren't in the container at build time
-• Fixed: Root cause: Dockerfile ran Vite build before `COPY .
-• Changed: Optimized Tailwind CSS configuration by consolidating content paths and removing redundant references, reducing build complexity
-• Changed: Enhanced Docker build process to properly include template and template tag directories, ensuring complete asset compilation
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [x] Verified locally: CSS builds correctly with all Tailwind utilities retained
-• Changed: [ ] CI build produces image with working CSS (check after merge)
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: `production/Dockerfile`: add `COPY app/templates/` and `COPY app/templatetags/` before the Vite build step
-• Changed: `app/static/tailwind.
-• Changed: Copy `app/templates/` and `app/templatetags/` into the Docker image **before** `npm run vite:build` so Tailwind can scan HTML templates during CSS purge
-• Changed: Remove stale `tailwind.</description>
     </item>
   </channel>
 </rss>

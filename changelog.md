@@ -122,6 +122,14 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.18] - 2026-03-13
+
+### Changed
+- [x] Tested on both dev and demo environments during live policy processing
+- Adds `scripts/development/diagnose_channel_layer.
+- Works with read-only containers via stdin piping
+- Useful for debugging WebSocket consumers (policy processing, document evaluation, publishing, etc.
+
 ## [v8.8.17] - 2026-03-13
 
 ### Fixed
