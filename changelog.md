@@ -122,6 +122,31 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.13] - 2026-03-13
+
+### Changed
+- **Bug Fixes**
+- Settlement now counts both completed and failed tasks; final completion is sent only after all tasks are settled and failure events are handled.
+- **New Features**
+- Failure events are intercepted and routed to the settlement handler so failed tasks update progress, counts, and finalization.
+- **Documentation**
+- Multi-task coordination docs updated to explain settled vs completed and the need to handle both success and failure events.
+- **Tests**
+- Expanded tests covering completion, failure, mixed settlements, delivery semantics, and final_completion emission.
+- **Chores**
+- Reduced logging verbosity across several background processing paths.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] 43 tests pass across all 4 test files (tracking, completion, forwarder, orchestrator)
+- [x] `test_realistic_59_tasks_with_15_failures` reproduces the exact 44/59 scenario
+- [x] Mixed complete/fail, all-fail, partial settlement, edge cases all covered
+- [x] New `test_message_forwarder.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- `MessageForwarder` now intercepts `TASK_FAILED` for tracked tasks (same as `TASK_COMPLETED`), routing them to `TaskCompletionHandler.
+- `TaskTrackingHelper` tracks `failed_tasks` alongside `completed_tasks`; settlement = completed + failed >= total
+- `TaskCompletionHandler.
+- Updated `multi-task-coordination/SKILL.
+- **Root cause:** When tasks failed, `MessageForwarder` forwarded `TASK_FAILED` to the client unhandled.
+
 ## [v8.8.12] - 2026-03-13
 
 ### Changed

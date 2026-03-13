@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 09:43:50 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 11:40:59 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -145,6 +145,33 @@
       <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
 • Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
 • Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.13</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.13</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.13</guid>
+      <description>• Changed: **Bug Fixes**
+• Changed: Settlement now counts both completed and failed tasks; final completion is sent only after all tasks are settled and failure events are handled.
+• Changed: **New Features**
+• Changed: Failure events are intercepted and routed to the settlement handler so failed tasks update progress, counts, and finalization.
+• Changed: **Documentation**
+• Changed: Multi-task coordination docs updated to explain settled vs completed and the need to handle both success and failure events.
+• Changed: **Tests**
+• Changed: Expanded tests covering completion, failure, mixed settlements, delivery semantics, and final_completion emission.
+• Changed: **Chores**
+• Changed: Reduced logging verbosity across several background processing paths.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] 43 tests pass across all 4 test files (tracking, completion, forwarder, orchestrator)
+• Changed: [x] `test_realistic_59_tasks_with_15_failures` reproduces the exact 44/59 scenario
+• Changed: [x] Mixed complete/fail, all-fail, partial settlement, edge cases all covered
+• Changed: [x] New `test_message_forwarder.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: `MessageForwarder` now intercepts `TASK_FAILED` for tracked tasks (same as `TASK_COMPLETED`), routing them to `TaskCompletionHandler.
+• Changed: `TaskTrackingHelper` tracks `failed_tasks` alongside `completed_tasks`; settlement = completed + failed &gt;= total
+• Changed: `TaskCompletionHandler.
+• Changed: Updated `multi-task-coordination/SKILL.
+• Changed: **Root cause:** When tasks failed, `MessageForwarder` forwarded `TASK_FAILED` to the client unhandled.</description>
     </item>
     <item>
       <title>FITS v8.8.12</title>
@@ -334,22 +361,6 @@
 • Changed: Hide Add/Edit/Delete buttons on control and requirement detail pages for system frameworks
 • Changed: Make `include_delete_action` a property and `get_primary_action()` return `None` for system frameworks in both `FrameworkControlDetailView` and `FrameworkRequirementDetailView`
 • Changed: Wrap template action links in `{% if not framework.</description>
-    </item>
-    <item>
-      <title>FITS v8.7.4</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.4</link>
-      <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.4</guid>
-      <description>• Changed: Framework import commands (ISO 27001, CIS, NIS2, DORA, EU AI Act) now set `is_system=True`
-• Changed: Edit/delete buttons hidden in UI for system frameworks
-• Changed: CRUD operations on system frameworks return 403 Forbidden
-• Changed: 13 unit tests for model-level protection
-• Changed: View-level protection tests for frameworks, controls, and requirements
-• Added: System framework protection to prevent modification of imported ISMS frameworks
-• Added: `is_system` property on Framework model to mark system frameworks as immutable
-• Added: `is_system_framework()` helper method on FrameworkMember base class
-• Added: &quot;System Framework&quot; badge displayed on framework detail pages
-• Added: Comprehensive unit tests for model and view-level protection</description>
     </item>
   </channel>
 </rss>
