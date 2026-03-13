@@ -122,6 +122,11 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.15] - 2026-03-13
+
+### Changed
+- The toast suppression was in reliable-policy-chat.
+
 ## [v8.8.14] - 2026-03-13
 
 ### Fixed

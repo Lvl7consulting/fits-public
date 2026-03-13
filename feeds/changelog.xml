@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 15:53:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 16:40:53 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -145,6 +145,13 @@
       <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
 • Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
 • Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.15</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.15</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.15</guid>
+      <description>• Changed: The toast suppression was in reliable-policy-chat.</description>
     </item>
     <item>
       <title>FITS v8.8.14</title>
@@ -350,26 +357,6 @@
       <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.7.7</guid>
       <description>• Changed: …ixes</description>
-    </item>
-    <item>
-      <title>FITS v8.7.6</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.6</link>
-      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.6</guid>
-      <description>• Changed: **Improvements**
-• Changed: Enhanced organization context resolution with improved fallback mechanisms for non-organization users
-• Changed: Strengthened user role detection with additional verification layers
-• Changed: Improved error handling and logging for more reliable system diagnostics
-• Changed: **Updates**
-• Changed: Refined developer tooling rules for better code guidance
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Security: …r mixin rules
-• Security: Added descriptions to clarify the purpose of the rules for container security hardening and relationship manager mixin.
-• Security: Changed `alwaysApply` to false for both rules to allow for more flexible application.
-• Security: Enhanced comments in the OrganizationMiddleware to improve clarity on user roles and organization context handling.
-• Security: Introduced a new method `_is_non_org_user` to streamline the identification of users who do not require organization context.
-• Security: Updated navigation context retrieval to include a fallback for users not yet enhanced by the auth middleware.
-• Security: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
   </channel>
 </rss>
