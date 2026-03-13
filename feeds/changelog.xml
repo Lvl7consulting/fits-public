@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 09:41:28 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 09:43:50 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -145,6 +145,13 @@
       <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
 • Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
 • Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.12</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.12</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.12</guid>
+      <description>• Changed: Docstrings generation was requested by @bbalvl7.</description>
     </item>
     <item>
       <title>FITS v8.8.11</title>
@@ -343,38 +350,6 @@
 • Added: `is_system_framework()` helper method on FrameworkMember base class
 • Added: &quot;System Framework&quot; badge displayed on framework detail pages
 • Added: Comprehensive unit tests for model and view-level protection</description>
-    </item>
-    <item>
-      <title>FITS v8.7.3</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.3</link>
-      <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.3</guid>
-      <description>• Added: **`.
-• Added: Determines version bump type from PR labels (`release:patch` / `release:minor` / `release:major`; defaults to patch)
-• Added: Calculates next semver from latest git tag
-• Added: Updates `version.
-• Added: Generates changelog entry from PR description via `changelog_manager.
-• Added: Commits version bump, creates git tag, creates GitHub Release
-• Added: Builds production Docker image and pushes to GHCR (`ghcr.
-• Added: Dispatches `publish-changelog.
-• Added: **GitHub labels**: `release:patch`, `release:minor`, `release:major` created on the repo
-• Changed: **New Features**
-• Changed: Upload questionnaires as plain-text (.
-• Changed: Automated release &amp; changelog publishing with optional manual trigger.
-• Changed: Richer dashboard compliance analysis: risk indicators, recommendations, trends.
-• Changed: **Improvements**
-• Changed: Drag-and-drop file uploads with improved previews and validation.
-• Changed: System frameworks are now protected from modification/deletion.
-• Changed: Numerous UI, navigation and dashboard rendering refinements for robustness and usability.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: **`.
-• Changed: **`scripts/devops/github/release.
-• Changed: **`.
-• Changed: Made with [Cursor](https://cursor.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: Automate the entire release process via GitHub Actions when a PR is merged to `main`
-• Changed: Replace manual `release.
-• Changed: Build and push Docker images to GHCR as part of the release</description>
     </item>
   </channel>
 </rss>

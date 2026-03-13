@@ -122,6 +122,11 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.12] - 2026-03-13
+
+### Changed
+- Docstrings generation was requested by @bbalvl7.
+
 ## [v8.8.11] - 2026-03-13
 
 ### Added
