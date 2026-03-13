@@ -122,6 +122,42 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.11] - 2026-03-13
+
+### Added
+- Regression tests for `user.
+- Tests for brace-balanced JSON extraction (nested objects, trailing braces)
+- Tests exercising `_retry_with_backoff` coroutine with mocked `asyncio.
+
+### Fixed
+- **Milestone email crash** — `consumer.
+- **Defensive null check** — skip milestone email when `consumer.
+- **AI response extraction** — iterate all `TextContentBlock` items in messages, not just `msg.
+- **JSON over-capture** — replace greedy `\{.
+- **Pydantic v1 deprecation** — replace `schema.
+- **Inconsistent string conversion** — normalize `{e}` / `{str(e)}` to `{e!s}` in AI processing error path
+- **Dead code** — remove unused variable extractions in `process_completion_data`
+- **Test reliability** — convert async retry tests from `unittest.
+- **Test strictness** — add `strict=True` to `zip()` calls in test assertions
+
+### Changed
+- **New Features**
+- Enhanced progress tracking for policy processing workflows.
+- **Bug Fixes & Improvements**
+- Improved policy processing completion flow to ensure final status is always delivered, even when auxiliary operations fail.
+- Better handling of API rate limits—now retried automatically instead of failing immediately.
+- Cleaner AI-generated content with citation annotations removed.
+- Strengthened JSON parsing and response extraction with fallback mechanisms.
+- **Performance**
+- Increased concurrent task processing capacity for faster policy handling.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] All new and existing tests pass (`pytest` in Docker container)
+- [ ] Verify milestone emails send correctly after policy generation on staging
+- [ ] Verify milestone emails send correctly after policy processing on staging
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Fix `AttributeError: 'PolicyTemplateGenerationConsumerV1' object has no attribute 'user_uid'` crash on production when sending milestone emails after policy generation/processing completion
+- Harden AI structured output pipeline: fix JSON parsing, response extraction, and retry logic
+
 ## [v8.8.10] - 2026-03-13
 
 ### Changed

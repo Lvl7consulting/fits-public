@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 05:06:17 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 09:41:28 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -145,6 +145,40 @@
       <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
 • Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
 • Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.11</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.11</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.11</guid>
+      <description>• Added: Regression tests for `user.
+• Added: Tests for brace-balanced JSON extraction (nested objects, trailing braces)
+• Added: Tests exercising `_retry_with_backoff` coroutine with mocked `asyncio.
+• Fixed: **Milestone email crash** — `consumer.
+• Fixed: **Defensive null check** — skip milestone email when `consumer.
+• Fixed: **AI response extraction** — iterate all `TextContentBlock` items in messages, not just `msg.
+• Fixed: **JSON over-capture** — replace greedy `\{.
+• Fixed: **Pydantic v1 deprecation** — replace `schema.
+• Fixed: **Inconsistent string conversion** — normalize `{e}` / `{str(e)}` to `{e!s}` in AI processing error path
+• Fixed: **Dead code** — remove unused variable extractions in `process_completion_data`
+• Fixed: **Test reliability** — convert async retry tests from `unittest.
+• Fixed: **Test strictness** — add `strict=True` to `zip()` calls in test assertions
+• Changed: **New Features**
+• Changed: Enhanced progress tracking for policy processing workflows.
+• Changed: **Bug Fixes &amp; Improvements**
+• Changed: Improved policy processing completion flow to ensure final status is always delivered, even when auxiliary operations fail.
+• Changed: Better handling of API rate limits—now retried automatically instead of failing immediately.
+• Changed: Cleaner AI-generated content with citation annotations removed.
+• Changed: Strengthened JSON parsing and response extraction with fallback mechanisms.
+• Changed: **Performance**
+• Changed: Increased concurrent task processing capacity for faster policy handling.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] All new and existing tests pass (`pytest` in Docker container)
+• Changed: [ ] Verify milestone emails send correctly after policy generation on staging
+• Changed: [ ] Verify milestone emails send correctly after policy processing on staging
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Fix `AttributeError: 'PolicyTemplateGenerationConsumerV1' object has no attribute 'user_uid'` crash on production when sending milestone emails after policy generation/processing completion
+• Changed: Harden AI structured output pipeline: fix JSON parsing, response extraction, and retry logic</description>
     </item>
     <item>
       <title>FITS v8.8.10</title>
@@ -341,13 +375,6 @@
 • Changed: Automate the entire release process via GitHub Actions when a PR is merged to `main`
 • Changed: Replace manual `release.
 • Changed: Build and push Docker images to GHCR as part of the release</description>
-    </item>
-    <item>
-      <title>FITS v8.7.2</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.2</link>
-      <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.2</guid>
-      <description>• Added: Added TXT file support for AI questionnaire uploads.</description>
     </item>
   </channel>
 </rss>
