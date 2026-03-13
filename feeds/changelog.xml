@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 17:20:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 17:52:47 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -145,6 +145,17 @@
       <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
 • Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
 • Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.17</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.17</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.17</guid>
+      <description>• Fixed: Progress bar flicker on demo: alternating per-task (30/100) and aggregate (2/21) progress values caused the bar to disappear and reappear erratically
+• Changed: [x] All 26 existing message forwarder + completion handler tests pass
+• Changed: [x] Manual verification: dev shows stable &quot;Completed X/Y tasks&quot; without flicker
+• Changed: Splits `_launch_tasks` into two passes: create+track all Task nodes first, then dispatch `.
+• Changed: Closes a race window where fast Celery workers send `TASK_PROGRESS` before all UIDs are registered in the tracker, causing those events to bypass `is_tracked()` and leak raw per-task progress (0-100%) to the frontend</description>
     </item>
     <item>
       <title>FITS v8.8.16</title>
@@ -351,20 +362,6 @@
 • Changed: `app/static/tailwind.
 • Changed: Copy `app/templates/` and `app/templatetags/` into the Docker image **before** `npm run vite:build` so Tailwind can scan HTML templates during CSS purge
 • Changed: Remove stale `tailwind.</description>
-    </item>
-    <item>
-      <title>FITS v8.7.8</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.7.8</link>
-      <pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.7.8</guid>
-      <description>• Changed: **New Features**
-• Changed: Added `--list-keys` flag to the deployment script to display available SSH public keys with deterministic indexing, enabling easier key selection for deployments.
-• Changed: **Chores**
-• Changed: Fixed file ownership permissions for Vite build output in container images and deployment initialization.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: …rors
-• Changed: Sort SSH keys alphabetically for stable --key-index mapping, add --list-keys flag.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
   </channel>
 </rss>

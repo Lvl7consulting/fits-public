@@ -122,6 +122,17 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.17] - 2026-03-13
+
+### Fixed
+- Progress bar flicker on demo: alternating per-task (30/100) and aggregate (2/21) progress values caused the bar to disappear and reappear erratically
+
+### Changed
+- [x] All 26 existing message forwarder + completion handler tests pass
+- [x] Manual verification: dev shows stable "Completed X/Y tasks" without flicker
+- Splits `_launch_tasks` into two passes: create+track all Task nodes first, then dispatch `.
+- Closes a race window where fast Celery workers send `TASK_PROGRESS` before all UIDs are registered in the tracker, causing those events to bypass `is_tracked()` and leak raw per-task progress (0-100%) to the frontend
+
 ## [v8.8.16] - 2026-03-13
 
 ### Fixed
