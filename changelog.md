@@ -122,6 +122,38 @@
 - [x] `npm audit` reports 0 vulnerabilities
 - [x] `pip install -r requirements.
 
+## [v8.8.19] - 2026-03-15
+
+### Changed
+- **New Features**
+- Comprehensive v1 to v2 migration framework with 44-step implementation plan and detailed coordination protocols.
+- Added v2 WebSocket consumer infrastructure with updated coordination patterns.
+- New policy processing completion coordination documentation.
+- New scope assessment questions retrieval consumer with full task orchestration.
+- **Breaking Changes**
+- WebSocket endpoints migrated from `/ws/v1/` to `/ws/v2/`.
+- API endpoints migrated from `/api/v1/` to `/api/v2/`.
+- Integration mode simplified: remote_assistant mode removed; all providers now use local_rag exclusively.
+- All consumer classes renamed to V2; V1 versions no longer available.
+- **Improvements**
+- Unified local RAG implementation across all AI providers.
+- Updated chat initialization to use rag_store_id instead of vector_store references.
+- Streamlined task and message handling with v2 async patterns.
+- Enhanced completion coordination and task tracking for WebSocket consumers.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- Frontend/API callers still using `/api/v1/` or `/ws/v1/` may need a coordinated follow-up (see plan review in docs).
+- Pre-commit (lint + unit tests) passed on commit.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- **Consumers:** `app/consumers/v1/` → `v2/` (dir + file renames, class renames, all imports)
+- **Celery tasks:** All `_celery_v1` → `_celery_v2` (confluence, policy, questionnaire, notifications)
+- **Task model:** `send_*_v1_async` → `send_*_v2_async`
+- **Routing:** WebSocket route names and `ws/v1/` → `ws/v2/` paths; API remains `/api/v1/` (no `api/v2/` in this PR)
+- **Settings:** `CELERY_TASK_ROUTES` and related keys updated to v2 task names
+- **Docs:** `0-docs/2026-03-14-v1-to-v2-migration/` — README, AGENT-PROTOCOL, 44 step files
+- **Cursor rule:** `websocket-v1-architecture.
+- **Cleanup:** Removed stale `app/tasks/0-docs/celery_task_improvements/` docs
+- Complete v1→v2 rename across consumers, Celery tasks, Task model, WebSocket/API routing, and settings.
+
 ## [v8.8.18] - 2026-03-13
 
 ### Changed
