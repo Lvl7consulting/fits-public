@@ -115,6 +115,26 @@
 - Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 - Fixes BCDR framework missing `is_system=True` on initial creation
 
+## [v8.8.23] - 2026-03-16
+
+### Changed
+- [ ] Space page deletion flow works end-to-end
+- [ ] Spinner renders correctly in buttons
+- [ ] Policy and login pages render correctly
+- 🤖 Generated with [Claude Code](https://claude.
+- Space page deletion UI improvements
+- Spinner component updates
+- Policy and login template fixes
+
+## [v8.8.22] - 2026-03-16
+
+### Changed
+- [ ] Verify README renders correctly
+- [ ] Existing tests pass
+- 🤖 Generated with [Claude Code](https://claude.
+- Update README documentation
+- Space page deletion consumer, task, and related docs
+
 ## [v8.8.21] - 2026-03-16
 
 ### Changed
