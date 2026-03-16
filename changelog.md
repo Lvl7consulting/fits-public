@@ -115,6 +115,30 @@
 - Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 - Fixes BCDR framework missing `is_system=True` on initial creation
 
+## [v8.8.25] - 2026-03-16
+
+### Changed
+- [ ] `.
+- 🤖 Generated with [Claude Code](https://claude.
+- Add `task.
+- Previously task status stayed IN_PROGRESS in the database on exception — now explicitly marked FAILED
+- Addresses PR #387 review: Space.
+
+## [v8.8.24] - 2026-03-16
+
+### Changed
+- [ ] `.
+- [ ] Open manage-content in two tabs: Tab 2 sees active task status on connect
+- [ ] Duplicate INITIATE_TASK returns validation error
+- 🤖 Generated with [Claude Code](https://claude.
+- Add `ActiveTaskChecker` helper for concurrent task prevention
+- Update `ConnectionHelper` to check active tasks on WebSocket connect
+- Update `DeletionHandler` to guard against duplicate INITIATE_TASK
+- Fix `CompletionHandler` to report errors to client on failure
+- Fix mutable default argument in `AssessmentTemplate.
+- Mask `NEO4J_PASSWORD` in `restart_celery.
+- Add 12 new tests, update docs and background-task-setup skill
+
 ## [v8.8.23] - 2026-03-16
 
 ### Changed

@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Mar 2026 12:38:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 12:39:52 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -136,6 +136,34 @@
 • Changed: New `migrate_system_frameworks` data migration that orchestrates all 6 `generate_*_framework` commands, auto-discovered by `migrate_data` on every deploy
 • Changed: Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 • Changed: Fixes BCDR framework missing `is_system=True` on initial creation</description>
+    </item>
+    <item>
+      <title>FITS v8.8.25</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.25</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.25</guid>
+      <description>• Changed: [ ] `.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: Add `task.
+• Changed: Previously task status stayed IN_PROGRESS in the database on exception — now explicitly marked FAILED
+• Changed: Addresses PR #387 review: Space.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.24</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.24</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.24</guid>
+      <description>• Changed: [ ] `.
+• Changed: [ ] Open manage-content in two tabs: Tab 2 sees active task status on connect
+• Changed: [ ] Duplicate INITIATE_TASK returns validation error
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: Add `ActiveTaskChecker` helper for concurrent task prevention
+• Changed: Update `ConnectionHelper` to check active tasks on WebSocket connect
+• Changed: Update `DeletionHandler` to guard against duplicate INITIATE_TASK
+• Changed: Fix `CompletionHandler` to report errors to client on failure
+• Changed: Fix mutable default argument in `AssessmentTemplate.
+• Changed: Mask `NEO4J_PASSWORD` in `restart_celery.
+• Changed: Add 12 new tests, update docs and background-task-setup skill</description>
     </item>
     <item>
       <title>FITS v8.8.23</title>
@@ -270,64 +298,6 @@
       <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.8.15</guid>
       <description>• Changed: The toast suppression was in reliable-policy-chat.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.14</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.14</link>
-      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.14</guid>
-      <description>• Fixed: Stale `chat_manager.
-• Fixed: Neo4j UID passed as vector_store_id instead of OpenAI `vs_*` ID (3 consumers)
-• Fixed: `additionalProperties: false` missing from structured JSON schemas
-• Fixed: Chat completion green toast notification shown unnecessarily
-• Fixed: [x] 1,543+ unit tests pass (pre-commit hook runs full suite)
-• Fixed: [x] All new TDD tests cover Responses API flows: streaming, structured output, file_search, vector store ops
-• Fixed: [x] Vector store ID resolution tests verify OpenAI `vs_*` IDs used (not Neo4j UIDs)
-• Fixed: [x] Sync Knowledge Base view tests: success, non-finalized rejection, service error handling
-• Fixed: [ ] Manual: send chat message, verify streaming response with no green toast
-• Fixed: [ ] Manual: sync knowledge base on finalized policy, verify vector store updated
-• Fixed: [ ] Manual: verify policy analysis/gap closing still works end-to-end
-• Removed: `AIAssistantManager`, `AIChatManager`, `ai_factory`, `ai_assistant_ops`, `ai_chat_ops/`, `ai_thread_ops`, `ai_context_managers`
-• Removed: `question_generation_models.
-• Removed: Legacy `vector_store/files.
-• Removed: All legacy Assistants API test files
-• Removed: Deprecated model fields and their read sites
-• Changed: All AI consumers/tasks now use `OpenAIResponsesManager` instead of `AIAssistantManager`/`AIChatManager`
-• Changed: Chat model uses `last_response_id` instead of `thread_id` for conversation continuity
-• Changed: Policy finalization checks `VectorStore` relationship instead of `openai_assistant_id`
-• Changed: `cleanup_ai_resources` management command updated for Responses API
-• Changed: Vector store ID resolution uses `vectorStore.
-• Added: `OpenAIResponsesManager` — thin wrapper around `client.
-• Added: `PolicySyncKnowledgeBaseView` + URL route + TypeScript handler with confirmation modal
-• Added: ~2,800 lines of new TDD tests across 20+ test files covering all migrated flows
-• Added: Stream event type debug logging in `stream_response`</description>
-    </item>
-    <item>
-      <title>FITS v8.8.13</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.13</link>
-      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.13</guid>
-      <description>• Changed: **Bug Fixes**
-• Changed: Settlement now counts both completed and failed tasks; final completion is sent only after all tasks are settled and failure events are handled.
-• Changed: **New Features**
-• Changed: Failure events are intercepted and routed to the settlement handler so failed tasks update progress, counts, and finalization.
-• Changed: **Documentation**
-• Changed: Multi-task coordination docs updated to explain settled vs completed and the need to handle both success and failure events.
-• Changed: **Tests**
-• Changed: Expanded tests covering completion, failure, mixed settlements, delivery semantics, and final_completion emission.
-• Changed: **Chores**
-• Changed: Reduced logging verbosity across several background processing paths.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [x] 43 tests pass across all 4 test files (tracking, completion, forwarder, orchestrator)
-• Changed: [x] `test_realistic_59_tasks_with_15_failures` reproduces the exact 44/59 scenario
-• Changed: [x] Mixed complete/fail, all-fail, partial settlement, edge cases all covered
-• Changed: [x] New `test_message_forwarder.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: `MessageForwarder` now intercepts `TASK_FAILED` for tracked tasks (same as `TASK_COMPLETED`), routing them to `TaskCompletionHandler.
-• Changed: `TaskTrackingHelper` tracks `failed_tasks` alongside `completed_tasks`; settlement = completed + failed &gt;= total
-• Changed: `TaskCompletionHandler.
-• Changed: Updated `multi-task-coordination/SKILL.
-• Changed: **Root cause:** When tasks failed, `MessageForwarder` forwarded `TASK_FAILED` to the client unhandled.</description>
     </item>
   </channel>
 </rss>
