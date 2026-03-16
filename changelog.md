@@ -115,6 +115,11 @@
 - Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 - Fixes BCDR framework missing `is_system=True` on initial creation
 
+## [v8.8.20] - 2026-03-16
+
+### Added
+- feat: left menu icons and related template/component updates
+
 ## [v8.8.2] - 2026-03-12
 
 ### Deferred (2 alerts — require separate LCEL migration)
