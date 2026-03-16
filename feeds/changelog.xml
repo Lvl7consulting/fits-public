@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Mar 2026 05:06:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 12:36:12 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -136,6 +136,23 @@
 • Changed: New `migrate_system_frameworks` data migration that orchestrates all 6 `generate_*_framework` commands, auto-discovered by `migrate_data` on every deploy
 • Changed: Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 • Changed: Fixes BCDR framework missing `is_system=True` on initial creation</description>
+    </item>
+    <item>
+      <title>FITS v8.8.21</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.21</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.21</guid>
+      <description>• Changed: **New Features**
+• Changed: Real-time progress tracking for Confluence page deletion with live WebSocket updates showing deletion progress as it happens
+• Changed: Persistent task tracking that survives reconnections and resumes from where it left off
+• Changed: **Improvements**
+• Changed: Replaced form submission with WebSocket-driven deletion for faster, more responsive operations
+• Changed: Enhanced error handling and recovery for page deletion tasks
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: **fix: reliable-scope-ai-assessment class updates**
+• Changed: **chore: v2 consumers, progress-bar utils, restart scripts and tests**
+• Changed: **feat: space page deletion consumer v2, confluence page delete task, assessment template and manage content updates**
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
     <item>
       <title>FITS v8.8.20</title>
@@ -328,30 +345,6 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Fix `AttributeError: 'PolicyTemplateGenerationConsumerV1' object has no attribute 'user_uid'` crash on production when sending milestone emails after policy generation/processing completion
 • Changed: Harden AI structured output pipeline: fix JSON parsing, response extraction, and retry logic</description>
-    </item>
-    <item>
-      <title>FITS v8.8.10</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.10</link>
-      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.10</guid>
-      <description>• Changed: **New Features**
-• Changed: Visual &quot;Processing.
-• Changed: Buttons now show distinct busy (spinning/disabled) and ready states so progress and availability are clearer
-• Changed: **Bug Fixes / Behavior**
-• Changed: Stop action now performs a gentler cancellation flow and cleans up the UI on confirmation
-• Changed: Improved handling of empty or malformed assistant responses with clearer error signaling
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] Navigate to a policy detail page and click &quot;Analyze Framework Compliance&quot;
-• Changed: [ ] Verify the progress bar appears smoothly without a page reload
-• Changed: [ ] Verify the &quot;Analyze&quot; button switches to &quot;Analyzing.
-• Changed: [ ] Verify the stop button appears in the status card
-• Changed: [ ] Verify the page reloads only once when analysis completes (final_completion)
-• Changed: [ ] Verify clicking &quot;Stop Analysis&quot; still works correctly
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: Removed the `schedulePageReload(1500)` that fired when the &quot;Policy processing initiated!&quot; WebSocket message arrived, causing a jarring progress bar flash
-• Changed: Both button states (active and analyzing/busy) are now pre-rendered in the template with `hidden` class toggling, and a new `switchToAnalyzingUI()` function toggles them dynamically when analysis starts
-• Changed: The stop button, analyzing badges, and disabled buttons are all shown instantly via JS instead of waiting for a page reload
-• Changed: The proper `final_completion` reload (when all tasks finish) remains unchanged</description>
     </item>
   </channel>
 </rss>

@@ -115,6 +115,21 @@
 - Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 - Fixes BCDR framework missing `is_system=True` on initial creation
 
+## [v8.8.21] - 2026-03-16
+
+### Changed
+- **New Features**
+- Real-time progress tracking for Confluence page deletion with live WebSocket updates showing deletion progress as it happens
+- Persistent task tracking that survives reconnections and resumes from where it left off
+- **Improvements**
+- Replaced form submission with WebSocket-driven deletion for faster, more responsive operations
+- Enhanced error handling and recovery for page deletion tasks
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- **fix: reliable-scope-ai-assessment class updates**
+- **chore: v2 consumers, progress-bar utils, restart scripts and tests**
+- **feat: space page deletion consumer v2, confluence page delete task, assessment template and manage content updates**
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+
 ## [v8.8.20] - 2026-03-16
 
 ### Added
