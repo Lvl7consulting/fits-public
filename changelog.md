@@ -115,6 +115,14 @@
 - Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 - Fixes BCDR framework missing `is_system=True` on initial creation
 
+## [v8.8.28] - 2026-03-18
+
+### Changed
+- [ ] Check GitHub repo page shows the root README after merge
+- 🤖 Generated with [Claude Code](https://claude.
+- Remove `.
+- The repo was showing "GitHub Configuration" instead of the actual project README
+
 ## [v8.8.27] - 2026-03-18
 
 ### Changed
