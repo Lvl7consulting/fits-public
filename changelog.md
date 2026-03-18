@@ -115,6 +115,16 @@
 - Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 - Fixes BCDR framework missing `is_system=True` on initial creation
 
+## [v8.8.27] - 2026-03-18
+
+### Changed
+- [ ] pip-audit GitHub Action passes on this branch
+- [ ] Docker container builds successfully with updated packages
+- 🤖 Generated with [Claude Code](https://claude.
+- **pyasn1** 0.
+- **PyJWT** 2.
+- **pyOpenSSL** 25.
+
 ## [v8.8.26] - 2026-03-18
 
 ### Changed

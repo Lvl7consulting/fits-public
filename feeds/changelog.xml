@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Mar 2026 09:27:40 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 09:51:41 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -136,6 +136,18 @@
 • Changed: New `migrate_system_frameworks` data migration that orchestrates all 6 `generate_*_framework` commands, auto-discovered by `migrate_data` on every deploy
 • Changed: Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 • Changed: Fixes BCDR framework missing `is_system=True` on initial creation</description>
+    </item>
+    <item>
+      <title>FITS v8.8.27</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.27</link>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.27</guid>
+      <description>• Changed: [ ] pip-audit GitHub Action passes on this branch
+• Changed: [ ] Docker container builds successfully with updated packages
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: **pyasn1** 0.
+• Changed: **PyJWT** 2.
+• Changed: **pyOpenSSL** 25.</description>
     </item>
     <item>
       <title>FITS v8.8.26</title>
@@ -300,21 +312,6 @@
 • Changed: [x] Manual verification: dev shows stable &quot;Completed X/Y tasks&quot; without flicker
 • Changed: Splits `_launch_tasks` into two passes: create+track all Task nodes first, then dispatch `.
 • Changed: Closes a race window where fast Celery workers send `TASK_PROGRESS` before all UIDs are registered in the tracker, causing those events to bypass `is_tracked()` and leak raw per-task progress (0-100%) to the frontend</description>
-    </item>
-    <item>
-      <title>FITS v8.8.16</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.16</link>
-      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.16</guid>
-      <description>• Fixed: Neo4j `CartesianProduct` INFORMATION notification: `MATCH (them), (us) WHERE elementId(them)=$them and elementId(us)=$self MERGE(us)-[r:\`ADDRESSES\`]-&gt;(them)` — now silenced across all call sites
-• Changed: [x] 9 new unit tests in `app/services/queries/tests/test_instruction_connect_relationships.
-• Changed: [x] Existing connection tests updated to assert delegation to `InstructionQueries.
-• Changed: [x] All 13 tests pass (`pytest` inside container)
-• Changed: **`app/services/queries/instruction_queries.
-• Changed: **`app/tasks/v1/policy_template_generation/ai_generation/content_saver.
-• Changed: **`app/tasks/v1/policy_processing/instruction_handling.
-• Changed: Replaces neomodel's `.
-• Changed: Introduces `InstructionQueries.</description>
     </item>
   </channel>
 </rss>
