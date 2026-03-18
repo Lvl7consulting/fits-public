@@ -115,6 +115,23 @@
 - Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 - Fixes BCDR framework missing `is_system=True` on initial creation
 
+## [v8.8.29] - 2026-03-18
+
+### Changed
+- [ ] Verify README renders correctly on GitHub repo page
+- [ ] Confirm all sections are accurate and complete
+- 🤖 Generated with [Claude Code](https://claude.
+
+### Security
+- Complete rewrite of README.
+- Covers all 4 user roles: super admin, tenant admin, organization user, client
+- Documents every feature: policies, policy factory (7-step AI workflow), AI chat, frameworks, assessments, document evaluation, questionnaires, employees, spaces/Confluence, self-service import, dashboard/reporting
+- Full AI & RAG architecture documentation (local RAG vs remote assistant, 4 LLM providers)
+- Real-time WebSocket communication system with 12 consumer types
+- Complete technology stack, deployment architecture, security model
+- CI/CD pipeline and testing documentation
+- ~800 lines of comprehensive documentation
+
 ## [v8.8.28] - 2026-03-18
 
 ### Changed
