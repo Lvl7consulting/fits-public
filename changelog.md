@@ -115,6 +115,28 @@
 - Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 - Fixes BCDR framework missing `is_system=True` on initial creation
 
+## [v8.8.26] - 2026-03-18
+
+### Changed
+- **New Features**
+- Executive Brief mode (policy statements) and deep-linking to individual processes.
+- Hierarchical Process → Procedure model with per-process editing and nested steps.
+- **Improvements**
+- Redesigned policy UI with legend-driven cards, clearer process/procedure display, generated-policy pages, DOCX export improvements, and KB sync/status indicators.
+- Questionnaire AI suggests titles; answers now record model confidence.
+- **Bug Fixes**
+- Safer temporary file handling and improved extraction fallback for uploaded documents.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- **docs: separating process and procedures from policies and safeguards (requirements, analysis)**
+- **feat: process/procedures separation – docs, models, services, tasks, views**
+- **Policy template, process/procedures separation, sections and related updates**
+- **feat: executive brief skips procedures, shows "Policy Statements"**
+- **Policy template: schemas, prompts, AI generation and tests**
+- **Add icon-document-check and icon-document-text header icons**
+- **Policy template review list and section UI/view updates**
+- **Process/procedures separation: questionnaire parser, detail view, and task updates**
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+
 ## [v8.8.25] - 2026-03-16
 
 ### Changed

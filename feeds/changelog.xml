@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Mar 2026 12:41:40 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 09:27:40 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -136,6 +136,30 @@
 • Changed: New `migrate_system_frameworks` data migration that orchestrates all 6 `generate_*_framework` commands, auto-discovered by `migrate_data` on every deploy
 • Changed: Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
 • Changed: Fixes BCDR framework missing `is_system=True` on initial creation</description>
+    </item>
+    <item>
+      <title>FITS v8.8.26</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.26</link>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.26</guid>
+      <description>• Changed: **New Features**
+• Changed: Executive Brief mode (policy statements) and deep-linking to individual processes.
+• Changed: Hierarchical Process → Procedure model with per-process editing and nested steps.
+• Changed: **Improvements**
+• Changed: Redesigned policy UI with legend-driven cards, clearer process/procedure display, generated-policy pages, DOCX export improvements, and KB sync/status indicators.
+• Changed: Questionnaire AI suggests titles; answers now record model confidence.
+• Changed: **Bug Fixes**
+• Changed: Safer temporary file handling and improved extraction fallback for uploaded documents.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: **docs: separating process and procedures from policies and safeguards (requirements, analysis)**
+• Changed: **feat: process/procedures separation – docs, models, services, tasks, views**
+• Changed: **Policy template, process/procedures separation, sections and related updates**
+• Changed: **feat: executive brief skips procedures, shows &quot;Policy Statements&quot;**
+• Changed: **Policy template: schemas, prompts, AI generation and tests**
+• Changed: **Add icon-document-check and icon-document-text header icons**
+• Changed: **Policy template review list and section UI/view updates**
+• Changed: **Process/procedures separation: questionnaire parser, detail view, and task updates**
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
     <item>
       <title>FITS v8.8.25</title>
@@ -291,13 +315,6 @@
 • Changed: **`app/tasks/v1/policy_processing/instruction_handling.
 • Changed: Replaces neomodel's `.
 • Changed: Introduces `InstructionQueries.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.15</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.15</link>
-      <pubDate>Fri, 13 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.15</guid>
-      <description>• Changed: The toast suppression was in reliable-policy-chat.</description>
     </item>
   </channel>
 </rss>
