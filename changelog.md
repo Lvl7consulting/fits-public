@@ -102,6 +102,30 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.30] - 2026-03-25
+
+### Changed
+- [ ] Open `0-docs/presentations/fits-coherence-deck.
+- [ ] Review data-flow docs in `0-docs/data-flow/` for accuracy
+- 🤖 Generated with [Claude Code](https://claude.
+- | # | Slide |
+- |---|-------|
+- | 01 | The Compliance Chaos Problem (dark hook) |
+- | 02 | The Fragmented Tool Landscape |
+- | 03 | Meet Sarah — A Day Without FITS |
+- | 04 | The Hidden Cost (stat callouts) |
+- | 05 | Introducing FITS (hero slide) |
+- | 06 | Feed It Your World (inputs) |
+- | 07 | AI Does the Heavy Lifting |
+- | 08 | One Action.
+- | 09 | Sarah's Day — With FITS |
+- | 10 | Not Another AI Chat.
+- | 11 | From Chaos to Coherence (CTA) |
+- **`0-docs/data-flow/`** — Mermaid data-flow diagram (md/svg/png/hires), abstract marketing diagram, and 10 detailed findings docs covering: file upload pipeline, AI providers, Confluence/Jira, email providers, report generation, core data models, Celery tasks, RAG/vector store, API endpoints, and policy workflow
+- **`0-docs/presentations/`** — "From Chaos to Coherence" 11-slide marketing pitch deck (`.
+- **`docs/superpowers/specs/`** — Presentation design spec
+- **`.
+
 ## [v8.8.3] - 2026-03-12
 
 ### Changed

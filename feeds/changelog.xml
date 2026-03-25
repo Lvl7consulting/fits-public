@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Mar 2026 11:12:16 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 07:52:50 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,32 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.30</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.30</link>
+      <pubDate>Wed, 25 Mar 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.30</guid>
+      <description>• Changed: [ ] Open `0-docs/presentations/fits-coherence-deck.
+• Changed: [ ] Review data-flow docs in `0-docs/data-flow/` for accuracy
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: | # | Slide |
+• Changed: |---|-------|
+• Changed: | 01 | The Compliance Chaos Problem (dark hook) |
+• Changed: | 02 | The Fragmented Tool Landscape |
+• Changed: | 03 | Meet Sarah — A Day Without FITS |
+• Changed: | 04 | The Hidden Cost (stat callouts) |
+• Changed: | 05 | Introducing FITS (hero slide) |
+• Changed: | 06 | Feed It Your World (inputs) |
+• Changed: | 07 | AI Does the Heavy Lifting |
+• Changed: | 08 | One Action.
+• Changed: | 09 | Sarah's Day — With FITS |
+• Changed: | 10 | Not Another AI Chat.
+• Changed: | 11 | From Chaos to Coherence (CTA) |
+• Changed: **`0-docs/data-flow/`** — Mermaid data-flow diagram (md/svg/png/hires), abstract marketing diagram, and 10 detailed findings docs covering: file upload pipeline, AI providers, Confluence/Jira, email providers, report generation, core data models, Celery tasks, RAG/vector store, API endpoints, and policy workflow
+• Changed: **`0-docs/presentations/`** — &quot;From Chaos to Coherence&quot; 11-slide marketing pitch deck (`.
+• Changed: **`docs/superpowers/specs/`** — Presentation design spec
+• Changed: **`.</description>
     </item>
     <item>
       <title>FITS v8.8.3</title>
@@ -284,40 +310,6 @@
       <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
 • Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
 • Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.19</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.19</link>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.19</guid>
-      <description>• Changed: **New Features**
-• Changed: Comprehensive v1 to v2 migration framework with 44-step implementation plan and detailed coordination protocols.
-• Changed: Added v2 WebSocket consumer infrastructure with updated coordination patterns.
-• Changed: New policy processing completion coordination documentation.
-• Changed: New scope assessment questions retrieval consumer with full task orchestration.
-• Changed: **Breaking Changes**
-• Changed: WebSocket endpoints migrated from `/ws/v1/` to `/ws/v2/`.
-• Changed: API endpoints migrated from `/api/v1/` to `/api/v2/`.
-• Changed: Integration mode simplified: remote_assistant mode removed; all providers now use local_rag exclusively.
-• Changed: All consumer classes renamed to V2; V1 versions no longer available.
-• Changed: **Improvements**
-• Changed: Unified local RAG implementation across all AI providers.
-• Changed: Updated chat initialization to use rag_store_id instead of vector_store references.
-• Changed: Streamlined task and message handling with v2 async patterns.
-• Changed: Enhanced completion coordination and task tracking for WebSocket consumers.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: Frontend/API callers still using `/api/v1/` or `/ws/v1/` may need a coordinated follow-up (see plan review in docs).
-• Changed: Pre-commit (lint + unit tests) passed on commit.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: **Consumers:** `app/consumers/v1/` → `v2/` (dir + file renames, class renames, all imports)
-• Changed: **Celery tasks:** All `_celery_v1` → `_celery_v2` (confluence, policy, questionnaire, notifications)
-• Changed: **Task model:** `send_*_v1_async` → `send_*_v2_async`
-• Changed: **Routing:** WebSocket route names and `ws/v1/` → `ws/v2/` paths; API remains `/api/v1/` (no `api/v2/` in this PR)
-• Changed: **Settings:** `CELERY_TASK_ROUTES` and related keys updated to v2 task names
-• Changed: **Docs:** `0-docs/2026-03-14-v1-to-v2-migration/` — README, AGENT-PROTOCOL, 44 step files
-• Changed: **Cursor rule:** `websocket-v1-architecture.
-• Changed: **Cleanup:** Removed stale `app/tasks/0-docs/celery_task_improvements/` docs
-• Changed: Complete v1→v2 rename across consumers, Celery tasks, Task model, WebSocket/API routing, and settings.</description>
     </item>
   </channel>
 </rss>
