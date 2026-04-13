@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2026 16:29:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 21:26:50 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,36 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.32</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.32</link>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.32</guid>
+      <description>• Changed: **New Features**
+• Changed: Remote-assistant question generation using vector-store IDs; progress events and automatic parsing/saving of generated questions.
+• Changed: **Improvements**
+• Changed: Mode-aware session initialization and validation; session metadata records the active store ID.
+• Changed: Frontend: form actions use template-rendered create/update URLs; form button overlay retrieved lazily; more robust template rendering context for question lists.
+• Changed: **Bug Fixes**
+• Changed: Update handler now returns a controlled error response on failure.
+• Changed: **Tests**
+• Changed: Extensive unit, integration and E2E coverage for generation paths, routing, helpers, persistence, and UI.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] `test_remote_assistant_with_vector_store_id_succeeds` — Chat.
+• Changed: [x] `test_remote_assistant_without_vector_store_id_reports_error` — CONFIGURATION_ERROR reported
+• Changed: [x] `test_local_rag_with_rag_store_id_succeeds` — Chat.
+• Changed: [x] `test_local_rag_without_rag_store_id_reports_error` — CONFIGURATION_ERROR reported (regression)
+• Changed: [x] Full unit suite: 2096 passed
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: `get_assistant_info` now returns `(rag_store_id, vector_store_id, integration_mode)` matching the `PolicyChatUtils` pattern
+• Changed: `_handle_initiate_session` is now mode-aware: checks the right ID per mode and passes the correct kwarg to `Chat.
+• Changed: Updated `test_vector_store_id_responses.
+• Changed: Added 4 new TDD tests covering both modes (success + missing ID paths)
+• Changed: `get_assistant_info` only returned `(rag_store_id, integration_mode)` — it never fetched `vector_store_id` from `policy.
+• Changed: `_handle_initiate_session` checked `if not rag_store_id:` unconditionally — always `None` in `remote_assistant` mode, so the error always fired regardless of configuration
+• Changed: `Chat.</description>
     </item>
     <item>
       <title>FITS v8.8.31</title>
@@ -324,13 +354,6 @@
 • Changed: **chore: v2 consumers, progress-bar utils, restart scripts and tests**
 • Changed: **feat: space page deletion consumer v2, confluence page delete task, assessment template and manage content updates**
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.20</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.20</link>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.20</guid>
-      <description>• Added: feat: left menu icons and related template/component updates</description>
     </item>
   </channel>
 </rss>

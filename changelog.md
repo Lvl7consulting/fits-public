@@ -102,6 +102,34 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.32] - 2026-04-13
+
+### Changed
+- **New Features**
+- Remote-assistant question generation using vector-store IDs; progress events and automatic parsing/saving of generated questions.
+- **Improvements**
+- Mode-aware session initialization and validation; session metadata records the active store ID.
+- Frontend: form actions use template-rendered create/update URLs; form button overlay retrieved lazily; more robust template rendering context for question lists.
+- **Bug Fixes**
+- Update handler now returns a controlled error response on failure.
+- **Tests**
+- Extensive unit, integration and E2E coverage for generation paths, routing, helpers, persistence, and UI.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] `test_remote_assistant_with_vector_store_id_succeeds` — Chat.
+- [x] `test_remote_assistant_without_vector_store_id_reports_error` — CONFIGURATION_ERROR reported
+- [x] `test_local_rag_with_rag_store_id_succeeds` — Chat.
+- [x] `test_local_rag_without_rag_store_id_reports_error` — CONFIGURATION_ERROR reported (regression)
+- [x] Full unit suite: 2096 passed
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- `get_assistant_info` now returns `(rag_store_id, vector_store_id, integration_mode)` matching the `PolicyChatUtils` pattern
+- `_handle_initiate_session` is now mode-aware: checks the right ID per mode and passes the correct kwarg to `Chat.
+- Updated `test_vector_store_id_responses.
+- Added 4 new TDD tests covering both modes (success + missing ID paths)
+- `get_assistant_info` only returned `(rag_store_id, integration_mode)` — it never fetched `vector_store_id` from `policy.
+- `_handle_initiate_session` checked `if not rag_store_id:` unconditionally — always `None` in `remote_assistant` mode, so the error always fired regardless of configuration
+- `Chat.
+
 ## [v8.8.31] - 2026-04-13
 
 ### Changed
