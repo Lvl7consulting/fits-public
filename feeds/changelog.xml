@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Mar 2026 07:52:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 16:29:18 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,36 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.31</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.31</link>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.31</guid>
+      <description>• Changed: **New Features**
+• Changed: Added Google Generative AI integration.
+• Changed: **Refactor**
+• Changed: Modernized RAG pipeline for improved retrieval, parsing, and consolidated answer+source responses.
+• Changed: **Bug Fixes**
+• Changed: More consistent conversation history routing and effective window sizing for session-based chats.
+• Changed: **Chores**
+• Changed: Upgraded core dependencies and LangChain ecosystem; added npm package resolution override.
+• Changed: **Documentation**
+• Changed: Added a security vulnerability remediation plan.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] 2091 unit tests passing on branch
+• Changed: [x] Docker build resolves all dependencies cleanly (`requirements-audit.
+• Changed: [x] Pre-push dependency resolution check passed
+• Changed: [ ] Verify RAG v2 chain behaviour in staging (LangChain LCEL migration)
+• Changed: [ ] Confirm Celery workers restarted after deploy
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: **ujson 5.
+• Changed: **PyMuPDF 1.
+• Changed: **Django ≥5.
+• Changed: **npm flatted 3.
+• Changed: **LangChain ecosystem v0.
+• Changed: **Pygments CVE-2026-4539**: No fix available upstream — alert dismissed with `tolerable_risk` reason</description>
     </item>
     <item>
       <title>FITS v8.8.30</title>
@@ -301,15 +331,6 @@
       <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
       <guid>fits-v8.8.20</guid>
       <description>• Added: feat: left menu icons and related template/component updates</description>
-    </item>
-    <item>
-      <title>FITS v8.8.2</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.2</link>
-      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.2</guid>
-      <description>• Deferred (2 alerts — require separate LCEL migration): [x] All 1430 unit tests pass
-• Deferred (2 alerts — require separate LCEL migration): [x] `npm audit` reports 0 vulnerabilities
-• Deferred (2 alerts — require separate LCEL migration): [x] `pip install -r requirements.</description>
     </item>
   </channel>
 </rss>

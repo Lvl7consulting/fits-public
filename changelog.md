@@ -102,6 +102,34 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.31] - 2026-04-13
+
+### Changed
+- **New Features**
+- Added Google Generative AI integration.
+- **Refactor**
+- Modernized RAG pipeline for improved retrieval, parsing, and consolidated answer+source responses.
+- **Bug Fixes**
+- More consistent conversation history routing and effective window sizing for session-based chats.
+- **Chores**
+- Upgraded core dependencies and LangChain ecosystem; added npm package resolution override.
+- **Documentation**
+- Added a security vulnerability remediation plan.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] 2091 unit tests passing on branch
+- [x] Docker build resolves all dependencies cleanly (`requirements-audit.
+- [x] Pre-push dependency resolution check passed
+- [ ] Verify RAG v2 chain behaviour in staging (LangChain LCEL migration)
+- [ ] Confirm Celery workers restarted after deploy
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- **ujson 5.
+- **PyMuPDF 1.
+- **Django ≥5.
+- **npm flatted 3.
+- **LangChain ecosystem v0.
+- **Pygments CVE-2026-4539**: No fix available upstream — alert dismissed with `tolerable_risk` reason
+
 ## [v8.8.30] - 2026-03-25
 
 ### Changed
