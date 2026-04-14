@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 13:01:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 17:13:18 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,52 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.34</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.34</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.34</guid>
+      <description>• Changed: # Release Notes
+• Changed: **New Features**
+• Changed: Multi-policy chat for simultaneously querying multiple policies
+• Changed: Intelligent policy routing to direct questions to relevant policies
+• Changed: Answer synthesis combining responses into a single summary
+• Changed: Conversation history with ability to resume previous chats
+• Changed: Optional policy pre-selection for targeted queries
+• Changed: Multi-policy questionnaire answering
+• Changed: **Improvements**
+• Changed: Enhanced knowledge profile generation for improved routing accuracy
+• Changed: Refined access control for policy management
+• Changed: Extended WebSocket heartbeat timeout for better connection stability
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] TDD — tests written before each implementation chunk
+• Changed: [ ] `.
+• Changed: [ ] Playwright E2E: Strong Tiger org, 3 seed policies with RAG stores
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: | # | Chunk | Status |
+• Changed: |---|-------|--------|
+• Changed: | 01 | Branch + Constants | ⬜ |
+• Changed: | 02 | Data Models | ⬜ |
+• Changed: | 03 | Single-Policy Task (scatter) | ⬜ |
+• Changed: | 03b | Synthesis Task (gather+cleanup) | ⬜ |
+• Changed: | 03c | Knowledge Profile Task | ⬜ |
+• Changed: | 04 | Router LLM + Consumer | ⬜ |
+• Changed: | 05 | Policy Chat UI | ⬜ |
+• Changed: | 09 | Chat List + Resume | ⬜ |
+• Changed: | 10 | Policy Pre-selection | ⬜ |
+• Changed: | 06 | Questionnaire Integration | ⬜ |
+• Changed: | 07 | Unit Tests | ⬜ |
+• Changed: | 08 | E2E Tests (Playwright) | ⬜ |
+• Changed: A reusable engine that intelligently routes a user query to relevant policies, collects RAG-grounded answers, and synthesizes them into one concise response.
+• Changed: **Architecture**: Router LLM → Selective Scatter → Gather → Synthesize
+• Changed: Router reads Knowledge Registry (per-policy profiles) + conversation history → selects relevant policies only
+• Changed: One Celery task per selected policy (parallel) → each queries its own RAG store
+• Changed: Synthesis task merges N raw answers into one response via single LLM call
+• Changed: Sub-chat results are ephemeral — deleted after synthesis
+• Changed: Master chat conversation persists with full history
+• Changed: **Zero touch to existing features** — all new files.</description>
     </item>
     <item>
       <title>FITS v8.8.33</title>
@@ -350,17 +396,6 @@
 • Changed: Space page deletion UI improvements
 • Changed: Spinner component updates
 • Changed: Policy and login template fixes</description>
-    </item>
-    <item>
-      <title>FITS v8.8.22</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.22</link>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.22</guid>
-      <description>• Changed: [ ] Verify README renders correctly
-• Changed: [ ] Existing tests pass
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: Update README documentation
-• Changed: Space page deletion consumer, task, and related docs</description>
     </item>
   </channel>
 </rss>

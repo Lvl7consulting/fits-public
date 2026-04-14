@@ -102,6 +102,50 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.34] - 2026-04-14
+
+### Changed
+- # Release Notes
+- **New Features**
+- Multi-policy chat for simultaneously querying multiple policies
+- Intelligent policy routing to direct questions to relevant policies
+- Answer synthesis combining responses into a single summary
+- Conversation history with ability to resume previous chats
+- Optional policy pre-selection for targeted queries
+- Multi-policy questionnaire answering
+- **Improvements**
+- Enhanced knowledge profile generation for improved routing accuracy
+- Refined access control for policy management
+- Extended WebSocket heartbeat timeout for better connection stability
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] TDD — tests written before each implementation chunk
+- [ ] `.
+- [ ] Playwright E2E: Strong Tiger org, 3 seed policies with RAG stores
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- | # | Chunk | Status |
+- |---|-------|--------|
+- | 01 | Branch + Constants | ⬜ |
+- | 02 | Data Models | ⬜ |
+- | 03 | Single-Policy Task (scatter) | ⬜ |
+- | 03b | Synthesis Task (gather+cleanup) | ⬜ |
+- | 03c | Knowledge Profile Task | ⬜ |
+- | 04 | Router LLM + Consumer | ⬜ |
+- | 05 | Policy Chat UI | ⬜ |
+- | 09 | Chat List + Resume | ⬜ |
+- | 10 | Policy Pre-selection | ⬜ |
+- | 06 | Questionnaire Integration | ⬜ |
+- | 07 | Unit Tests | ⬜ |
+- | 08 | E2E Tests (Playwright) | ⬜ |
+- A reusable engine that intelligently routes a user query to relevant policies, collects RAG-grounded answers, and synthesizes them into one concise response.
+- **Architecture**: Router LLM → Selective Scatter → Gather → Synthesize
+- Router reads Knowledge Registry (per-policy profiles) + conversation history → selects relevant policies only
+- One Celery task per selected policy (parallel) → each queries its own RAG store
+- Synthesis task merges N raw answers into one response via single LLM call
+- Sub-chat results are ephemeral — deleted after synthesis
+- Master chat conversation persists with full history
+- **Zero touch to existing features** — all new files.
+
 ## [v8.8.33] - 2026-04-14
 
 ### Changed
