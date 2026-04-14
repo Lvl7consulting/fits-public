@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2026 21:26:50 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 13:01:15 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,30 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.33</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.33</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.33</guid>
+      <description>• Changed: **New Features**
+• Changed: Role-based gating applied broadly to policy and chat pages: super-admins and tenant-admins are redirected to their dashboards; regular users keep access.
+• Changed: **Tests**
+• Changed: Added comprehensive tests covering redirect and non-redirect behavior for SUPER_ADMIN, TENANT_ADMIN, and USER across policy, chat, super-admin, and tenant-admin flows.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] 45 policy access tests — all green
+• Changed: [x] 10 domain segregation tests — all green
+• Changed: [x] Full unit suite — 2287 passed, 0 failures
+• Changed: [x] Lint clean
+• Changed: [ ] Manual: log in as super-admin, confirm redirect to `/super-admin/` on any `/organizations/{id}/policies/*` URL
+• Changed: [ ] Manual: log in as tenant-admin, confirm redirect to `/tenant-admin/` on any `/organizations/{id}/policies/*` URL
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Super-admins and tenant-admins were able to navigate directly to regular-user domain URLs such as `/organizations/{id}/policies/create/`
+• Changed: Added new `RegularUserOnlyMixin` — only `USER` role passes through; `SUPER_ADMIN` → `/super-admin/`, `TENANT_ADMIN` → `/tenant-admin/`
+• Changed: Applied to all 15 policy views (create, list, detail, update, delete, chat, chat_list, chat_detail, chat_delete, chat_rename, download×2, sync_knowledge_base, sections, assistant_model)
+• Changed: 45 new TDD tests for policy views (3 per view: super-admin blocked, tenant-admin blocked, user allowed through)
+• Changed: 10 new domain segregation tests for super-admin and tenant-admin domains</description>
     </item>
     <item>
       <title>FITS v8.8.32</title>
@@ -337,23 +361,6 @@
 • Changed: 🤖 Generated with [Claude Code](https://claude.
 • Changed: Update README documentation
 • Changed: Space page deletion consumer, task, and related docs</description>
-    </item>
-    <item>
-      <title>FITS v8.8.21</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.21</link>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.21</guid>
-      <description>• Changed: **New Features**
-• Changed: Real-time progress tracking for Confluence page deletion with live WebSocket updates showing deletion progress as it happens
-• Changed: Persistent task tracking that survives reconnections and resumes from where it left off
-• Changed: **Improvements**
-• Changed: Replaced form submission with WebSocket-driven deletion for faster, more responsive operations
-• Changed: Enhanced error handling and recovery for page deletion tasks
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: **fix: reliable-scope-ai-assessment class updates**
-• Changed: **chore: v2 consumers, progress-bar utils, restart scripts and tests**
-• Changed: **feat: space page deletion consumer v2, confluence page delete task, assessment template and manage content updates**
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
   </channel>
 </rss>

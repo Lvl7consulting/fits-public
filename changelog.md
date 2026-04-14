@@ -102,6 +102,28 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.33] - 2026-04-14
+
+### Changed
+- **New Features**
+- Role-based gating applied broadly to policy and chat pages: super-admins and tenant-admins are redirected to their dashboards; regular users keep access.
+- **Tests**
+- Added comprehensive tests covering redirect and non-redirect behavior for SUPER_ADMIN, TENANT_ADMIN, and USER across policy, chat, super-admin, and tenant-admin flows.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] 45 policy access tests — all green
+- [x] 10 domain segregation tests — all green
+- [x] Full unit suite — 2287 passed, 0 failures
+- [x] Lint clean
+- [ ] Manual: log in as super-admin, confirm redirect to `/super-admin/` on any `/organizations/{id}/policies/*` URL
+- [ ] Manual: log in as tenant-admin, confirm redirect to `/tenant-admin/` on any `/organizations/{id}/policies/*` URL
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Super-admins and tenant-admins were able to navigate directly to regular-user domain URLs such as `/organizations/{id}/policies/create/`
+- Added new `RegularUserOnlyMixin` — only `USER` role passes through; `SUPER_ADMIN` → `/super-admin/`, `TENANT_ADMIN` → `/tenant-admin/`
+- Applied to all 15 policy views (create, list, detail, update, delete, chat, chat_list, chat_detail, chat_delete, chat_rename, download×2, sync_knowledge_base, sections, assistant_model)
+- 45 new TDD tests for policy views (3 per view: super-admin blocked, tenant-admin blocked, user allowed through)
+- 10 new domain segregation tests for super-admin and tenant-admin domains
+
 ## [v8.8.32] - 2026-04-13
 
 ### Changed
