@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2026 10:18:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 14:56:54 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,41 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.36</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.36</link>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.36</guid>
+      <description>• Changed: **New Features**
+• Changed: Added support for independent Questionnaire and Documentation publication types in Confluence publishing workflow.
+• Changed: Enabled separate folder structures and page organization per publication type.
+• Changed: Added publication tracking with status monitoring and error recording.
+• Changed: **Documentation**
+• Changed: Comprehensive design documentation for publication-type feature architecture, page hierarchy, model changes, trigger architecture, folder lifecycle, unpublish behavior, and testing strategy.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] 9-cell pytest matrix: `{questionnaire, documentation, all} × {first-publish, republish, unpublish}`
+• Changed: [ ] Partial failure under `all` — questionnaire committed, documentation `last_error` set
+• Changed: [ ] Dedup collision — second button press during in-flight task correctly blocked
+• Changed: [ ] Folder creation race — advisory lock prevents duplicate folders
+• Changed: [ ] Version CAS — concurrent republish handled correctly
+• Changed: [ ] Cross-domain auth denial
+• Changed: [ ] Jest: two-button UI (disabled state, progress label, error banner)
+• Changed: [ ] Run via `.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Full spec and implementation plan in `0-docs/confluence-publication-type/`:
+• Changed: `README.
+• Changed: `00-problem.
+• Changed: `implementation-plan.
+• Changed: `progress.
+• Changed: Adds two independent publish buttons per AssessmentTemplate: **Publish Questionnaire** and **Publish Documentation**
+• Changed: Introduces `PublicationType` enum (`questionnaire` / `documentation` / `all`) threaded through the existing Celery publish pipeline
+• Changed: Two thin folder pages under `EnvironmentPage` isolate the page hierarchies — all existing page titles unchanged (parser contract preserved)
+• Changed: New `TemplatePublication` node tracks per-`(scope, env, template, type)` Confluence page IDs with optimistic version locking
+• Changed: Typed `confluence_page_id_questionnaire` / `confluence_page_id_documentation` fields added to structural models; legacy `confluence_page_id` backfilled then retired
+• Changed: Advisory lock per `(env_uid, publication_type)` prevents folder creation races
+• Changed: `find_active_task` dedup extended with `publication_type` key</description>
     </item>
     <item>
       <title>FITS v8.8.35</title>
@@ -401,23 +436,6 @@
 • Changed: Add `task.
 • Changed: Previously task status stayed IN_PROGRESS in the database on exception — now explicitly marked FAILED
 • Changed: Addresses PR #387 review: Space.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.24</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.24</link>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.24</guid>
-      <description>• Changed: [ ] `.
-• Changed: [ ] Open manage-content in two tabs: Tab 2 sees active task status on connect
-• Changed: [ ] Duplicate INITIATE_TASK returns validation error
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: Add `ActiveTaskChecker` helper for concurrent task prevention
-• Changed: Update `ConnectionHelper` to check active tasks on WebSocket connect
-• Changed: Update `DeletionHandler` to guard against duplicate INITIATE_TASK
-• Changed: Fix `CompletionHandler` to report errors to client on failure
-• Changed: Fix mutable default argument in `AssessmentTemplate.
-• Changed: Mask `NEO4J_PASSWORD` in `restart_celery.
-• Changed: Add 12 new tests, update docs and background-task-setup skill</description>
     </item>
   </channel>
 </rss>

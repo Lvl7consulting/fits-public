@@ -102,6 +102,39 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.36] - 2026-04-15
+
+### Changed
+- **New Features**
+- Added support for independent Questionnaire and Documentation publication types in Confluence publishing workflow.
+- Enabled separate folder structures and page organization per publication type.
+- Added publication tracking with status monitoring and error recording.
+- **Documentation**
+- Comprehensive design documentation for publication-type feature architecture, page hierarchy, model changes, trigger architecture, folder lifecycle, unpublish behavior, and testing strategy.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] 9-cell pytest matrix: `{questionnaire, documentation, all} × {first-publish, republish, unpublish}`
+- [ ] Partial failure under `all` — questionnaire committed, documentation `last_error` set
+- [ ] Dedup collision — second button press during in-flight task correctly blocked
+- [ ] Folder creation race — advisory lock prevents duplicate folders
+- [ ] Version CAS — concurrent republish handled correctly
+- [ ] Cross-domain auth denial
+- [ ] Jest: two-button UI (disabled state, progress label, error banner)
+- [ ] Run via `.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Full spec and implementation plan in `0-docs/confluence-publication-type/`:
+- `README.
+- `00-problem.
+- `implementation-plan.
+- `progress.
+- Adds two independent publish buttons per AssessmentTemplate: **Publish Questionnaire** and **Publish Documentation**
+- Introduces `PublicationType` enum (`questionnaire` / `documentation` / `all`) threaded through the existing Celery publish pipeline
+- Two thin folder pages under `EnvironmentPage` isolate the page hierarchies — all existing page titles unchanged (parser contract preserved)
+- New `TemplatePublication` node tracks per-`(scope, env, template, type)` Confluence page IDs with optimistic version locking
+- Typed `confluence_page_id_questionnaire` / `confluence_page_id_documentation` fields added to structural models; legacy `confluence_page_id` backfilled then retired
+- Advisory lock per `(env_uid, publication_type)` prevents folder creation races
+- `find_active_task` dedup extended with `publication_type` key
+
 ## [v8.8.35] - 2026-04-15
 
 ### Changed
