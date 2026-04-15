@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 17:13:18 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 10:18:11 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,41 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.35</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.35</link>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.35</guid>
+      <description>• Changed: **Bug Fixes**
+• Changed: Remote-assistant flows now require a processed vector store ID and perform preflight checks with the AI service; clear RuntimeErrors are raised if a store is missing or deleted.
+• Changed: Stale or deleted vector stores are proactively marked as failed to avoid repeated attempts.
+• Changed: **New Features**
+• Changed: Added remote vector-store validation and a utility to verify existence with the AI service before use.
+• Changed: **Tests**
+• Changed: Expanded coverage for status guarding, preflight validation, error propagation, and end-to-end remote vector store selection.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] All 2459 unit tests pass (CI green)
+• Changed: [ ] `TestGetPolicyVectorStoreIdStatusGuard` — status guard for all non-processed statuses
+• Changed: [ ] `TestValidateVectorStoreExists` — returns bool, re-raises non-404 errors
+• Changed: [ ] `TestMarkVectorStoreFailed` — sets status, swallows only DoesNotExist, re-raises infra errors
+• Changed: [ ] `TestGetValidatedRemoteVectorStoreId` — happy path, missing VS, deleted-on-OpenAI
+• Changed: [ ] Each task file: resolves VS for remote_assistant, skips for local_rag, raises when VS missing, raises when VS deleted on OpenAI
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: | File | Before | After |
+• Changed: |------|--------|-------|
+• Changed: | `policy_chat_rag_v2/task.
+• Changed: | `multi_policy_query_single_v2/task.
+• Changed: | `questionnaire_answer_rag_v2/task.
+• Changed: | `policy_requirement_processing_rag_v2/task.
+• Changed: | `template_question_generator_rag_v2/task.
+• Changed: | `questionnaire_adapter.
+• Changed: **Root cause**: OpenAI vector store IDs stored as `status=processed` in Neo4j could be deleted/expired on OpenAI's side, causing `Vector store with id [.
+• Changed: **Fix — Scenario A (race condition)**: Status guard added to all three VS-ID lookup paths — only returns an ID when `status == 'processed'`; pending/uploaded/failed stores are skipped.
+• Changed: **Fix — Scenario B (stale-processed)**: New `validate_vector_store_exists()` makes a cheap `retrieve()` call to OpenAI before any AI query; `mark_vector_store_failed()` self-heals the DB node on 404.
+• Changed: **Centralized helper**: `get_validated_remote_vector_store_id(policy, ai_provider)` combines status guard + raise-on-missing + proactive OpenAI existence check + self-heal into a single call, applied uniformly across all entry points.
+• Changed: **Silent fallback eliminated**: Four task files (`questionnaire_answer_rag_v2`, `policy_requirement_processing_rag_v2`, `template_question_generator_rag_v2`, `questionnaire_adapter`) were either silently falling back to `local_rag` or passing `[]` to file_search when no VS was available — all now raise `RuntimeError` with a clear message.</description>
     </item>
     <item>
       <title>FITS v8.8.34</title>
@@ -383,19 +418,6 @@
 • Changed: Fix mutable default argument in `AssessmentTemplate.
 • Changed: Mask `NEO4J_PASSWORD` in `restart_celery.
 • Changed: Add 12 new tests, update docs and background-task-setup skill</description>
-    </item>
-    <item>
-      <title>FITS v8.8.23</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.23</link>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.23</guid>
-      <description>• Changed: [ ] Space page deletion flow works end-to-end
-• Changed: [ ] Spinner renders correctly in buttons
-• Changed: [ ] Policy and login pages render correctly
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: Space page deletion UI improvements
-• Changed: Spinner component updates
-• Changed: Policy and login template fixes</description>
     </item>
   </channel>
 </rss>

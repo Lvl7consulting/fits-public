@@ -102,6 +102,39 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.35] - 2026-04-15
+
+### Changed
+- **Bug Fixes**
+- Remote-assistant flows now require a processed vector store ID and perform preflight checks with the AI service; clear RuntimeErrors are raised if a store is missing or deleted.
+- Stale or deleted vector stores are proactively marked as failed to avoid repeated attempts.
+- **New Features**
+- Added remote vector-store validation and a utility to verify existence with the AI service before use.
+- **Tests**
+- Expanded coverage for status guarding, preflight validation, error propagation, and end-to-end remote vector store selection.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] All 2459 unit tests pass (CI green)
+- [ ] `TestGetPolicyVectorStoreIdStatusGuard` — status guard for all non-processed statuses
+- [ ] `TestValidateVectorStoreExists` — returns bool, re-raises non-404 errors
+- [ ] `TestMarkVectorStoreFailed` — sets status, swallows only DoesNotExist, re-raises infra errors
+- [ ] `TestGetValidatedRemoteVectorStoreId` — happy path, missing VS, deleted-on-OpenAI
+- [ ] Each task file: resolves VS for remote_assistant, skips for local_rag, raises when VS missing, raises when VS deleted on OpenAI
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- | File | Before | After |
+- |------|--------|-------|
+- | `policy_chat_rag_v2/task.
+- | `multi_policy_query_single_v2/task.
+- | `questionnaire_answer_rag_v2/task.
+- | `policy_requirement_processing_rag_v2/task.
+- | `template_question_generator_rag_v2/task.
+- | `questionnaire_adapter.
+- **Root cause**: OpenAI vector store IDs stored as `status=processed` in Neo4j could be deleted/expired on OpenAI's side, causing `Vector store with id [.
+- **Fix — Scenario A (race condition)**: Status guard added to all three VS-ID lookup paths — only returns an ID when `status == 'processed'`; pending/uploaded/failed stores are skipped.
+- **Fix — Scenario B (stale-processed)**: New `validate_vector_store_exists()` makes a cheap `retrieve()` call to OpenAI before any AI query; `mark_vector_store_failed()` self-heals the DB node on 404.
+- **Centralized helper**: `get_validated_remote_vector_store_id(policy, ai_provider)` combines status guard + raise-on-missing + proactive OpenAI existence check + self-heal into a single call, applied uniformly across all entry points.
+- **Silent fallback eliminated**: Four task files (`questionnaire_answer_rag_v2`, `policy_requirement_processing_rag_v2`, `template_question_generator_rag_v2`, `questionnaire_adapter`) were either silently falling back to `local_rag` or passing `[]` to file_search when no VS was available — all now raise `RuntimeError` with a clear message.
+
 ## [v8.8.34] - 2026-04-14
 
 ### Changed
