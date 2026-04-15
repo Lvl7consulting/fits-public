@@ -102,6 +102,22 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.37] - 2026-04-15
+
+### Changed
+- **Bug Fixes**
+- Enhanced detection and handling of vector stores that have expired or been deleted on the provider side, with improved error messaging for better troubleshooting.
+- **Documentation**
+- Added validation guidelines for vector store readiness and documented guard mechanisms to prevent usage of stale or failed stores.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] Docs-only change — CI passes (no app code changed)
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Updates three architecture docs to match the `get_validated_remote_vector_store_id()` helper shipped in #405.
+- **`05-policy-chat-flow.
+- **`03-vector-stores-and-files.
+- **`03-single-policy-task.
+
 ## [v8.8.36] - 2026-04-15
 
 ### Changed

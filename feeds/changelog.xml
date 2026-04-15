@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2026 14:56:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 20:40:56 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,24 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.37</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.37</link>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.37</guid>
+      <description>• Changed: **Bug Fixes**
+• Changed: Enhanced detection and handling of vector stores that have expired or been deleted on the provider side, with improved error messaging for better troubleshooting.
+• Changed: **Documentation**
+• Changed: Added validation guidelines for vector store readiness and documented guard mechanisms to prevent usage of stale or failed stores.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] Docs-only change — CI passes (no app code changed)
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Updates three architecture docs to match the `get_validated_remote_vector_store_id()` helper shipped in #405.
+• Changed: **`05-policy-chat-flow.
+• Changed: **`03-vector-stores-and-files.
+• Changed: **`03-single-policy-task.</description>
     </item>
     <item>
       <title>FITS v8.8.36</title>
@@ -425,17 +443,6 @@
 • Changed: **Policy template review list and section UI/view updates**
 • Changed: **Process/procedures separation: questionnaire parser, detail view, and task updates**
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.25</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.25</link>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.25</guid>
-      <description>• Changed: [ ] `.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: Add `task.
-• Changed: Previously task status stayed IN_PROGRESS in the database on exception — now explicitly marked FAILED
-• Changed: Addresses PR #387 review: Space.</description>
     </item>
   </channel>
 </rss>
