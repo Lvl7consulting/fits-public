@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2026 20:40:56 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 18:07:21 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -121,6 +121,34 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.38</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.38</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.38</guid>
+      <description>• Changed: **New Features**
+• Changed: New user-facing task exception for &quot;vector store not ready&quot; and centralized error handlers for task flows.
+• Changed: Host-side file-length check added to lint/test workflow.
+• Changed: **Bug Fixes**
+• Changed: More consistent task-failure reporting, safer error-reporting when notification/event bus calls fail.
+• Changed: Stable re-exports preserving public APIs after internal reorganizations.
+• Changed: **Tests**
+• Changed: Expanded/reorganized test helpers and suites for vector-store errors, task decorators, progress events, and RAG workflows.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] `.
+• Changed: [x] `.
+• Changed: [x] Pre-commit full CI suite (lint + unit) ran green on commit
+• Changed: [ ] Manual: trigger a policy chat with no processed vector store → expect the friendly &quot;No processed vector store available…&quot; toast via WebSocket, no backend-exception email
+• Changed: [ ] Manual: delete a VS on OpenAI while it is still `processed` in DB → expect the &quot;re-upload the policy documents&quot; message and the VS node flipped to `failed`
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: `get_validated_remote_vector_store_id` raises `VectorStoreNotReadyError` (UserFacingTaskError subclass) instead of `RuntimeError`.
+• Changed: No other runtime logic changed — the refactor is a pure move of code into smaller modules with matching imports.
+• Changed: Surface vector-store-not-ready to the user via WebSocket with a specific `VECTOR_STORE_NOT_READY` error_code (was a generic backend exception + failure email).
+• Changed: Split `app/tasks/base.
+• Changed: Split the corresponding test modules along the same boundaries; each test file now stays ≤200 lines.
+• Changed: Add `scripts/check_file_length.</description>
     </item>
     <item>
       <title>FITS v8.8.37</title>
@@ -419,30 +447,6 @@
 • Changed: **pyasn1** 0.
 • Changed: **PyJWT** 2.
 • Changed: **pyOpenSSL** 25.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.26</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.26</link>
-      <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.26</guid>
-      <description>• Changed: **New Features**
-• Changed: Executive Brief mode (policy statements) and deep-linking to individual processes.
-• Changed: Hierarchical Process → Procedure model with per-process editing and nested steps.
-• Changed: **Improvements**
-• Changed: Redesigned policy UI with legend-driven cards, clearer process/procedure display, generated-policy pages, DOCX export improvements, and KB sync/status indicators.
-• Changed: Questionnaire AI suggests titles; answers now record model confidence.
-• Changed: **Bug Fixes**
-• Changed: Safer temporary file handling and improved extraction fallback for uploaded documents.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: **docs: separating process and procedures from policies and safeguards (requirements, analysis)**
-• Changed: **feat: process/procedures separation – docs, models, services, tasks, views**
-• Changed: **Policy template, process/procedures separation, sections and related updates**
-• Changed: **feat: executive brief skips procedures, shows &quot;Policy Statements&quot;**
-• Changed: **Policy template: schemas, prompts, AI generation and tests**
-• Changed: **Add icon-document-check and icon-document-text header icons**
-• Changed: **Policy template review list and section UI/view updates**
-• Changed: **Process/procedures separation: questionnaire parser, detail view, and task updates**
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
   </channel>
 </rss>

@@ -102,6 +102,32 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.38] - 2026-04-16
+
+### Changed
+- **New Features**
+- New user-facing task exception for "vector store not ready" and centralized error handlers for task flows.
+- Host-side file-length check added to lint/test workflow.
+- **Bug Fixes**
+- More consistent task-failure reporting, safer error-reporting when notification/event bus calls fail.
+- Stable re-exports preserving public APIs after internal reorganizations.
+- **Tests**
+- Expanded/reorganized test helpers and suites for vector-store errors, task decorators, progress events, and RAG workflows.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] `.
+- [x] `.
+- [x] Pre-commit full CI suite (lint + unit) ran green on commit
+- [ ] Manual: trigger a policy chat with no processed vector store → expect the friendly "No processed vector store available…" toast via WebSocket, no backend-exception email
+- [ ] Manual: delete a VS on OpenAI while it is still `processed` in DB → expect the "re-upload the policy documents" message and the VS node flipped to `failed`
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- `get_validated_remote_vector_store_id` raises `VectorStoreNotReadyError` (UserFacingTaskError subclass) instead of `RuntimeError`.
+- No other runtime logic changed — the refactor is a pure move of code into smaller modules with matching imports.
+- Surface vector-store-not-ready to the user via WebSocket with a specific `VECTOR_STORE_NOT_READY` error_code (was a generic backend exception + failure email).
+- Split `app/tasks/base.
+- Split the corresponding test modules along the same boundaries; each test file now stays ≤200 lines.
+- Add `scripts/check_file_length.
+
 ## [v8.8.37] - 2026-04-15
 
 ### Changed
