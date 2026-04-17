@@ -86,6 +86,54 @@
 - When a questionnaire is in "processing" state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 - Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.
 
+## [v8.8.41] - 2026-04-17
+
+### Changed
+- **New Features**
+- Assessment templates now use organization-scoped URLs and navigation throughout the UI.
+- Search and counts support organization+framework-scoped queries.
+- **Bug Fixes**
+- Removed legacy non-organization template route to prevent cross-organization URL leakage.
+- Enforced organization/policy consistency during template create/update and tightened scoped access.
+- **Tests**
+- Added broad unit/integration tests covering org scoping, URL generation, queries, and regression checks.
+- **Documentation**
+- Added rollout plan and verification checklist for the migration.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] Full unit suite green (`.
+- [x] New tests: org+framework query, mixin, list/detail/update/delete/questions/create scoping, header actions, framework row onclick, scope context, legacy URL resolver, TS endpoint (mock + integration marker)
+- [x] Codex review × 3, all findings addressed
+- [ ] **Manual smoke (before merge):**
+- Log in as two users in different orgs; each visits `/organizations/<oid>/frameworks/<fw>/assessment-templates/` and sees only their own templates.
+- Each manipulates the URL to another org's template uid → expect 404.
+- Legacy `/frameworks/<fw>/templates/` → expect 404.
+- Super-admin and tenant-admin: navigate frameworks → framework detail → audit templates without errors.
+- [ ] **Data audit (before merge):** on demo DB, run:
+- ```cypher
+- MATCH (t:AssessmentTemplate)
+- OPTIONAL MATCH (o:Organization)-[:OWNS]->(t)
+- RETURN t.
+- ORDER BY 3
+- ```
+- Attribute or delete any `<no-owner>` rows.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- New `AssessmentTemplateQueries.
+- New `TemplateOrgOwnershipMixin` wired into detail / update / delete / questions views.
+- `AssessmentTemplateUrlService`: six non-org helpers deleted; all callers migrated to `get_org_*`.
+- `AssessmentTemplate.
+- `AssessmentTemplateCreateView` / `UpdateView` read org from URL `oid` (super-admin safe) and reject foreign policies with 403.
+- `TemplateQuestionsManageView` verifies `templateRequirement_uid` belongs to the scoped template.
+- Frontend: HTML `{% url %}` tags and `helpers.
+- `frameworks/detail.
+- Plan: `.
+
+### Security
+- **Security fix**: users could see every organization's AssessmentTemplates on `/frameworks/<fw>/templates/`.
+- Removes the non-org URL mount; every template URL now requires `oid`.
+- Fails closed: orphan templates (no org edge) cannot be created; foreign policy_uid on create/update returns 403.
+- Codex CLI reviewed the diff in three rounds; all 8 findings fixed (P1 detail/questions header crash, TS endpoint drift, foreign-requirement leak, foreign-policy-on-update, orphan templates, etc.
+
 ## [v8.8.40] - 2026-04-17
 
 ### Changed
