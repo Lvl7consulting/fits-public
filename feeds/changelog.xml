@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Apr 2026 11:17:42 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 12:04:35 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -103,6 +103,35 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: When a questionnaire is in &quot;processing&quot; state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 • Changed: Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.40</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.40</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.40</guid>
+      <description>• Changed: **Chores**
+• Changed: Updated dependency versions for enhanced stability and security, including core libraries, text processing tools, image handling, testing frameworks, and supporting packages.
+• Changed: Updated security audit configuration to address known vulnerability advisories in dependencies.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [x] Local `pip-audit -r requirements.
+• Changed: [x] Pre-commit hook ran full CI suite: 2491 passed, 75 deselected
+• Changed: [ ] CI pip-audit workflow passes on this branch
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: **`GHSA-r7w7-9xr2-qq2r`** — langchain-openai image-token-counting SSRF.
+• Changed: Fix is in `langchain-openai` 1.
+• Changed: Repo currently pins `openai==1.
+• Changed: Per the advisory itself, impact is limited to blind probing — the response body is consumed by `Image.
+• Changed: | Package | From | To | Advisory |
+• Changed: |---|---|---|---|
+• Changed: | langchain-core | 1.
+• Changed: | langchain-text-splitters | 1.
+• Changed: | langsmith | 0.
+• Changed: | pillow | 12.
+• Changed: | pytest | 9.
+• Changed: | python-multipart | 0.
+• Changed: Nightly pip-audit run [#236](https://github.
+• Changed: Adds `GHSA-r7w7-9xr2-qq2r` to the ignore list pending a separate `openai` 1.
+• Changed: Local `pip-audit` with CI's ignore list now reports **&quot;No known vulnerabilities found, 7 ignored&quot;**</description>
     </item>
     <item>
       <title>FITS v8.8.4</title>
@@ -471,16 +500,6 @@
 • Security: Complete technology stack, deployment architecture, security model
 • Security: CI/CD pipeline and testing documentation
 • Security: ~800 lines of comprehensive documentation</description>
-    </item>
-    <item>
-      <title>FITS v8.8.28</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.28</link>
-      <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.28</guid>
-      <description>• Changed: [ ] Check GitHub repo page shows the root README after merge
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: Remove `.
-• Changed: The repo was showing &quot;GitHub Configuration&quot; instead of the actual project README</description>
     </item>
   </channel>
 </rss>

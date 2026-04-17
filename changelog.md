@@ -86,6 +86,33 @@
 - When a questionnaire is in "processing" state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 - Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.
 
+## [v8.8.40] - 2026-04-17
+
+### Changed
+- **Chores**
+- Updated dependency versions for enhanced stability and security, including core libraries, text processing tools, image handling, testing frameworks, and supporting packages.
+- Updated security audit configuration to address known vulnerability advisories in dependencies.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [x] Local `pip-audit -r requirements.
+- [x] Pre-commit hook ran full CI suite: 2491 passed, 75 deselected
+- [ ] CI pip-audit workflow passes on this branch
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- **`GHSA-r7w7-9xr2-qq2r`** — langchain-openai image-token-counting SSRF.
+- Fix is in `langchain-openai` 1.
+- Repo currently pins `openai==1.
+- Per the advisory itself, impact is limited to blind probing — the response body is consumed by `Image.
+- | Package | From | To | Advisory |
+- |---|---|---|---|
+- | langchain-core | 1.
+- | langchain-text-splitters | 1.
+- | langsmith | 0.
+- | pillow | 12.
+- | pytest | 9.
+- | python-multipart | 0.
+- Nightly pip-audit run [#236](https://github.
+- Adds `GHSA-r7w7-9xr2-qq2r` to the ignore list pending a separate `openai` 1.
+- Local `pip-audit` with CI's ignore list now reports **"No known vulnerabilities found, 7 ignored"**
+
 ## [v8.8.4] - 2026-03-12
 
 ### Changed
