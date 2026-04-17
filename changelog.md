@@ -102,6 +102,50 @@
 - Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 - Surface a user-visible error notification when "Generate All Answers" or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.
 
+## [v8.8.39] - 2026-04-17
+
+### Changed
+- **New Features**
+- EU AI Act framework import/export and CSV generation
+- New operational and scope reports with Excel export and charts
+- Improved reliable policy chat with session persistence and robust UI components
+- **Improvements**
+- Modular, unified chart system for consistent visuals
+- Refactored assessment and background task handling for more reliable progress updates
+- Enhanced super-admin metrics dashboard with clearer sections and error states
+- **Tests**
+- Expanded unit tests for AI response manager and response streaming
+- **Documentation**
+- Added progress and guidance doc for refactor efforts
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Reviewer: spot-check a mixin split (e.
+- [ ] Reviewer: spot-check a management command (e.
+- [ ] CI runs green
+- [ ] `pre-commit run check-file-length --all-files` passes
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- `.
+- `.
+- `.
+- Test counts preserved exactly across every split (45→45, 65→65, suite-wide 2491→2491).
+- Vite build verified for both TS refactors.
+- | File type | Pattern | Example |
+- |---|---|---|
+- | Neo4j models | Mixin decomposition → `foo/__init__.
+- | Non-command helpers | Package split → `foo/__init__.
+- | Real mgmt commands | Thin `.
+- | TS entry pages | Entry file kept + sibling directory with focused modules | `reliable-policy-chat/`, `super-admin-dashboard-metrics/` |
+- | Pytest test files | Split by feature area + shared fixtures in `conftest.
+- | Monitoring CLI scripts | Same as real commands (thin entry + underscore package) | `scripts/monitoring/test_confluence_credentials.
+- **In:** Files >700 lines in `app/`, `confluence/`, `scripts/`, `e2e-playwright/`, `FITS/`.
+- **Out:** Files 200–700 lines (deferred to round 2, ~270 files); `admin/` and `auth/` (Django vendored).
+- **Refactored 12 files** >700 lines into ≤200-line focused modules (models, management commands, TS pages, components, test suites).
+- **Deleted 3 verified-unused files** (~2,687 lines: `matrix_original_backup.
+- **Added pre-commit enforcement** via `.
+- **Excluded Django-vendored `admin/` and `auth/`** from the file-length checker.
+- **Fixed one bug found during refactor:** restored `logger.
+- Spec: `docs/superpowers/specs/2026-04-17-200-line-limit-round-1-design.
+
 ## [v8.8.38] - 2026-04-16
 
 ### Changed
