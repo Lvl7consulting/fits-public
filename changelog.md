@@ -86,6 +86,21 @@
 - When a questionnaire is in "processing" state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 - Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.
 
+## [v8.8.42] - 2026-04-17
+
+### Changed
+- [x] Full unit suite (2545 tests) passes in pre-commit hook
+- [x] Rendered all four templates via \`render_to_string\` and verified in Chrome at 1440x900 (light + dark)
+- [ ] Manual smoke on staging: trigger a 404 (nonexistent URL), a 403 (cross-org link), a 500 (with DEBUG=False) and confirm each matches the design
+- 🤖 Generated with [Claude Code](https://claude.
+- Added: \`app/static/css/errors.
+- Updated: \`app/templates/403.
+- Replaces the bare unstyled 400/403/404/500 templates with a shared shell and four thin extensions.
+- Shell renders a large gradient numeral, blueprint-grid backdrop, contextual icon, recovery CTAs (return home + go back), and a monospace detail strip.
+- Per-status accent: 404 indigo, 403 amber, 500 rose, 400 sky.
+- Self-contained \`app/static/css/errors.
+- Dark-mode aware via the existing \`color-theme\` localStorage convention (preload script mirrors \`darkmode.
+
 ## [v8.8.41] - 2026-04-17
 
 ### Changed

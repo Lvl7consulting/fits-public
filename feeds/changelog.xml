@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Apr 2026 21:55:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 22:27:55 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -103,6 +103,23 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: When a questionnaire is in &quot;processing&quot; state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 • Changed: Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.42</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.42</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.42</guid>
+      <description>• Changed: [x] Full unit suite (2545 tests) passes in pre-commit hook
+• Changed: [x] Rendered all four templates via \`render_to_string\` and verified in Chrome at 1440x900 (light + dark)
+• Changed: [ ] Manual smoke on staging: trigger a 404 (nonexistent URL), a 403 (cross-org link), a 500 (with DEBUG=False) and confirm each matches the design
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: Added: \`app/static/css/errors.
+• Changed: Updated: \`app/templates/403.
+• Changed: Replaces the bare unstyled 400/403/404/500 templates with a shared shell and four thin extensions.
+• Changed: Shell renders a large gradient numeral, blueprint-grid backdrop, contextual icon, recovery CTAs (return home + go back), and a monospace detail strip.
+• Changed: Per-status accent: 404 indigo, 403 amber, 500 rose, 400 sky.
+• Changed: Self-contained \`app/static/css/errors.
+• Changed: Dark-mode aware via the existing \`color-theme\` localStorage convention (preload script mirrors \`darkmode.</description>
     </item>
     <item>
       <title>FITS v8.8.41</title>
@@ -516,21 +533,6 @@
 • Changed: **`0-docs/presentations/`** — &quot;From Chaos to Coherence&quot; 11-slide marketing pitch deck (`.
 • Changed: **`docs/superpowers/specs/`** — Presentation design spec
 • Changed: **`.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.3</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.3</link>
-      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.3</guid>
-      <description>• Changed: [x] `migrate_data --list` shows `migrate_system_frameworks` at order 100
-• Changed: [x] `migrate_system_frameworks --dry-run` completes 6/6
-• Changed: [x] `migrate_system_frameworks` (live) refreshes all 6 existing frameworks without errors
-• Changed: [x] Docker production build succeeds
-• Changed: **New file**: `app/management/commands/migrate_system_frameworks.
-• Changed: **Modified**: All 6 `generate_*_framework.
-• Changed: New `migrate_system_frameworks` data migration that orchestrates all 6 `generate_*_framework` commands, auto-discovered by `migrate_data` on every deploy
-• Changed: Existing frameworks get metadata refreshed (description, is_system) via direct Cypher; controls and requirements are never overwritten
-• Changed: Fixes BCDR framework missing `is_system=True` on initial creation</description>
     </item>
   </channel>
 </rss>
