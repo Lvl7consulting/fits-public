@@ -86,6 +86,61 @@
 - When a questionnaire is in "processing" state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 - Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.
 
+## [v8.8.48] - 2026-04-18
+
+### Changed
+- [ ] Resolve the remaining 3 codex blockers above.
+- [ ] `.
+- [ ] Manual: log in as tenant admin, create a group, assign modules, add/remove members, and confirm user create/edit flow shows and submits `groups`.
+- 🤖 Generated with [Claude Code](https://claude.
+- `app/views/tenant_admin/groups/` — list / create / update / delete / members views + templates.
+- `app/services/rbac/user_groups.
+- `app/templates/v2/components/forms/group_assignment.
+- Tests for list/create/update/delete/members flows.
+- **[P1 — FIXED in this PR via 749ba645]** `form.
+- **[P1]** Default-group conflict is detected too late — `app/services/rbac/user_groups.
+- **[P2]** Admin accounts leak into the group-member picker — `app/views/tenant_admin/groups/members.
+- **[P2]** Empty-modules selection silently reverts on edit retries — `app/views/tenant_admin/groups/update.
+- **Status: draft** — needs PR-1.
+- RBAC PR-5: tenant-admin UI.
+- Stack: PR-0 → PR-1 → PR-2 → PR-3 → PR-4 → **PR-5** (tip).
+
+## [v8.8.47] - 2026-04-18
+
+### Changed
+- [ ] Resolve kill-switch + org-switcher regressions.
+- [ ] `.
+- [ ] Manual: log in as a user missing `dashboard` and verify the landing cascade + 403 page work; flip `RBAC_ENFORCEMENT_ENABLED=false` and verify legacy routing.
+- 🤖 Generated with [Claude Code](https://claude.
+- `app/rbac/middleware.
+- `app/utils/navigation_*` — post-login landing cascade by `landing_priority`.
+- `app/rbac/sidebar.
+- `app/views/auth/no_module_access.
+- **[P1]** `RBAC_ENFORCEMENT_ENABLED` kill-switch is not honored in post-login routing — `app/utils/navigation_context.
+- **[P2]** Org-switcher controls still hard-target `organizations:dashboard` — `app/templates/v2/pages/base.
+- **[P3]** Sidebar recomputes `effective_modules()` from Neo4j on every render — `app/rbac/sidebar.
+- **Status: draft** — needs PR-1.
+- RBAC PR-4: middleware + post-login landing + dynamic sidebar.
+- One deviation from the design doc: template restrictions forced `request.
+- Stack: PR-0 → PR-1 → PR-2 → PR-3 → **PR-4** → PR-5.
+
+## [v8.8.46] - 2026-04-18
+
+### Changed
+- [ ] Audit the allowlist entries flagged above.
+- [ ] `.
+- 🤖 Generated with [Claude Code](https://claude.
+- 42 urlconf files tagged via `module_urls(<code>, urlpatterns)`.
+- `app/rbac/constants.
+- `app/rbac/tests/test_url_coverage.
+- Two allowlist buckets in `app/rbac/constants.
+- **[P2 / security]** Import APIs allowlisted without tenant/org checks — `app/rbac/constants.
+- **[P2 / security]** Recovery endpoints allowlisted without ownership checks — `app/rbac/constants.
+- **Fix direction:** either add ownership checks to the views (preferred — the allowlist comment already claims they exist) or drop the entries and tag the URLs with their real module.
+- **Status: draft** — needs PR-1, PR-2 merged first, and the two P2 bypasses resolved.
+- RBAC PR-3: enforcement wiring.
+- Stack: PR-0 → PR-1 → PR-2 → **PR-3** → PR-4 → PR-5.
+
 ## [v8.8.45] - 2026-04-18
 
 ### Changed

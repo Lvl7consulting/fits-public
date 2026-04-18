@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2026 21:40:09 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 21:41:48 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -103,6 +103,67 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: When a questionnaire is in &quot;processing&quot; state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 • Changed: Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.48</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.48</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.48</guid>
+      <description>• Changed: [ ] Resolve the remaining 3 codex blockers above.
+• Changed: [ ] `.
+• Changed: [ ] Manual: log in as tenant admin, create a group, assign modules, add/remove members, and confirm user create/edit flow shows and submits `groups`.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: `app/views/tenant_admin/groups/` — list / create / update / delete / members views + templates.
+• Changed: `app/services/rbac/user_groups.
+• Changed: `app/templates/v2/components/forms/group_assignment.
+• Changed: Tests for list/create/update/delete/members flows.
+• Changed: **[P1 — FIXED in this PR via 749ba645]** `form.
+• Changed: **[P1]** Default-group conflict is detected too late — `app/services/rbac/user_groups.
+• Changed: **[P2]** Admin accounts leak into the group-member picker — `app/views/tenant_admin/groups/members.
+• Changed: **[P2]** Empty-modules selection silently reverts on edit retries — `app/views/tenant_admin/groups/update.
+• Changed: **Status: draft** — needs PR-1.
+• Changed: RBAC PR-5: tenant-admin UI.
+• Changed: Stack: PR-0 → PR-1 → PR-2 → PR-3 → PR-4 → **PR-5** (tip).</description>
+    </item>
+    <item>
+      <title>FITS v8.8.47</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.47</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.47</guid>
+      <description>• Changed: [ ] Resolve kill-switch + org-switcher regressions.
+• Changed: [ ] `.
+• Changed: [ ] Manual: log in as a user missing `dashboard` and verify the landing cascade + 403 page work; flip `RBAC_ENFORCEMENT_ENABLED=false` and verify legacy routing.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: `app/rbac/middleware.
+• Changed: `app/utils/navigation_*` — post-login landing cascade by `landing_priority`.
+• Changed: `app/rbac/sidebar.
+• Changed: `app/views/auth/no_module_access.
+• Changed: **[P1]** `RBAC_ENFORCEMENT_ENABLED` kill-switch is not honored in post-login routing — `app/utils/navigation_context.
+• Changed: **[P2]** Org-switcher controls still hard-target `organizations:dashboard` — `app/templates/v2/pages/base.
+• Changed: **[P3]** Sidebar recomputes `effective_modules()` from Neo4j on every render — `app/rbac/sidebar.
+• Changed: **Status: draft** — needs PR-1.
+• Changed: RBAC PR-4: middleware + post-login landing + dynamic sidebar.
+• Changed: One deviation from the design doc: template restrictions forced `request.
+• Changed: Stack: PR-0 → PR-1 → PR-2 → PR-3 → **PR-4** → PR-5.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.46</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.46</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.46</guid>
+      <description>• Changed: [ ] Audit the allowlist entries flagged above.
+• Changed: [ ] `.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: 42 urlconf files tagged via `module_urls(&lt;code&gt;, urlpatterns)`.
+• Changed: `app/rbac/constants.
+• Changed: `app/rbac/tests/test_url_coverage.
+• Changed: Two allowlist buckets in `app/rbac/constants.
+• Changed: **[P2 / security]** Import APIs allowlisted without tenant/org checks — `app/rbac/constants.
+• Changed: **[P2 / security]** Recovery endpoints allowlisted without ownership checks — `app/rbac/constants.
+• Changed: **Fix direction:** either add ownership checks to the views (preferred — the allowlist comment already claims they exist) or drop the entries and tag the URLs with their real module.
+• Changed: **Status: draft** — needs PR-1, PR-2 merged first, and the two P2 bypasses resolved.
+• Changed: RBAC PR-3: enforcement wiring.
+• Changed: Stack: PR-0 → PR-1 → PR-2 → **PR-3** → PR-4 → PR-5.</description>
     </item>
     <item>
       <title>FITS v8.8.45</title>
@@ -407,111 +468,6 @@
 • Changed: Typed `confluence_page_id_questionnaire` / `confluence_page_id_documentation` fields added to structural models; legacy `confluence_page_id` backfilled then retired
 • Changed: Advisory lock per `(env_uid, publication_type)` prevents folder creation races
 • Changed: `find_active_task` dedup extended with `publication_type` key</description>
-    </item>
-    <item>
-      <title>FITS v8.8.35</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.35</link>
-      <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.35</guid>
-      <description>• Changed: **Bug Fixes**
-• Changed: Remote-assistant flows now require a processed vector store ID and perform preflight checks with the AI service; clear RuntimeErrors are raised if a store is missing or deleted.
-• Changed: Stale or deleted vector stores are proactively marked as failed to avoid repeated attempts.
-• Changed: **New Features**
-• Changed: Added remote vector-store validation and a utility to verify existence with the AI service before use.
-• Changed: **Tests**
-• Changed: Expanded coverage for status guarding, preflight validation, error propagation, and end-to-end remote vector store selection.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] All 2459 unit tests pass (CI green)
-• Changed: [ ] `TestGetPolicyVectorStoreIdStatusGuard` — status guard for all non-processed statuses
-• Changed: [ ] `TestValidateVectorStoreExists` — returns bool, re-raises non-404 errors
-• Changed: [ ] `TestMarkVectorStoreFailed` — sets status, swallows only DoesNotExist, re-raises infra errors
-• Changed: [ ] `TestGetValidatedRemoteVectorStoreId` — happy path, missing VS, deleted-on-OpenAI
-• Changed: [ ] Each task file: resolves VS for remote_assistant, skips for local_rag, raises when VS missing, raises when VS deleted on OpenAI
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: | File | Before | After |
-• Changed: |------|--------|-------|
-• Changed: | `policy_chat_rag_v2/task.
-• Changed: | `multi_policy_query_single_v2/task.
-• Changed: | `questionnaire_answer_rag_v2/task.
-• Changed: | `policy_requirement_processing_rag_v2/task.
-• Changed: | `template_question_generator_rag_v2/task.
-• Changed: | `questionnaire_adapter.
-• Changed: **Root cause**: OpenAI vector store IDs stored as `status=processed` in Neo4j could be deleted/expired on OpenAI's side, causing `Vector store with id [.
-• Changed: **Fix — Scenario A (race condition)**: Status guard added to all three VS-ID lookup paths — only returns an ID when `status == 'processed'`; pending/uploaded/failed stores are skipped.
-• Changed: **Fix — Scenario B (stale-processed)**: New `validate_vector_store_exists()` makes a cheap `retrieve()` call to OpenAI before any AI query; `mark_vector_store_failed()` self-heals the DB node on 404.
-• Changed: **Centralized helper**: `get_validated_remote_vector_store_id(policy, ai_provider)` combines status guard + raise-on-missing + proactive OpenAI existence check + self-heal into a single call, applied uniformly across all entry points.
-• Changed: **Silent fallback eliminated**: Four task files (`questionnaire_answer_rag_v2`, `policy_requirement_processing_rag_v2`, `template_question_generator_rag_v2`, `questionnaire_adapter`) were either silently falling back to `local_rag` or passing `[]` to file_search when no VS was available — all now raise `RuntimeError` with a clear message.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.34</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.34</link>
-      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.34</guid>
-      <description>• Changed: # Release Notes
-• Changed: **New Features**
-• Changed: Multi-policy chat for simultaneously querying multiple policies
-• Changed: Intelligent policy routing to direct questions to relevant policies
-• Changed: Answer synthesis combining responses into a single summary
-• Changed: Conversation history with ability to resume previous chats
-• Changed: Optional policy pre-selection for targeted queries
-• Changed: Multi-policy questionnaire answering
-• Changed: **Improvements**
-• Changed: Enhanced knowledge profile generation for improved routing accuracy
-• Changed: Refined access control for policy management
-• Changed: Extended WebSocket heartbeat timeout for better connection stability
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] TDD — tests written before each implementation chunk
-• Changed: [ ] `.
-• Changed: [ ] Playwright E2E: Strong Tiger org, 3 seed policies with RAG stores
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: | # | Chunk | Status |
-• Changed: |---|-------|--------|
-• Changed: | 01 | Branch + Constants | ⬜ |
-• Changed: | 02 | Data Models | ⬜ |
-• Changed: | 03 | Single-Policy Task (scatter) | ⬜ |
-• Changed: | 03b | Synthesis Task (gather+cleanup) | ⬜ |
-• Changed: | 03c | Knowledge Profile Task | ⬜ |
-• Changed: | 04 | Router LLM + Consumer | ⬜ |
-• Changed: | 05 | Policy Chat UI | ⬜ |
-• Changed: | 09 | Chat List + Resume | ⬜ |
-• Changed: | 10 | Policy Pre-selection | ⬜ |
-• Changed: | 06 | Questionnaire Integration | ⬜ |
-• Changed: | 07 | Unit Tests | ⬜ |
-• Changed: | 08 | E2E Tests (Playwright) | ⬜ |
-• Changed: A reusable engine that intelligently routes a user query to relevant policies, collects RAG-grounded answers, and synthesizes them into one concise response.
-• Changed: **Architecture**: Router LLM → Selective Scatter → Gather → Synthesize
-• Changed: Router reads Knowledge Registry (per-policy profiles) + conversation history → selects relevant policies only
-• Changed: One Celery task per selected policy (parallel) → each queries its own RAG store
-• Changed: Synthesis task merges N raw answers into one response via single LLM call
-• Changed: Sub-chat results are ephemeral — deleted after synthesis
-• Changed: Master chat conversation persists with full history
-• Changed: **Zero touch to existing features** — all new files.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.33</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.33</link>
-      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.33</guid>
-      <description>• Changed: **New Features**
-• Changed: Role-based gating applied broadly to policy and chat pages: super-admins and tenant-admins are redirected to their dashboards; regular users keep access.
-• Changed: **Tests**
-• Changed: Added comprehensive tests covering redirect and non-redirect behavior for SUPER_ADMIN, TENANT_ADMIN, and USER across policy, chat, super-admin, and tenant-admin flows.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [x] 45 policy access tests — all green
-• Changed: [x] 10 domain segregation tests — all green
-• Changed: [x] Full unit suite — 2287 passed, 0 failures
-• Changed: [x] Lint clean
-• Changed: [ ] Manual: log in as super-admin, confirm redirect to `/super-admin/` on any `/organizations/{id}/policies/*` URL
-• Changed: [ ] Manual: log in as tenant-admin, confirm redirect to `/tenant-admin/` on any `/organizations/{id}/policies/*` URL
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: Super-admins and tenant-admins were able to navigate directly to regular-user domain URLs such as `/organizations/{id}/policies/create/`
-• Changed: Added new `RegularUserOnlyMixin` — only `USER` role passes through; `SUPER_ADMIN` → `/super-admin/`, `TENANT_ADMIN` → `/tenant-admin/`
-• Changed: Applied to all 15 policy views (create, list, detail, update, delete, chat, chat_list, chat_detail, chat_delete, chat_rename, download×2, sync_knowledge_base, sections, assistant_model)
-• Changed: 45 new TDD tests for policy views (3 per view: super-admin blocked, tenant-admin blocked, user allowed through)
-• Changed: 10 new domain segregation tests for super-admin and tenant-admin domains</description>
     </item>
   </channel>
 </rss>
