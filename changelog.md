@@ -86,6 +86,47 @@
 - When a questionnaire is in "processing" state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 - Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.
 
+## [v8.8.44] - 2026-04-18
+
+### Changed
+- **New Features**
+- Introduced a module registry system containing 13 modules with metadata (display names, descriptions, icon paths).
+- Added URL pattern tagging functionality to organize routing.
+- **Tests**
+- Added comprehensive test suites validating module registry integrity and URL tagging behavior.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] `.
+- [ ] Review for clarity / naming / docstrings.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- **[P2]** `Module` currently exposes `display_name`/`icon_svg_path`/`landing_priority` but no `link_target` or `active_path_prefix`.
+- **[P3]** `module_urls()` validates the module code with `assert module_code in MODULES`.
+- `app/rbac/modules.
+- `app/rbac/url_helpers.
+- `app/rbac/constants.
+- 13 unit tests for registry integrity and helper behavior.
+- RBAC PR-1: foundation layer.
+- Stack: PR-0 (design) → **PR-1** → PR-2 → PR-3 → PR-4 → PR-5.
+
+## [v8.8.43] - 2026-04-18
+
+### Changed
+- **Documentation**
+- Added a design spec for tenant-scoped, group-based RBAC: group assignment of module access, a tenant “Default” group for new users, admin bypass, dynamic sidebar gating based on effective group access, post-login landing selection by module priority, customizable access-denied page content, enforcement toggle (kill‑switch), URL coverage assurance, and an ordered rollout/rollback strategy with a comprehensive testing matrix.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Reviewers read the design doc end to end and leave comments where the spec is ambiguous or disagrees with stated constraints.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- `0-docs/rbac-user-groups-modules/design.
+- Design document for the RBAC user-groups + modules feature (see `0-docs/rbac-user-groups-modules/design.
+- Landing order:
+- 1.
+- 2.
+- 3.
+- 4.
+- 5.
+- 6.
+
 ## [v8.8.42] - 2026-04-17
 
 ### Changed

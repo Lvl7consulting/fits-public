@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Apr 2026 22:27:55 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 21:37:45 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -103,6 +103,51 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: When a questionnaire is in &quot;processing&quot; state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 • Changed: Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.44</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.44</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.44</guid>
+      <description>• Changed: **New Features**
+• Changed: Introduced a module registry system containing 13 modules with metadata (display names, descriptions, icon paths).
+• Changed: Added URL pattern tagging functionality to organize routing.
+• Changed: **Tests**
+• Changed: Added comprehensive test suites validating module registry integrity and URL tagging behavior.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] `.
+• Changed: [ ] Review for clarity / naming / docstrings.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: **[P2]** `Module` currently exposes `display_name`/`icon_svg_path`/`landing_priority` but no `link_target` or `active_path_prefix`.
+• Changed: **[P3]** `module_urls()` validates the module code with `assert module_code in MODULES`.
+• Changed: `app/rbac/modules.
+• Changed: `app/rbac/url_helpers.
+• Changed: `app/rbac/constants.
+• Changed: 13 unit tests for registry integrity and helper behavior.
+• Changed: RBAC PR-1: foundation layer.
+• Changed: Stack: PR-0 (design) → **PR-1** → PR-2 → PR-3 → PR-4 → PR-5.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.43</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.43</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.43</guid>
+      <description>• Changed: **Documentation**
+• Changed: Added a design spec for tenant-scoped, group-based RBAC: group assignment of module access, a tenant “Default” group for new users, admin bypass, dynamic sidebar gating based on effective group access, post-login landing selection by module priority, customizable access-denied page content, enforcement toggle (kill‑switch), URL coverage assurance, and an ordered rollout/rollback strategy with a comprehensive testing matrix.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Reviewers read the design doc end to end and leave comments where the spec is ambiguous or disagrees with stated constraints.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: `0-docs/rbac-user-groups-modules/design.
+• Changed: Design document for the RBAC user-groups + modules feature (see `0-docs/rbac-user-groups-modules/design.
+• Changed: Landing order:
+• Changed: 1.
+• Changed: 2.
+• Changed: 3.
+• Changed: 4.
+• Changed: 5.
+• Changed: 6.</description>
     </item>
     <item>
       <title>FITS v8.8.42</title>
@@ -477,62 +522,6 @@
 • Changed: `get_assistant_info` only returned `(rag_store_id, integration_mode)` — it never fetched `vector_store_id` from `policy.
 • Changed: `_handle_initiate_session` checked `if not rag_store_id:` unconditionally — always `None` in `remote_assistant` mode, so the error always fired regardless of configuration
 • Changed: `Chat.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.31</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.31</link>
-      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.31</guid>
-      <description>• Changed: **New Features**
-• Changed: Added Google Generative AI integration.
-• Changed: **Refactor**
-• Changed: Modernized RAG pipeline for improved retrieval, parsing, and consolidated answer+source responses.
-• Changed: **Bug Fixes**
-• Changed: More consistent conversation history routing and effective window sizing for session-based chats.
-• Changed: **Chores**
-• Changed: Upgraded core dependencies and LangChain ecosystem; added npm package resolution override.
-• Changed: **Documentation**
-• Changed: Added a security vulnerability remediation plan.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [x] 2091 unit tests passing on branch
-• Changed: [x] Docker build resolves all dependencies cleanly (`requirements-audit.
-• Changed: [x] Pre-push dependency resolution check passed
-• Changed: [ ] Verify RAG v2 chain behaviour in staging (LangChain LCEL migration)
-• Changed: [ ] Confirm Celery workers restarted after deploy
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: **ujson 5.
-• Changed: **PyMuPDF 1.
-• Changed: **Django ≥5.
-• Changed: **npm flatted 3.
-• Changed: **LangChain ecosystem v0.
-• Changed: **Pygments CVE-2026-4539**: No fix available upstream — alert dismissed with `tolerable_risk` reason</description>
-    </item>
-    <item>
-      <title>FITS v8.8.30</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.30</link>
-      <pubDate>Wed, 25 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.30</guid>
-      <description>• Changed: [ ] Open `0-docs/presentations/fits-coherence-deck.
-• Changed: [ ] Review data-flow docs in `0-docs/data-flow/` for accuracy
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: | # | Slide |
-• Changed: |---|-------|
-• Changed: | 01 | The Compliance Chaos Problem (dark hook) |
-• Changed: | 02 | The Fragmented Tool Landscape |
-• Changed: | 03 | Meet Sarah — A Day Without FITS |
-• Changed: | 04 | The Hidden Cost (stat callouts) |
-• Changed: | 05 | Introducing FITS (hero slide) |
-• Changed: | 06 | Feed It Your World (inputs) |
-• Changed: | 07 | AI Does the Heavy Lifting |
-• Changed: | 08 | One Action.
-• Changed: | 09 | Sarah's Day — With FITS |
-• Changed: | 10 | Not Another AI Chat.
-• Changed: | 11 | From Chaos to Coherence (CTA) |
-• Changed: **`0-docs/data-flow/`** — Mermaid data-flow diagram (md/svg/png/hires), abstract marketing diagram, and 10 detailed findings docs covering: file upload pipeline, AI providers, Confluence/Jira, email providers, report generation, core data models, Celery tasks, RAG/vector store, API endpoints, and policy workflow
-• Changed: **`0-docs/presentations/`** — &quot;From Chaos to Coherence&quot; 11-slide marketing pitch deck (`.
-• Changed: **`docs/superpowers/specs/`** — Presentation design spec
-• Changed: **`.</description>
     </item>
   </channel>
 </rss>
