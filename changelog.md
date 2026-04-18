@@ -86,6 +86,26 @@
 - When a questionnaire is in "processing" state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 - Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.
 
+## [v8.8.45] - 2026-04-18
+
+### Changed
+- [ ] Resolve the P1 idempotency issue.
+- [ ] `.
+- [ ] Dry-run `rbac_seed_default_groups` in staging and verify rerunning is a no-op.
+- 🤖 Generated with [Claude Code](https://claude.
+- `app/models/tenant/user_group.
+- `app/models/auth/user*.
+- `app/management/commands/rbac_seed_default_groups.
+- Tests for model invariants and `effective_modules()`.
+- **[P1]** `rbac_seed_default_groups` loses idempotency on partial runs — `app/management/commands/rbac_seed_default_groups.
+- **[P2]** Single-default invariant can be bypassed on create — `app/models/tenant/user_group.
+- **[P3]** Seed enrolls tenant admins into `MEMBER_OF` — `app/management/commands/rbac_seed_default_groups.
+- **Status: draft** — PR-1 must merge first, and the P1 above should be resolved before landing PR-2.
+
+### Security
+- RBAC PR-2: data model.
+- Stack: PR-0 → PR-1 → **PR-2** → PR-3 → PR-4 → PR-5.
+
 ## [v8.8.44] - 2026-04-18
 
 ### Changed
