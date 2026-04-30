@@ -86,6 +86,46 @@
 - When a questionnaire is in "processing" state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 - Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.
 
+## [v8.8.49] - 2026-04-30
+
+### Changed
+- **New Features**
+- Local publication target with one-way migrate-to-local action and magic-link SME access flows
+- Background local document evaluation, post-eval summary updates, and magic-link emit task
+- **Backend**
+- New local-publication endpoints, session/middleware, audit events, document storage, and dedicated Celery queue/worker
+- **Frontend**
+- New publication UI islands: dashboard, project, assessment, yes/no input, description, upload, document list, progress, and target/migrate controls
+- **Tests**
+- Extensive unit, integration, and Playwright E2E specs added
+- **Documentation**
+- Comprehensive planning, design, and runbooks for local publication and RAG optimization
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- `0-docs/local-publication-workflow/12-decisions-log.
+- `0-docs/local-publication-workflow/13-sme-access-flow.
+- `0-docs/local-publication-workflow/plan/` — the 54-segment TDD plan this branch implements.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Commit history is muddled in places.
+- B-21's local document-evaluation Celery task wires the framework but returns a `NEEDS_CONTEXT` sentinel because the existing RAG core requires a `Policy` + `AIProvider` not present in the local SME flow.
+- 7 of 8 Playwright e2e specs are `test.
+- Out-of-scope side-threads tracked separately: project-wide delete-flow redesign (don't-delete-client-data rule), FITS-user access control for local SME pages.
+- [ ] `.
+- [ ] `.
+- [ ] `npm test --prefix e2e-playwright -- tests/local-publication/` — 1 spec runs, 7 skipped pending Neo4j seed + Daphne + Vite-built bundles.
+- [ ] Anonymous SME flow: GET `/publication/access-request/` → POST email → neutral confirmation regardless of match.
+- [ ] Magic-link round-trip: email link click → 302 to `/publication/dashboard/` → cookie set → second click rejected.
+- [ ] Re-issue invalidation: SME session 1 stays alive; re-request link; session 1's next protected request flushes (via `EmployeeSessionGen`).
+- [ ] FITS-side: only users in the project's organization with `projects` RBAC module can flip `publication_target` or trigger `migrate-to-local`.
+- [ ] Regression: confluence-only project's existing publish flow runs identically; no `local_publication` task enqueued.
+- [ ] CSRF: authenticated POST/DELETE to `/publication/.
+- [ ] Don't-delete-client-data rule: project-scope deletion design surface flagged for follow-up (out of plan scope).
+- New `local_publication` Django app **parallel** to `confluence/` — per-project `publication_target` enum gates routing.
+- **Magic-link SME access**: one-time tokens (sha256, `select_for_update` race-safe), long-lived signed-cookie sessions, audit log, 5/hr/IP rate limiting, per-employee `EmployeeSessionGen` counter so re-issue invalidates prior sessions across any session backend.
+- **Live evaluation pipeline**: SME doc upload → Celery RAG → DocumentEvaluation update → post-eval status recompute → WebSocket push to live SME UI.
+- **TS islands** per page (dashboard, project, assessment, Yes/No, description, upload, doc list, eval indicator, WS client, progress bar, hash-based nav) with their own calm design system.
+- **30 backend + 19 frontend + 5 integration** TDD segments + 7 review-driven blocker fixes (post-eval dispatch, session-gen invalidation, MEDIA_ROOT, download endpoint, CSRF re-enable, RBAC + tenant scope on FITS endpoints).
+
 ## [v8.8.48] - 2026-04-18
 
 ### Changed

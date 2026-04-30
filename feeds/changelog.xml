@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2026 21:43:27 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:00:53 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -103,6 +103,48 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: When a questionnaire is in &quot;processing&quot; state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 • Changed: Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.49</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.49</link>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.49</guid>
+      <description>• Changed: **New Features**
+• Changed: Local publication target with one-way migrate-to-local action and magic-link SME access flows
+• Changed: Background local document evaluation, post-eval summary updates, and magic-link emit task
+• Changed: **Backend**
+• Changed: New local-publication endpoints, session/middleware, audit events, document storage, and dedicated Celery queue/worker
+• Changed: **Frontend**
+• Changed: New publication UI islands: dashboard, project, assessment, yes/no input, description, upload, document list, progress, and target/migrate controls
+• Changed: **Tests**
+• Changed: Extensive unit, integration, and Playwright E2E specs added
+• Changed: **Documentation**
+• Changed: Comprehensive planning, design, and runbooks for local publication and RAG optimization
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: `0-docs/local-publication-workflow/12-decisions-log.
+• Changed: `0-docs/local-publication-workflow/13-sme-access-flow.
+• Changed: `0-docs/local-publication-workflow/plan/` — the 54-segment TDD plan this branch implements.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Commit history is muddled in places.
+• Changed: B-21's local document-evaluation Celery task wires the framework but returns a `NEEDS_CONTEXT` sentinel because the existing RAG core requires a `Policy` + `AIProvider` not present in the local SME flow.
+• Changed: 7 of 8 Playwright e2e specs are `test.
+• Changed: Out-of-scope side-threads tracked separately: project-wide delete-flow redesign (don't-delete-client-data rule), FITS-user access control for local SME pages.
+• Changed: [ ] `.
+• Changed: [ ] `.
+• Changed: [ ] `npm test --prefix e2e-playwright -- tests/local-publication/` — 1 spec runs, 7 skipped pending Neo4j seed + Daphne + Vite-built bundles.
+• Changed: [ ] Anonymous SME flow: GET `/publication/access-request/` → POST email → neutral confirmation regardless of match.
+• Changed: [ ] Magic-link round-trip: email link click → 302 to `/publication/dashboard/` → cookie set → second click rejected.
+• Changed: [ ] Re-issue invalidation: SME session 1 stays alive; re-request link; session 1's next protected request flushes (via `EmployeeSessionGen`).
+• Changed: [ ] FITS-side: only users in the project's organization with `projects` RBAC module can flip `publication_target` or trigger `migrate-to-local`.
+• Changed: [ ] Regression: confluence-only project's existing publish flow runs identically; no `local_publication` task enqueued.
+• Changed: [ ] CSRF: authenticated POST/DELETE to `/publication/.
+• Changed: [ ] Don't-delete-client-data rule: project-scope deletion design surface flagged for follow-up (out of plan scope).
+• Changed: New `local_publication` Django app **parallel** to `confluence/` — per-project `publication_target` enum gates routing.
+• Changed: **Magic-link SME access**: one-time tokens (sha256, `select_for_update` race-safe), long-lived signed-cookie sessions, audit log, 5/hr/IP rate limiting, per-employee `EmployeeSessionGen` counter so re-issue invalidates prior sessions across any session backend.
+• Changed: **Live evaluation pipeline**: SME doc upload → Celery RAG → DocumentEvaluation update → post-eval status recompute → WebSocket push to live SME UI.
+• Changed: **TS islands** per page (dashboard, project, assessment, Yes/No, description, upload, doc list, eval indicator, WS client, progress bar, hash-based nav) with their own calm design system.
+• Changed: **30 backend + 19 frontend + 5 integration** TDD segments + 7 review-driven blocker fixes (post-eval dispatch, session-gen invalidation, MEDIA_ROOT, download endpoint, CSRF re-enable, RBAC + tenant scope on FITS endpoints).</description>
     </item>
     <item>
       <title>FITS v8.8.48</title>
@@ -433,41 +475,6 @@
 • Changed: **`05-policy-chat-flow.
 • Changed: **`03-vector-stores-and-files.
 • Changed: **`03-single-policy-task.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.36</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.36</link>
-      <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.36</guid>
-      <description>• Changed: **New Features**
-• Changed: Added support for independent Questionnaire and Documentation publication types in Confluence publishing workflow.
-• Changed: Enabled separate folder structures and page organization per publication type.
-• Changed: Added publication tracking with status monitoring and error recording.
-• Changed: **Documentation**
-• Changed: Comprehensive design documentation for publication-type feature architecture, page hierarchy, model changes, trigger architecture, folder lifecycle, unpublish behavior, and testing strategy.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] 9-cell pytest matrix: `{questionnaire, documentation, all} × {first-publish, republish, unpublish}`
-• Changed: [ ] Partial failure under `all` — questionnaire committed, documentation `last_error` set
-• Changed: [ ] Dedup collision — second button press during in-flight task correctly blocked
-• Changed: [ ] Folder creation race — advisory lock prevents duplicate folders
-• Changed: [ ] Version CAS — concurrent republish handled correctly
-• Changed: [ ] Cross-domain auth denial
-• Changed: [ ] Jest: two-button UI (disabled state, progress label, error banner)
-• Changed: [ ] Run via `.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: Full spec and implementation plan in `0-docs/confluence-publication-type/`:
-• Changed: `README.
-• Changed: `00-problem.
-• Changed: `implementation-plan.
-• Changed: `progress.
-• Changed: Adds two independent publish buttons per AssessmentTemplate: **Publish Questionnaire** and **Publish Documentation**
-• Changed: Introduces `PublicationType` enum (`questionnaire` / `documentation` / `all`) threaded through the existing Celery publish pipeline
-• Changed: Two thin folder pages under `EnvironmentPage` isolate the page hierarchies — all existing page titles unchanged (parser contract preserved)
-• Changed: New `TemplatePublication` node tracks per-`(scope, env, template, type)` Confluence page IDs with optimistic version locking
-• Changed: Typed `confluence_page_id_questionnaire` / `confluence_page_id_documentation` fields added to structural models; legacy `confluence_page_id` backfilled then retired
-• Changed: Advisory lock per `(env_uid, publication_type)` prevents folder creation races
-• Changed: `find_active_task` dedup extended with `publication_type` key</description>
     </item>
   </channel>
 </rss>
