@@ -71,6 +71,52 @@
 - Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
 - Move the div outside the conditional so it always renders with the required data attributes.
 
+## [v8.8.51] - 2026-05-09
+
+### Changed
+- [x] `.
+- [ ] Manual smoke: scope + project detail pages render correct gate state in browser.
+- [ ] Verify Publish-locally + Confluence-publish disabled tooltip surfaces per-scope reasons.
+- 🤖 Generated with [Claude Code](https://claude.
+- Bundle of greenfield work since the last main merge:
+- Local AI provider work (PR #422) follow-up: codex P2 fixes (URL `/v1` normalization, local chat-completions probe, keyless-local edit-page placeholder).
+- "Publish locally" button on scope + project detail pages with eligibility gates (≥1 scope, ≥1 application, ≥1 audit template, ≥1 SME).
+- Confluence "Publish Scope" + "Publish Project" buttons gated on per-scope content prerequisites with diagnostic tooltips.
+- UI controller respects server-rendered `disabled` state.
+- Employee-search performance: fulltext index, single-roundtrip count+page, multi-word matching across name/email.
+- Two simplify passes: shared `scope_content_reasons` helper, `cached_property` migration, frozen-tuple eligibility, unified `publish_disabled` / `publish_reasons` template context.
+- Various test/coverage adds and fixes (template comment leak, autouse stub-flag fixture, multi-policy-chat stale STATUS_UPDATE refs).
+
+## [v8.8.50] - 2026-05-09
+
+### Changed
+- **New Features**
+- Redesigned SME dashboard with co‑branding, per‑tenant briefing, and three buckets
+- Persistent Submit with preview, background evaluation progress, and SOC “Evaluate now” via WebSocket
+- **Improvements**
+- Two‑column assessment UI, grouped sidebar, All‑done states and reusable Submit CTA
+- Safer uploads: size/type checks, XLSX→CSV conversion; sign‑out flush ensures saves complete
+- New evaluation KPIs surfaced in dashboard
+- **Tests / Docs**
+- Expanded unit, integration, Playwright coverage and rollout guidance
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] `.
+- [ ] `.
+- [ ] `.
+- [ ] Resize viewport to 600px — sidebar stacks above panel, headers go static (per existing media query), questions still render under their control.
+- [ ] After Playwright snapshot regen, spot-check diff to confirm intentional change.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- **Playwright snapshot regen** — the new sidebar DOM (h3 headers + nested `<ul>`) will trip the existing 2% visual-diff threshold on `assessment.
+- **Lands after #420a** (currently open as #420).
+- **`de38bbb52`** `[rbac] feat(assessment-view): expose control_uid/title/number for SME sidebar grouping` — extends `_ASSESSMENT_CONTEXT_QUERY` RETURN with three control columns + ORDER BY `tc.
+- **`e571c81fd`** `[frontend] feat(sidebar): group questions under their TemplateControl` — extends `Question` interface with optional `controlUid`/`controlTitle`/`controlNumber`; rewrites `renderQuestionList` to bucket by control via insertion-ordered `Map` and emit `<section data-testid="control-group-{uid}"><h3 class="sidebar-control-heading">{number} {title}</h3><ul class="sidebar-control-list">…</ul></section>`.
+- **`9ff70ec11`** `[tests] test(question-list): control-group assertions for sidebar grouping` — adds Jest assertions covering group count, header content, and per-group question membership.
+- **`240b15a99`** `[tests] test(assessment-view): real-Neo4j integration for control-field surfacing` — un-mocked Cypher round-trip confirming the new payload shape.
+- **`1e3da4abd`** `[tests] test(model-inflate): DateTimeProperty round-trip lock-down` — carry-over from #420a smoke fixes; tightens the regression net for the neomodel datetime issue caught during smoke verification.
+- Group the SME assessment-page sidebar's flat 20-question list under its parent **TemplateControl** as sticky `<h3>` headers, so SMEs answering a multi-control audit retain the section context they'd see on any printed compliance questionnaire.
+- Plan: [`~/.
+
 ## [v8.8.5] - 2026-03-12
 
 ### Changed

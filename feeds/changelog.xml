@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 12:00:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 19:26:52 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -86,6 +86,56 @@
 • Changed: The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
 • Changed: Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the &quot;Generate All Answers&quot; button had no click handler — this is the root cause of the button doing nothing on production.
 • Changed: Move the div outside the conditional so it always renders with the required data attributes.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.51</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.51</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.51</guid>
+      <description>• Changed: [x] `.
+• Changed: [ ] Manual smoke: scope + project detail pages render correct gate state in browser.
+• Changed: [ ] Verify Publish-locally + Confluence-publish disabled tooltip surfaces per-scope reasons.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: Bundle of greenfield work since the last main merge:
+• Changed: Local AI provider work (PR #422) follow-up: codex P2 fixes (URL `/v1` normalization, local chat-completions probe, keyless-local edit-page placeholder).
+• Changed: &quot;Publish locally&quot; button on scope + project detail pages with eligibility gates (≥1 scope, ≥1 application, ≥1 audit template, ≥1 SME).
+• Changed: Confluence &quot;Publish Scope&quot; + &quot;Publish Project&quot; buttons gated on per-scope content prerequisites with diagnostic tooltips.
+• Changed: UI controller respects server-rendered `disabled` state.
+• Changed: Employee-search performance: fulltext index, single-roundtrip count+page, multi-word matching across name/email.
+• Changed: Two simplify passes: shared `scope_content_reasons` helper, `cached_property` migration, frozen-tuple eligibility, unified `publish_disabled` / `publish_reasons` template context.
+• Changed: Various test/coverage adds and fixes (template comment leak, autouse stub-flag fixture, multi-policy-chat stale STATUS_UPDATE refs).</description>
+    </item>
+    <item>
+      <title>FITS v8.8.50</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.50</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.50</guid>
+      <description>• Changed: **New Features**
+• Changed: Redesigned SME dashboard with co‑branding, per‑tenant briefing, and three buckets
+• Changed: Persistent Submit with preview, background evaluation progress, and SOC “Evaluate now” via WebSocket
+• Changed: **Improvements**
+• Changed: Two‑column assessment UI, grouped sidebar, All‑done states and reusable Submit CTA
+• Changed: Safer uploads: size/type checks, XLSX→CSV conversion; sign‑out flush ensures saves complete
+• Changed: New evaluation KPIs surfaced in dashboard
+• Changed: **Tests / Docs**
+• Changed: Expanded unit, integration, Playwright coverage and rollout guidance
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] `.
+• Changed: [ ] `.
+• Changed: [ ] `.
+• Changed: [ ] Resize viewport to 600px — sidebar stacks above panel, headers go static (per existing media query), questions still render under their control.
+• Changed: [ ] After Playwright snapshot regen, spot-check diff to confirm intentional change.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: **Playwright snapshot regen** — the new sidebar DOM (h3 headers + nested `&lt;ul&gt;`) will trip the existing 2% visual-diff threshold on `assessment.
+• Changed: **Lands after #420a** (currently open as #420).
+• Changed: **`de38bbb52`** `[rbac] feat(assessment-view): expose control_uid/title/number for SME sidebar grouping` — extends `_ASSESSMENT_CONTEXT_QUERY` RETURN with three control columns + ORDER BY `tc.
+• Changed: **`e571c81fd`** `[frontend] feat(sidebar): group questions under their TemplateControl` — extends `Question` interface with optional `controlUid`/`controlTitle`/`controlNumber`; rewrites `renderQuestionList` to bucket by control via insertion-ordered `Map` and emit `&lt;section data-testid=&quot;control-group-{uid}&quot;&gt;&lt;h3 class=&quot;sidebar-control-heading&quot;&gt;{number} {title}&lt;/h3&gt;&lt;ul class=&quot;sidebar-control-list&quot;&gt;…&lt;/ul&gt;&lt;/section&gt;`.
+• Changed: **`9ff70ec11`** `[tests] test(question-list): control-group assertions for sidebar grouping` — adds Jest assertions covering group count, header content, and per-group question membership.
+• Changed: **`240b15a99`** `[tests] test(assessment-view): real-Neo4j integration for control-field surfacing` — un-mocked Cypher round-trip confirming the new payload shape.
+• Changed: **`1e3da4abd`** `[tests] test(model-inflate): DateTimeProperty round-trip lock-down` — carry-over from #420a smoke fixes; tightens the regression net for the neomodel datetime issue caught during smoke verification.
+• Changed: Group the SME assessment-page sidebar's flat 20-question list under its parent **TemplateControl** as sticky `&lt;h3&gt;` headers, so SMEs answering a multi-control audit retain the section context they'd see on any printed compliance questionnaire.
+• Changed: Plan: [`~/.</description>
     </item>
     <item>
       <title>FITS v8.8.5</title>
@@ -429,52 +479,6 @@
 • Changed: **Excluded Django-vendored `admin/` and `auth/`** from the file-length checker.
 • Changed: **Fixed one bug found during refactor:** restored `logger.
 • Changed: Spec: `docs/superpowers/specs/2026-04-17-200-line-limit-round-1-design.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.38</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.38</link>
-      <pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.38</guid>
-      <description>• Changed: **New Features**
-• Changed: New user-facing task exception for &quot;vector store not ready&quot; and centralized error handlers for task flows.
-• Changed: Host-side file-length check added to lint/test workflow.
-• Changed: **Bug Fixes**
-• Changed: More consistent task-failure reporting, safer error-reporting when notification/event bus calls fail.
-• Changed: Stable re-exports preserving public APIs after internal reorganizations.
-• Changed: **Tests**
-• Changed: Expanded/reorganized test helpers and suites for vector-store errors, task decorators, progress events, and RAG workflows.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [x] `.
-• Changed: [x] `.
-• Changed: [x] Pre-commit full CI suite (lint + unit) ran green on commit
-• Changed: [ ] Manual: trigger a policy chat with no processed vector store → expect the friendly &quot;No processed vector store available…&quot; toast via WebSocket, no backend-exception email
-• Changed: [ ] Manual: delete a VS on OpenAI while it is still `processed` in DB → expect the &quot;re-upload the policy documents&quot; message and the VS node flipped to `failed`
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: `get_validated_remote_vector_store_id` raises `VectorStoreNotReadyError` (UserFacingTaskError subclass) instead of `RuntimeError`.
-• Changed: No other runtime logic changed — the refactor is a pure move of code into smaller modules with matching imports.
-• Changed: Surface vector-store-not-ready to the user via WebSocket with a specific `VECTOR_STORE_NOT_READY` error_code (was a generic backend exception + failure email).
-• Changed: Split `app/tasks/base.
-• Changed: Split the corresponding test modules along the same boundaries; each test file now stays ≤200 lines.
-• Changed: Add `scripts/check_file_length.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.37</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.37</link>
-      <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.37</guid>
-      <description>• Changed: **Bug Fixes**
-• Changed: Enhanced detection and handling of vector stores that have expired or been deleted on the provider side, with improved error messaging for better troubleshooting.
-• Changed: **Documentation**
-• Changed: Added validation guidelines for vector store readiness and documented guard mechanisms to prevent usage of stale or failed stores.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [x] Docs-only change — CI passes (no app code changed)
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: Updates three architecture docs to match the `get_validated_remote_vector_store_id()` helper shipped in #405.
-• Changed: **`05-policy-chat-flow.
-• Changed: **`03-vector-stores-and-files.
-• Changed: **`03-single-policy-task.</description>
     </item>
   </channel>
 </rss>
