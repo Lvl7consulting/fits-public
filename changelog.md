@@ -71,6 +71,18 @@
 - Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
 - Move the div outside the conditional so it always renders with the required data attributes.
 
+## [v8.8.52] - 2026-05-09
+
+### Changed
+- **Chores**
+- Updated minimum langchain-core version requirement to >= 1.
+- [![Review Change Stack](https://storage.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- Adds CVE-2026-44843 to the pip-audit ignore list.
+- Cherry-picked from greenfield commit \`0aa5d5cbd\` so main's pip-audit goes green again.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+
 ## [v8.8.51] - 2026-05-09
 
 ### Changed

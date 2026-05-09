@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2026 19:28:54 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 19:35:25 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -86,6 +86,20 @@
 • Changed: The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
 • Changed: Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the &quot;Generate All Answers&quot; button had no click handler — this is the root cause of the button doing nothing on production.
 • Changed: Move the div outside the conditional so it always renders with the required data attributes.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.52</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.52</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.52</guid>
+      <description>• Changed: **Chores**
+• Changed: Updated minimum langchain-core version requirement to &gt;= 1.
+• Changed: [![Review Change Stack](https://storage.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: Adds CVE-2026-44843 to the pip-audit ignore list.
+• Changed: Cherry-picked from greenfield commit \`0aa5d5cbd\` so main's pip-audit goes green again.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
     <item>
       <title>FITS v8.8.51</title>
@@ -433,52 +447,6 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
 • Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.39</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.39</link>
-      <pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.39</guid>
-      <description>• Changed: **New Features**
-• Changed: EU AI Act framework import/export and CSV generation
-• Changed: New operational and scope reports with Excel export and charts
-• Changed: Improved reliable policy chat with session persistence and robust UI components
-• Changed: **Improvements**
-• Changed: Modular, unified chart system for consistent visuals
-• Changed: Refactored assessment and background task handling for more reliable progress updates
-• Changed: Enhanced super-admin metrics dashboard with clearer sections and error states
-• Changed: **Tests**
-• Changed: Expanded unit tests for AI response manager and response streaming
-• Changed: **Documentation**
-• Changed: Added progress and guidance doc for refactor efforts
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] Reviewer: spot-check a mixin split (e.
-• Changed: [ ] Reviewer: spot-check a management command (e.
-• Changed: [ ] CI runs green
-• Changed: [ ] `pre-commit run check-file-length --all-files` passes
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: `.
-• Changed: `.
-• Changed: `.
-• Changed: Test counts preserved exactly across every split (45→45, 65→65, suite-wide 2491→2491).
-• Changed: Vite build verified for both TS refactors.
-• Changed: | File type | Pattern | Example |
-• Changed: |---|---|---|
-• Changed: | Neo4j models | Mixin decomposition → `foo/__init__.
-• Changed: | Non-command helpers | Package split → `foo/__init__.
-• Changed: | Real mgmt commands | Thin `.
-• Changed: | TS entry pages | Entry file kept + sibling directory with focused modules | `reliable-policy-chat/`, `super-admin-dashboard-metrics/` |
-• Changed: | Pytest test files | Split by feature area + shared fixtures in `conftest.
-• Changed: | Monitoring CLI scripts | Same as real commands (thin entry + underscore package) | `scripts/monitoring/test_confluence_credentials.
-• Changed: **In:** Files &gt;700 lines in `app/`, `confluence/`, `scripts/`, `e2e-playwright/`, `FITS/`.
-• Changed: **Out:** Files 200–700 lines (deferred to round 2, ~270 files); `admin/` and `auth/` (Django vendored).
-• Changed: **Refactored 12 files** &gt;700 lines into ≤200-line focused modules (models, management commands, TS pages, components, test suites).
-• Changed: **Deleted 3 verified-unused files** (~2,687 lines: `matrix_original_backup.
-• Changed: **Added pre-commit enforcement** via `.
-• Changed: **Excluded Django-vendored `admin/` and `auth/`** from the file-length checker.
-• Changed: **Fixed one bug found during refactor:** restored `logger.
-• Changed: Spec: `docs/superpowers/specs/2026-04-17-200-line-limit-round-1-design.</description>
     </item>
   </channel>
 </rss>
