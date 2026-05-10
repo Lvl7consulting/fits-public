@@ -71,6 +71,37 @@
 - Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
 - Move the div outside the conditional so it always renders with the required data attributes.
 
+## [v8.8.53] - 2026-05-10
+
+### Changed
+- **New Features**
+- Activate/Deactivate toggle for individual email providers with immediate UI feedback and page reload.
+- Inactive providers display a warning banner and disable the “Send Test Email” action.
+- Dev/test safety flag to force-null email routing (prevents real sends for safe runs).
+- **Bug Fixes**
+- Email routing enforces provider active state per priority level — no silent fallthrough.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- `.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- [x] Unit: ~3,770 tests pass via `.
+- [ ] Manually flip Activate/Deactivate on a tenant email provider detail page and confirm the banner and greyed-out test button update without a server restart
+- [ ] Manually click Send Test Email with the provider active (and `EMAIL_FORCE_NULL_PROVIDER=false`) — verify a real test mail arrives at the operator's address
+- [ ] Manually click Send Test Email with the provider inactive — verify the 400 "Activate this provider" message
+- [ ] Run \`npm run test:e2e -- email-providers/email-provider-activation.
+- The branch went through a long planning loop before any code:
+- Spec at `docs/superpowers/specs/2026-05-10-email-provider-toggle-design.
+- 10 split implementation plans at `docs/superpowers/plans/2026-05-10-email-provider-toggle/` — cursor-agent (gpt-5.
+- 10 implementation commits, then a `/simplify` cleanup pass, a final cursor-agent correctness review, and three follow-up commits to land the remaining review findings on this branch (no separate PRs).
+- **Routing fix:** `UnifiedEmailService` no longer falls through to the system provider when a tenant has any configured provider but none active.
+- **Single-active invariant:** activating a tenant provider deactivates any sibling active providers, making routing deterministic.
+- **Cross-tenant ownership:** new `ProviderOwnershipMixin` enforces the owner check on detail / update / delete / test / activate / deactivate / assign / unassign — closing a pre-existing leak path.
+- **UI:** new primary header button with the toggle, yellow inactive banner (reusing `alert_banner.
+- **Template fix:** detail templates used `{% if provider.
+- Replaces the global `EMAIL_PROVIDER_ENABLED` env var with a per-provider `is_active` toggle exposed via Activate/Deactivate buttons on tenant-admin and super-admin email-provider detail pages — no more container restart to pause mail.
+- Closes the long-standing bypass where the **Send Test Email** button hit real providers even when global mail was disabled.
+- Adds a separate dev/CI safeguard `EMAIL_FORCE_NULL_PROVIDER` plus a server-side `/__test__/email-safety/` probe so Playwright runs cannot leak real mail under any model state.
+
 ## [v8.8.52] - 2026-05-09
 
 ### Changed

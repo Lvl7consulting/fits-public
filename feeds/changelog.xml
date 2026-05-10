@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2026 19:35:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 11:49:06 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -86,6 +86,39 @@
 • Changed: The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
 • Changed: Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the &quot;Generate All Answers&quot; button had no click handler — this is the root cause of the button doing nothing on production.
 • Changed: Move the div outside the conditional so it always renders with the required data attributes.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.53</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.53</link>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.53</guid>
+      <description>• Changed: **New Features**
+• Changed: Activate/Deactivate toggle for individual email providers with immediate UI feedback and page reload.
+• Changed: Inactive providers display a warning banner and disable the “Send Test Email” action.
+• Changed: Dev/test safety flag to force-null email routing (prevents real sends for safe runs).
+• Changed: **Bug Fixes**
+• Changed: Email routing enforces provider active state per priority level — no silent fallthrough.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: `.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: [x] Unit: ~3,770 tests pass via `.
+• Changed: [ ] Manually flip Activate/Deactivate on a tenant email provider detail page and confirm the banner and greyed-out test button update without a server restart
+• Changed: [ ] Manually click Send Test Email with the provider active (and `EMAIL_FORCE_NULL_PROVIDER=false`) — verify a real test mail arrives at the operator's address
+• Changed: [ ] Manually click Send Test Email with the provider inactive — verify the 400 &quot;Activate this provider&quot; message
+• Changed: [ ] Run \`npm run test:e2e -- email-providers/email-provider-activation.
+• Changed: The branch went through a long planning loop before any code:
+• Changed: Spec at `docs/superpowers/specs/2026-05-10-email-provider-toggle-design.
+• Changed: 10 split implementation plans at `docs/superpowers/plans/2026-05-10-email-provider-toggle/` — cursor-agent (gpt-5.
+• Changed: 10 implementation commits, then a `/simplify` cleanup pass, a final cursor-agent correctness review, and three follow-up commits to land the remaining review findings on this branch (no separate PRs).
+• Changed: **Routing fix:** `UnifiedEmailService` no longer falls through to the system provider when a tenant has any configured provider but none active.
+• Changed: **Single-active invariant:** activating a tenant provider deactivates any sibling active providers, making routing deterministic.
+• Changed: **Cross-tenant ownership:** new `ProviderOwnershipMixin` enforces the owner check on detail / update / delete / test / activate / deactivate / assign / unassign — closing a pre-existing leak path.
+• Changed: **UI:** new primary header button with the toggle, yellow inactive banner (reusing `alert_banner.
+• Changed: **Template fix:** detail templates used `{% if provider.
+• Changed: Replaces the global `EMAIL_PROVIDER_ENABLED` env var with a per-provider `is_active` toggle exposed via Activate/Deactivate buttons on tenant-admin and super-admin email-provider detail pages — no more container restart to pause mail.
+• Changed: Closes the long-standing bypass where the **Send Test Email** button hit real providers even when global mail was disabled.
+• Changed: Adds a separate dev/CI safeguard `EMAIL_FORCE_NULL_PROVIDER` plus a server-side `/__test__/email-safety/` probe so Playwright runs cannot leak real mail under any model state.</description>
     </item>
     <item>
       <title>FITS v8.8.52</title>
@@ -429,24 +462,6 @@
 • Changed: Nightly pip-audit run [#236](https://github.
 • Changed: Adds `GHSA-r7w7-9xr2-qq2r` to the ignore list pending a separate `openai` 1.
 • Changed: Local `pip-audit` with CI's ignore list now reports **&quot;No known vulnerabilities found, 7 ignored&quot;**</description>
-    </item>
-    <item>
-      <title>FITS v8.8.4</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.4</link>
-      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.4</guid>
-      <description>• Changed: **New Features**
-• Changed: Added progress indicator that displays when processing questionnaires.
-• Changed: **Bug Fixes**
-• Changed: Added user notifications for WebSocket connection errors to keep users informed of connectivity issues.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] Upload a questionnaire file, then immediately navigate to its detail page -- verify the progress bar appears with &quot;Processing questionnaire.
-• Changed: [ ] On the detail page, verify that when the WebSocket connection is active, &quot;Generate All Answers&quot; works normally
-• Changed: [ ] Simulate a WebSocket disconnect (e.
-• Changed: [ ] Verify the same error toast appears when clicking individual &quot;Regenerate Answer&quot; buttons while disconnected
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: Show the progress bar immediately when navigating to a questionnaire that is still being parsed after upload, by reading `data-questionnaire-status` from the template on page load.
-• Changed: Surface a user-visible error notification when &quot;Generate All Answers&quot; or single answer generation is attempted while the WebSocket is disconnected, instead of silently failing.</description>
     </item>
   </channel>
 </rss>
