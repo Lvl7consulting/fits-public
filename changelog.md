@@ -71,6 +71,48 @@
 - Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
 - Move the div outside the conditional so it always renders with the required data attributes.
 
+## [v8.8.54] - 2026-05-11
+
+### Changed
+- **Documentation**
+- Added comprehensive Hetzner non-root deployment hardening plan with phased migration steps.
+- Added server preparation specification for provider-neutral setup.
+- Added zero-trust deployment operator guide.
+- Added security follow-up documentation for deploy log secret exposure prevention.
+- **New Features**
+- Added automated Hetzner E2E testing workflow with daily execution and manual trigger options.
+- Added pre-commit test hook for E2E validation.
+- **Bug Fixes**
+- Fixed incomplete base user manager implementation.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] `bats scripts/devops/hetzner/tests/` all green
+- [ ] `bash scripts/e2e/full-stack-test.
+- [ ] `https://<fqdn>/` serves publicly-trusted LE cert (no -k)
+- [ ] `docker inspect fits` shows User=1000:1000, no-new-privileges, CapAdd=[CAP_NET_BIND_SERVICE]
+- [ ] deployer's `sudo -n -l` matches FITS_DEPLOY+FITS_DOCKER+FITS_PROBE allowlist exactly
+- [ ] `getent passwd fits fitsdock` both show /usr/sbin/nologin
+- [ ] daemon.
+- [ ] DigitalOcean scripts unchanged from main
+- Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- `0-docs/hetzner-zero-trust-deploy.
+- Spec + plan codex-approved across 8 review rounds (R1 1/22 -> R8 22/22)
+- 80 commits, ~75 bats tests, 11 live E2E runs against a real Hetzner box
+- Phase 9 SSH-lockdown reverted per operator decision (root SSH stays)
+- `hz-provision-and-deploy.
+- `fits-rotate-helpers` for in-allowlist helper rotation
+- DNS-01 for cert auto-renewal once port 80 is locked
+- Redis AUTH wiring on the app side
+- `hz-deploy.
+
+### Security
+- End-to-end zero-trust deploy for Hetzner Cloud single-node fits.
+- **Containers**: `user: 1000:1000`, `no-new-privileges`, `apparmor=docker-default`, `cap_drop:[ALL]` plus minimum per-service `cap_add` for neo4j/redis startup chown, userns-remap=fitsdock so container root != host root.
+- **Host**: `deployer` (SSH-able, narrow sudo over `/usr/local/sbin/fits-*` helpers + fixed `docker compose -f /opt/fits/docker-compose.
+- **Deploy**: 8 root-owned `/usr/local/sbin/fits-*` helpers (`install-docker`, `stage-env`, `stage-compose`, `stage-ssl`, `stage-redis-password`, `issue-cert`, `prepare-volumes`, `rotate-neo4j-password`) invoked through narrow sudo.
+- **TLS**: Phase 4 calls `fits-issue-cert <fqdn> <email>` which runs certbot standalone; live test box has a real Let's Encrypt cert.
+- **E2E**: `scripts/e2e/full-stack-test.
+
 ## [v8.8.53] - 2026-05-10
 
 ### Changed
