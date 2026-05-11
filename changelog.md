@@ -71,6 +71,48 @@
 - Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
 - Move the div outside the conditional so it always renders with the required data attributes.
 
+## [v8.8.55] - 2026-05-11
+
+### Changed
+- **New Features**
+- Added interactive `.
+- Scripts now support structured metadata headers (category, runtime environment, summary, danger level).
+- Generated script analysis documentation in `docs/scripts-analysis/` tracking script usage, references, and status.
+- **Improvements**
+- Refactored dependency checker with modular architecture.
+- Script file-length validation now supports documented exemptions via allowlist.
+- Improved multi-tenant deployment workflow with modular helper scripts.
+- **Documentation**
+- Added comprehensive guides for scripts organizer implementation and design.
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] `python3 -m pytest scripts/_console/tests/` — 21 passing
+- [ ] `python3 scripts/_console/scan.
+- [ ] `.
+- [ ] Open `devops/hetzner` in the category tree → see all 26 entries with badges + summaries
+- [ ] Press `Ctrl-r` on `hz-status.
+- [ ] Press `Ctrl-r` on `fits-stage-env` (remote) → notify rejects with "open a terminal yourself"
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- [`docs/superpowers/specs/2026-05-11-scripts-organizer-design.
+- Plan: [`docs/superpowers/plans/2026-05-11-scripts-organizer/`](docs/superpowers/plans/2026-05-11-scripts-organizer/).
+- Remaining backfill batches stay todo so reviewers can land them one subtree at a time:
+- 04b: `scripts/e2e/` + `scripts/tests/`
+- 04c: `scripts/migrations/` + `scripts/database/` + `scripts/lib/`
+- 04d: `scripts/sme-smoke/` + `scripts/setup/`
+- 04e: `scripts/development/` + `scripts/maintenance/` + `scripts/monitoring/`
+- 04f: `scripts/forms/` + `scripts/pdf_converter/` + `scripts/code-analysis/` + `scripts/excel-multi-tenant-generation/`
+- 04g: top-level `scripts/*`
+- The **strict pre-commit + CI lint gate stays OFF** until the backfill batches land — see [`05-lint-gate.
+- Passes `python3 scripts/_console/scan.
+- 15 host-side wrappers (`hz-*.
+- 12 root-owned on-box helpers in `usr-local-sbin/` (`fits-*` + `_fits-install.
+- Self-updating console UI for the ~250 scripts under `scripts/`.
+- **Source of truth**: in-script `@category` / `@runs-on` / `@summary` / `@danger` header.
+- **Scanner** (`scripts/_console/scan.
+- **TUI** (`scripts/_console/console.
+- **Launcher** (`.
+- **Tests** (`scripts/_console/tests/`): 21 tests covering schema validation + a live-tree scan smoke test.
+
 ## [v8.8.54] - 2026-05-11
 
 ### Changed
