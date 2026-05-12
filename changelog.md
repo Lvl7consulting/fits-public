@@ -71,6 +71,13 @@
 - Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
 - Move the div outside the conditional so it always renders with the required data attributes.
 
+## [v8.8.56] - 2026-05-12
+
+### Changed
+- [x] No code changes — docs only.
+- Adds a project-root `CLAUDE.
+- Acts as a baseline alongside the existing per-account `CLAUDE.
+
 ## [v8.8.55] - 2026-05-11
 
 ### Changed
