@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2026 15:36:09 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 08:12:39 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -86,6 +86,30 @@
 • Changed: The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
 • Changed: Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the &quot;Generate All Answers&quot; button had no click handler — this is the root cause of the button doing nothing on production.
 • Changed: Move the div outside the conditional so it always renders with the required data attributes.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.57</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.57</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.57</guid>
+      <description>• Changed: **New Features**
+• Changed: Added a Hetzner deploy key setup tool that generates secure SSH keypairs, prevents overwriting existing private keys, enforces restrictive permissions, and can auto-update a GitHub secret or provide manual setup instructions.
+• Changed: E2E test workflow can provision a fresh Hetzner server per run, uses a dedicated firewall name, and supports a self-signed SSL strategy.
+• Changed: **Chores**
+• Changed: E2E workflow credential handling updated to expose deploy-phase credentials and a token file for downstream steps.
+• Changed: &lt;!-- review_stack_entry_start --&gt;
+• Changed: [![Review Change Stack](https://storage.
+• Changed: &lt;!-- review_stack_entry_end --&gt;
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Run `scripts/devops/hetzner/hz-setup-deploy-key.
+• Changed: [ ] Run with `--push` to set `HETZNER_DEPLOY_KEY` in GitHub secrets
+• Changed: [ ] Register the public key in Hetzner Cloud console under the matching name
+• Changed: [ ] Trigger the `Hetzner full-stack E2E` workflow manually to confirm the key step passes
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Adds `scripts/devops/hetzner/hz-setup-deploy-key.
+• Changed: The `HETZNER_DEPLOY_KEY` secret is currently empty/corrupt, causing the daily E2E run to fail at `ssh-keygen -y -f ~/.
+• Changed: Script outputs step-by-step instructions (GitHub secret → Hetzner Cloud SSH-key registration → `HETZNER_SSH_KEY_NAME` secret); pass `--push` to set the GitHub secret automatically via `gh`</description>
     </item>
     <item>
       <title>FITS v8.8.56</title>
@@ -442,27 +466,6 @@
 • Changed: 13 unit tests for registry integrity and helper behavior.
 • Changed: RBAC PR-1: foundation layer.
 • Changed: Stack: PR-0 (design) → **PR-1** → PR-2 → PR-3 → PR-4 → PR-5.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.43</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.43</link>
-      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.43</guid>
-      <description>• Changed: **Documentation**
-• Changed: Added a design spec for tenant-scoped, group-based RBAC: group assignment of module access, a tenant “Default” group for new users, admin bypass, dynamic sidebar gating based on effective group access, post-login landing selection by module priority, customizable access-denied page content, enforcement toggle (kill‑switch), URL coverage assurance, and an ordered rollout/rollback strategy with a comprehensive testing matrix.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] Reviewers read the design doc end to end and leave comments where the spec is ambiguous or disagrees with stated constraints.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: `0-docs/rbac-user-groups-modules/design.
-• Changed: Design document for the RBAC user-groups + modules feature (see `0-docs/rbac-user-groups-modules/design.
-• Changed: Landing order:
-• Changed: 1.
-• Changed: 2.
-• Changed: 3.
-• Changed: 4.
-• Changed: 5.
-• Changed: 6.</description>
     </item>
   </channel>
 </rss>

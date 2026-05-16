@@ -71,6 +71,28 @@
 - Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
 - Move the div outside the conditional so it always renders with the required data attributes.
 
+## [v8.8.57] - 2026-05-16
+
+### Changed
+- **New Features**
+- Added a Hetzner deploy key setup tool that generates secure SSH keypairs, prevents overwriting existing private keys, enforces restrictive permissions, and can auto-update a GitHub secret or provide manual setup instructions.
+- E2E test workflow can provision a fresh Hetzner server per run, uses a dedicated firewall name, and supports a self-signed SSL strategy.
+- **Chores**
+- E2E workflow credential handling updated to expose deploy-phase credentials and a token file for downstream steps.
+- <!-- review_stack_entry_start -->
+- [![Review Change Stack](https://storage.
+- <!-- review_stack_entry_end -->
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Run `scripts/devops/hetzner/hz-setup-deploy-key.
+- [ ] Run with `--push` to set `HETZNER_DEPLOY_KEY` in GitHub secrets
+- [ ] Register the public key in Hetzner Cloud console under the matching name
+- [ ] Trigger the `Hetzner full-stack E2E` workflow manually to confirm the key step passes
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Adds `scripts/devops/hetzner/hz-setup-deploy-key.
+- The `HETZNER_DEPLOY_KEY` secret is currently empty/corrupt, causing the daily E2E run to fail at `ssh-keygen -y -f ~/.
+- Script outputs step-by-step instructions (GitHub secret → Hetzner Cloud SSH-key registration → `HETZNER_SSH_KEY_NAME` secret); pass `--push` to set the GitHub secret automatically via `gh`
+
 ## [v8.8.56] - 2026-05-12
 
 ### Changed
