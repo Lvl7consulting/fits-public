@@ -57,6 +57,19 @@
 - Adds `self.
 - Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`
 
+## [v8.8.61] - 2026-05-16
+
+### Changed
+- [ ] README renders correctly on GitHub (headings, tables, anchor links)
+- [ ] TOC anchor `#local-publication--sme-portal` resolves
+- [ ] No existing content was inadvertently removed or reformatted
+- 🤖 Generated with [Claude Code](https://claude.
+- **Local AI Provider**: documents the new Ollama / vLLM / llama.
+- **RBAC / User Groups**: new Tenant Admin subsection covering the module registry, group assignment, dynamic sidebar, and fail-closed landing
+- **Local Publication & SME Portal**: new top-level section covering magic-link flow, the SME assessment portal, access control, and access-event audit trail
+- **E2E testing**: E2E Playwright row added to the test suites table and CI/CD workflow table (Hetzner provisioned per-run)
+- **Version corrections**: Anthropic embedding dimension 1024 → 384 (actual all-MiniLM-L6-v2 output), `anthropic` 0.
+
 ## [v8.8.60] - 2026-05-16
 
 ### Changed

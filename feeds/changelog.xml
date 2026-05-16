@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 09:20:02 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 12:31:08 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -70,6 +70,21 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Adds `self.
 • Changed: Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`</description>
+    </item>
+    <item>
+      <title>FITS v8.8.61</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.61</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.61</guid>
+      <description>• Changed: [ ] README renders correctly on GitHub (headings, tables, anchor links)
+• Changed: [ ] TOC anchor `#local-publication--sme-portal` resolves
+• Changed: [ ] No existing content was inadvertently removed or reformatted
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: **Local AI Provider**: documents the new Ollama / vLLM / llama.
+• Changed: **RBAC / User Groups**: new Tenant Admin subsection covering the module registry, group assignment, dynamic sidebar, and fail-closed landing
+• Changed: **Local Publication &amp; SME Portal**: new top-level section covering magic-link flow, the SME assessment portal, access control, and access-event audit trail
+• Changed: **E2E testing**: E2E Playwright row added to the test suites table and CI/CD workflow table (Hetzner provisioned per-run)
+• Changed: **Version corrections**: Anthropic embedding dimension 1024 → 384 (actual all-MiniLM-L6-v2 output), `anthropic` 0.</description>
     </item>
     <item>
       <title>FITS v8.8.60</title>
@@ -417,27 +432,6 @@
 • Changed: **Status: draft** — needs PR-1.
 • Changed: RBAC PR-5: tenant-admin UI.
 • Changed: Stack: PR-0 → PR-1 → PR-2 → PR-3 → PR-4 → **PR-5** (tip).</description>
-    </item>
-    <item>
-      <title>FITS v8.8.47</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.47</link>
-      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.47</guid>
-      <description>• Changed: [ ] Resolve kill-switch + org-switcher regressions.
-• Changed: [ ] `.
-• Changed: [ ] Manual: log in as a user missing `dashboard` and verify the landing cascade + 403 page work; flip `RBAC_ENFORCEMENT_ENABLED=false` and verify legacy routing.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: `app/rbac/middleware.
-• Changed: `app/utils/navigation_*` — post-login landing cascade by `landing_priority`.
-• Changed: `app/rbac/sidebar.
-• Changed: `app/views/auth/no_module_access.
-• Changed: **[P1]** `RBAC_ENFORCEMENT_ENABLED` kill-switch is not honored in post-login routing — `app/utils/navigation_context.
-• Changed: **[P2]** Org-switcher controls still hard-target `organizations:dashboard` — `app/templates/v2/pages/base.
-• Changed: **[P3]** Sidebar recomputes `effective_modules()` from Neo4j on every render — `app/rbac/sidebar.
-• Changed: **Status: draft** — needs PR-1.
-• Changed: RBAC PR-4: middleware + post-login landing + dynamic sidebar.
-• Changed: One deviation from the design doc: template restrictions forced `request.
-• Changed: Stack: PR-0 → PR-1 → PR-2 → PR-3 → **PR-4** → PR-5.</description>
     </item>
   </channel>
 </rss>
