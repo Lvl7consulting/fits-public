@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 08:12:39 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 08:53:56 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -86,6 +86,15 @@
 • Changed: The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
 • Changed: Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the &quot;Generate All Answers&quot; button had no click handler — this is the root cause of the button doing nothing on production.
 • Changed: Move the div outside the conditional so it always renders with the required data attributes.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.58</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.58</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.58</guid>
+      <description>• Changed: Adds `.
+• Changed: Adds `docs/superpowers/plans/2026-05-11-console-code-review-fixes.
+• Changed: 🤖 Generated with [Claude Code](https://claude.</description>
     </item>
     <item>
       <title>FITS v8.8.57</title>
@@ -442,30 +451,6 @@
 • Changed: **Status: draft** — PR-1 must merge first, and the P1 above should be resolved before landing PR-2.
 • Security: RBAC PR-2: data model.
 • Security: Stack: PR-0 → PR-1 → **PR-2** → PR-3 → PR-4 → PR-5.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.44</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.44</link>
-      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.44</guid>
-      <description>• Changed: **New Features**
-• Changed: Introduced a module registry system containing 13 modules with metadata (display names, descriptions, icon paths).
-• Changed: Added URL pattern tagging functionality to organize routing.
-• Changed: **Tests**
-• Changed: Added comprehensive test suites validating module registry integrity and URL tagging behavior.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] `.
-• Changed: [ ] Review for clarity / naming / docstrings.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: **[P2]** `Module` currently exposes `display_name`/`icon_svg_path`/`landing_priority` but no `link_target` or `active_path_prefix`.
-• Changed: **[P3]** `module_urls()` validates the module code with `assert module_code in MODULES`.
-• Changed: `app/rbac/modules.
-• Changed: `app/rbac/url_helpers.
-• Changed: `app/rbac/constants.
-• Changed: 13 unit tests for registry integrity and helper behavior.
-• Changed: RBAC PR-1: foundation layer.
-• Changed: Stack: PR-0 (design) → **PR-1** → PR-2 → PR-3 → PR-4 → PR-5.</description>
     </item>
   </channel>
 </rss>
