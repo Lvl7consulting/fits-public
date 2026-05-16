@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 08:53:56 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 09:16:47 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -72,6 +72,15 @@
 • Changed: Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`</description>
     </item>
     <item>
+      <title>FITS v8.8.60</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.60</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.60</guid>
+      <description>• Changed: **fix(scope)**: stop blocking deletion on assessment templates — scopes/projects with only assessment templates (no publications) were incorrectly prevented from being deleted
+• Changed: **feat(ui)**: gate unpublish on prior publish — unpublish action is now only available when content has been published; adds copy-to-clipboard in delete modal
+• Changed: 🤖 Generated with [Claude Code](https://claude.</description>
+    </item>
+    <item>
       <title>FITS v8.8.6</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.8.6</link>
       <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
@@ -86,6 +95,23 @@
 • Changed: The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
 • Changed: Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the &quot;Generate All Answers&quot; button had no click handler — this is the root cause of the button doing nothing on production.
 • Changed: Move the div outside the conditional so it always renders with the required data attributes.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.59</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.59</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.59</guid>
+      <description>• Changed: **Chores**
+• Changed: Updated dependency versions for improved stability and compatibility.
+• Changed: &lt;!-- review_stack_entry_start --&gt;
+• Changed: [![Review Change Stack](https://storage.
+• Changed: &lt;!-- review_stack_entry_end --&gt;
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: **langsmith** 0.
+• Changed: **ujson** 5.
+• Changed: Both were flagged by the daily pip-audit workflow.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
     <item>
       <title>FITS v8.8.58</title>
@@ -412,45 +438,6 @@
 • Changed: RBAC PR-4: middleware + post-login landing + dynamic sidebar.
 • Changed: One deviation from the design doc: template restrictions forced `request.
 • Changed: Stack: PR-0 → PR-1 → PR-2 → PR-3 → **PR-4** → PR-5.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.46</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.46</link>
-      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.46</guid>
-      <description>• Changed: [ ] Audit the allowlist entries flagged above.
-• Changed: [ ] `.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: 42 urlconf files tagged via `module_urls(&lt;code&gt;, urlpatterns)`.
-• Changed: `app/rbac/constants.
-• Changed: `app/rbac/tests/test_url_coverage.
-• Changed: Two allowlist buckets in `app/rbac/constants.
-• Changed: **[P2 / security]** Import APIs allowlisted without tenant/org checks — `app/rbac/constants.
-• Changed: **[P2 / security]** Recovery endpoints allowlisted without ownership checks — `app/rbac/constants.
-• Changed: **Fix direction:** either add ownership checks to the views (preferred — the allowlist comment already claims they exist) or drop the entries and tag the URLs with their real module.
-• Changed: **Status: draft** — needs PR-1, PR-2 merged first, and the two P2 bypasses resolved.
-• Changed: RBAC PR-3: enforcement wiring.
-• Changed: Stack: PR-0 → PR-1 → PR-2 → **PR-3** → PR-4 → PR-5.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.45</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.45</link>
-      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.45</guid>
-      <description>• Changed: [ ] Resolve the P1 idempotency issue.
-• Changed: [ ] `.
-• Changed: [ ] Dry-run `rbac_seed_default_groups` in staging and verify rerunning is a no-op.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: `app/models/tenant/user_group.
-• Changed: `app/models/auth/user*.
-• Changed: `app/management/commands/rbac_seed_default_groups.
-• Changed: Tests for model invariants and `effective_modules()`.
-• Changed: **[P1]** `rbac_seed_default_groups` loses idempotency on partial runs — `app/management/commands/rbac_seed_default_groups.
-• Changed: **[P2]** Single-default invariant can be bypassed on create — `app/models/tenant/user_group.
-• Changed: **[P3]** Seed enrolls tenant admins into `MEMBER_OF` — `app/management/commands/rbac_seed_default_groups.
-• Changed: **Status: draft** — PR-1 must merge first, and the P1 above should be resolved before landing PR-2.
-• Security: RBAC PR-2: data model.
-• Security: Stack: PR-0 → PR-1 → **PR-2** → PR-3 → PR-4 → PR-5.</description>
     </item>
   </channel>
 </rss>

@@ -57,6 +57,13 @@
 - Adds `self.
 - Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`
 
+## [v8.8.60] - 2026-05-16
+
+### Changed
+- **fix(scope)**: stop blocking deletion on assessment templates — scopes/projects with only assessment templates (no publications) were incorrectly prevented from being deleted
+- **feat(ui)**: gate unpublish on prior publish — unpublish action is now only available when content has been published; adds copy-to-clipboard in delete modal
+- 🤖 Generated with [Claude Code](https://claude.
+
 ## [v8.8.6] - 2026-03-12
 
 ### Changed
@@ -70,6 +77,21 @@
 - The `#questionnaire-editor` div was inside the `{% else %}` branch of the `review_mode` conditional in `detail.
 - Without it, the JS entry point found no container, never instantiated `QuestionnaireEditor`, and the "Generate All Answers" button had no click handler — this is the root cause of the button doing nothing on production.
 - Move the div outside the conditional so it always renders with the required data attributes.
+
+## [v8.8.59] - 2026-05-16
+
+### Changed
+- **Chores**
+- Updated dependency versions for improved stability and compatibility.
+- <!-- review_stack_entry_start -->
+- [![Review Change Stack](https://storage.
+- <!-- review_stack_entry_end -->
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- **langsmith** 0.
+- **ujson** 5.
+- Both were flagged by the daily pip-audit workflow.
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
 
 ## [v8.8.58] - 2026-05-16
 
