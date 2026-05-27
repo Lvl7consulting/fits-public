@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 12:31:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 09:29:04 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -70,6 +70,25 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Adds `self.
 • Changed: Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`</description>
+    </item>
+    <item>
+      <title>FITS v8.8.62</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.62</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.62</guid>
+      <description>• Changed: **Chores**
+• Changed: Updated deployment infrastructure configuration.
+• Changed: &lt;!-- review_stack_entry_start --&gt;
+• Changed: [![Review Change Stack](https://storage.
+• Changed: &lt;!-- review_stack_entry_end --&gt;
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Trigger the Hetzner E2E workflow manually via workflow_dispatch and confirm Phase 1 provisions a cpx42 successfully
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: The daily E2E workflow calls `hetzner_create_server … &quot;cx43&quot; … &quot;fsn1&quot;`.
+• Changed: cx43 is out of stock in all Hetzner EU regions (fsn1, nbg1, hel1), causing intermittent HTTP 412 errors when the E2E workflow tries to provision a test server
+• Changed: cpx42 has identical specs (8 cores, 16 GB RAM) and is reliably available in fsn1
+• Changed: One-line change in `scripts/e2e/phase/01-provision.</description>
     </item>
     <item>
       <title>FITS v8.8.61</title>
@@ -411,27 +430,6 @@
 • Changed: **Live evaluation pipeline**: SME doc upload → Celery RAG → DocumentEvaluation update → post-eval status recompute → WebSocket push to live SME UI.
 • Changed: **TS islands** per page (dashboard, project, assessment, Yes/No, description, upload, doc list, eval indicator, WS client, progress bar, hash-based nav) with their own calm design system.
 • Changed: **30 backend + 19 frontend + 5 integration** TDD segments + 7 review-driven blocker fixes (post-eval dispatch, session-gen invalidation, MEDIA_ROOT, download endpoint, CSRF re-enable, RBAC + tenant scope on FITS endpoints).</description>
-    </item>
-    <item>
-      <title>FITS v8.8.48</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.48</link>
-      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.48</guid>
-      <description>• Changed: [ ] Resolve the remaining 3 codex blockers above.
-• Changed: [ ] `.
-• Changed: [ ] Manual: log in as tenant admin, create a group, assign modules, add/remove members, and confirm user create/edit flow shows and submits `groups`.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: `app/views/tenant_admin/groups/` — list / create / update / delete / members views + templates.
-• Changed: `app/services/rbac/user_groups.
-• Changed: `app/templates/v2/components/forms/group_assignment.
-• Changed: Tests for list/create/update/delete/members flows.
-• Changed: **[P1 — FIXED in this PR via 749ba645]** `form.
-• Changed: **[P1]** Default-group conflict is detected too late — `app/services/rbac/user_groups.
-• Changed: **[P2]** Admin accounts leak into the group-member picker — `app/views/tenant_admin/groups/members.
-• Changed: **[P2]** Empty-modules selection silently reverts on edit retries — `app/views/tenant_admin/groups/update.
-• Changed: **Status: draft** — needs PR-1.
-• Changed: RBAC PR-5: tenant-admin UI.
-• Changed: Stack: PR-0 → PR-1 → PR-2 → PR-3 → PR-4 → **PR-5** (tip).</description>
     </item>
   </channel>
 </rss>

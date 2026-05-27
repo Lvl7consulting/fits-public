@@ -57,6 +57,23 @@
 - Adds `self.
 - Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`
 
+## [v8.8.62] - 2026-05-27
+
+### Changed
+- **Chores**
+- Updated deployment infrastructure configuration.
+- <!-- review_stack_entry_start -->
+- [![Review Change Stack](https://storage.
+- <!-- review_stack_entry_end -->
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Trigger the Hetzner E2E workflow manually via workflow_dispatch and confirm Phase 1 provisions a cpx42 successfully
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- The daily E2E workflow calls `hetzner_create_server … "cx43" … "fsn1"`.
+- cx43 is out of stock in all Hetzner EU regions (fsn1, nbg1, hel1), causing intermittent HTTP 412 errors when the E2E workflow tries to provision a test server
+- cpx42 has identical specs (8 cores, 16 GB RAM) and is reliably available in fsn1
+- One-line change in `scripts/e2e/phase/01-provision.
+
 ## [v8.8.61] - 2026-05-16
 
 ### Changed
