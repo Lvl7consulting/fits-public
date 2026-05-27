@@ -57,6 +57,24 @@
 - Adds `self.
 - Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`
 
+## [v8.8.63] - 2026-05-27
+
+### Changed
+- **Chores**
+- Removed an unused dependency from the project.
+- <!-- review_stack_entry_start -->
+- [![Review Change Stack](https://storage.
+- <!-- review_stack_entry_end -->
+- <!-- end of auto-generated comment: release notes by coderabbit.
+- [ ] Confirm pip-audit passes after merge (PYSEC-2026-161 gone from the daily report)
+- [ ] Confirm the app starts normally (starlette is not imported at runtime)
+- 🤖 Generated with [Claude Code](https://claude.
+- <!-- This is an auto-generated comment: release notes by coderabbit.
+- Removes `starlette==0.
+- Starlette was added in the Ollama integration commit (Aug 2024) alongside `app_nuuday/`.
+- Nothing in the codebase imports starlette; no installed package has it as a required (non-optional) dependency (`transformers` lists it only under `serving`/`dev` extras which are not installed)
+- Dropping it eliminates the **PYSEC-2026-161** advisory (Host header injection) from the daily pip-audit scan
+
 ## [v8.8.62] - 2026-05-27
 
 ### Changed

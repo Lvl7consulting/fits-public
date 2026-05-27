@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 09:29:04 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 10:38:15 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -70,6 +70,26 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Adds `self.
 • Changed: Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`</description>
+    </item>
+    <item>
+      <title>FITS v8.8.63</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.63</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.63</guid>
+      <description>• Changed: **Chores**
+• Changed: Removed an unused dependency from the project.
+• Changed: &lt;!-- review_stack_entry_start --&gt;
+• Changed: [![Review Change Stack](https://storage.
+• Changed: &lt;!-- review_stack_entry_end --&gt;
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Confirm pip-audit passes after merge (PYSEC-2026-161 gone from the daily report)
+• Changed: [ ] Confirm the app starts normally (starlette is not imported at runtime)
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: Removes `starlette==0.
+• Changed: Starlette was added in the Ollama integration commit (Aug 2024) alongside `app_nuuday/`.
+• Changed: Nothing in the codebase imports starlette; no installed package has it as a required (non-optional) dependency (`transformers` lists it only under `serving`/`dev` extras which are not installed)
+• Changed: Dropping it eliminates the **PYSEC-2026-161** advisory (Host header injection) from the daily pip-audit scan</description>
     </item>
     <item>
       <title>FITS v8.8.62</title>
@@ -388,48 +408,6 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: When a questionnaire is in &quot;processing&quot; state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
 • Changed: Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.49</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.49</link>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.49</guid>
-      <description>• Changed: **New Features**
-• Changed: Local publication target with one-way migrate-to-local action and magic-link SME access flows
-• Changed: Background local document evaluation, post-eval summary updates, and magic-link emit task
-• Changed: **Backend**
-• Changed: New local-publication endpoints, session/middleware, audit events, document storage, and dedicated Celery queue/worker
-• Changed: **Frontend**
-• Changed: New publication UI islands: dashboard, project, assessment, yes/no input, description, upload, document list, progress, and target/migrate controls
-• Changed: **Tests**
-• Changed: Extensive unit, integration, and Playwright E2E specs added
-• Changed: **Documentation**
-• Changed: Comprehensive planning, design, and runbooks for local publication and RAG optimization
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: `0-docs/local-publication-workflow/12-decisions-log.
-• Changed: `0-docs/local-publication-workflow/13-sme-access-flow.
-• Changed: `0-docs/local-publication-workflow/plan/` — the 54-segment TDD plan this branch implements.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: Commit history is muddled in places.
-• Changed: B-21's local document-evaluation Celery task wires the framework but returns a `NEEDS_CONTEXT` sentinel because the existing RAG core requires a `Policy` + `AIProvider` not present in the local SME flow.
-• Changed: 7 of 8 Playwright e2e specs are `test.
-• Changed: Out-of-scope side-threads tracked separately: project-wide delete-flow redesign (don't-delete-client-data rule), FITS-user access control for local SME pages.
-• Changed: [ ] `.
-• Changed: [ ] `.
-• Changed: [ ] `npm test --prefix e2e-playwright -- tests/local-publication/` — 1 spec runs, 7 skipped pending Neo4j seed + Daphne + Vite-built bundles.
-• Changed: [ ] Anonymous SME flow: GET `/publication/access-request/` → POST email → neutral confirmation regardless of match.
-• Changed: [ ] Magic-link round-trip: email link click → 302 to `/publication/dashboard/` → cookie set → second click rejected.
-• Changed: [ ] Re-issue invalidation: SME session 1 stays alive; re-request link; session 1's next protected request flushes (via `EmployeeSessionGen`).
-• Changed: [ ] FITS-side: only users in the project's organization with `projects` RBAC module can flip `publication_target` or trigger `migrate-to-local`.
-• Changed: [ ] Regression: confluence-only project's existing publish flow runs identically; no `local_publication` task enqueued.
-• Changed: [ ] CSRF: authenticated POST/DELETE to `/publication/.
-• Changed: [ ] Don't-delete-client-data rule: project-scope deletion design surface flagged for follow-up (out of plan scope).
-• Changed: New `local_publication` Django app **parallel** to `confluence/` — per-project `publication_target` enum gates routing.
-• Changed: **Magic-link SME access**: one-time tokens (sha256, `select_for_update` race-safe), long-lived signed-cookie sessions, audit log, 5/hr/IP rate limiting, per-employee `EmployeeSessionGen` counter so re-issue invalidates prior sessions across any session backend.
-• Changed: **Live evaluation pipeline**: SME doc upload → Celery RAG → DocumentEvaluation update → post-eval status recompute → WebSocket push to live SME UI.
-• Changed: **TS islands** per page (dashboard, project, assessment, Yes/No, description, upload, doc list, eval indicator, WS client, progress bar, hash-based nav) with their own calm design system.
-• Changed: **30 backend + 19 frontend + 5 integration** TDD segments + 7 review-driven blocker fixes (post-eval dispatch, session-gen invalidation, MEDIA_ROOT, download endpoint, CSRF re-enable, RBAC + tenant scope on FITS endpoints).</description>
     </item>
   </channel>
 </rss>
