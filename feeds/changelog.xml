@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 10:38:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 12:51:14 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -70,6 +70,47 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Adds `self.
 • Changed: Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`</description>
+    </item>
+    <item>
+      <title>FITS v8.8.65</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.65</link>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.65</guid>
+      <description>• Refactoring (200-line compliance): `PolicyStatusMixin` extracted from `Policy` → `policy_status.
+• Refactoring (200-line compliance): `forms.
+• Refactoring (200-line compliance): `update.
+• Refactoring (200-line compliance): [ ] `.
+• Refactoring (200-line compliance): [ ] `.
+• Refactoring (200-line compliance): [ ] `.
+• Refactoring (200-line compliance): [ ] `.
+• Refactoring (200-line compliance): [ ] Manual: upload a document in Policy Factory → policy creates successfully instead of returning 400
+• Code review fixes (3 passes of /simplify --fix): `framework.
+• Code review fixes (3 passes of /simplify --fix): `await receive()` added to `MalformedWebSocketConsumer` before sending close (ASGI lifecycle consistency)
+• Code review fixes (3 passes of /simplify --fix): `try/finally` around temp-file cleanup in `_process_file_additions` (files leaked on processing exception)
+• Code review fixes (3 passes of /simplify --fix): `BasePolicyForm.
+• Code review fixes (3 passes of /simplify --fix): `SESSION_KEY` constant imported in `auth_middleware` instead of hardcoded string (rename-safe)
+• Code review fixes (3 passes of /simplify --fix): `_get_responses_manager()` helper extracted in `update_vector_store_ops` (identical 5-line block was duplicated)
+• Root fixes: **Policy creation crash** (`CardinalityViolation`): `Policy.
+• Root fixes: **WebSocket catch-all**: Unmatched WS paths raised `ValueError` leaking framework internals.
+• Root fixes: **WebSocket auth gate**: `WebSocketAuthMiddleware` between `AuthMiddlewareStack` and `URLRouter` closes unauthenticated connections with code 4003 before any consumer runs.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.64</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.64</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.64</guid>
+      <description>• Changed: [x] `.
+• Changed: [x] `python manage.
+• Changed: [x] `python manage.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: `app/management/commands/_generate_gdpr/` — data files + builder + CSV writer
+• Changed: `app/management/commands/generate_gdpr_framework.
+• Changed: `app/management/commands/tests/test_generate_gdpr_framework.
+• Changed: `app/management/commands/migrate_system_frameworks.
+• Changed: Adds `generate_gdpr_framework` management command seeding all 99 GDPR articles across 11 chapters into Neo4j
+• Changed: Follows the same modular subpackage pattern as the EU AI Act seeder (`_generate_gdpr/` with split data files kept under 200 lines)
+• Changed: Registered in `migrate_system_frameworks.
+• Changed: 14 new unit tests, all passing; full suite (3,928 tests) green</description>
     </item>
     <item>
       <title>FITS v8.8.63</title>
@@ -359,55 +400,6 @@
 • Changed: Employee-search performance: fulltext index, single-roundtrip count+page, multi-word matching across name/email.
 • Changed: Two simplify passes: shared `scope_content_reasons` helper, `cached_property` migration, frozen-tuple eligibility, unified `publish_disabled` / `publish_reasons` template context.
 • Changed: Various test/coverage adds and fixes (template comment leak, autouse stub-flag fixture, multi-policy-chat stale STATUS_UPDATE refs).</description>
-    </item>
-    <item>
-      <title>FITS v8.8.50</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.50</link>
-      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.50</guid>
-      <description>• Changed: **New Features**
-• Changed: Redesigned SME dashboard with co‑branding, per‑tenant briefing, and three buckets
-• Changed: Persistent Submit with preview, background evaluation progress, and SOC “Evaluate now” via WebSocket
-• Changed: **Improvements**
-• Changed: Two‑column assessment UI, grouped sidebar, All‑done states and reusable Submit CTA
-• Changed: Safer uploads: size/type checks, XLSX→CSV conversion; sign‑out flush ensures saves complete
-• Changed: New evaluation KPIs surfaced in dashboard
-• Changed: **Tests / Docs**
-• Changed: Expanded unit, integration, Playwright coverage and rollout guidance
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] `.
-• Changed: [ ] `.
-• Changed: [ ] `.
-• Changed: [ ] Resize viewport to 600px — sidebar stacks above panel, headers go static (per existing media query), questions still render under their control.
-• Changed: [ ] After Playwright snapshot regen, spot-check diff to confirm intentional change.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: **Playwright snapshot regen** — the new sidebar DOM (h3 headers + nested `&lt;ul&gt;`) will trip the existing 2% visual-diff threshold on `assessment.
-• Changed: **Lands after #420a** (currently open as #420).
-• Changed: **`de38bbb52`** `[rbac] feat(assessment-view): expose control_uid/title/number for SME sidebar grouping` — extends `_ASSESSMENT_CONTEXT_QUERY` RETURN with three control columns + ORDER BY `tc.
-• Changed: **`e571c81fd`** `[frontend] feat(sidebar): group questions under their TemplateControl` — extends `Question` interface with optional `controlUid`/`controlTitle`/`controlNumber`; rewrites `renderQuestionList` to bucket by control via insertion-ordered `Map` and emit `&lt;section data-testid=&quot;control-group-{uid}&quot;&gt;&lt;h3 class=&quot;sidebar-control-heading&quot;&gt;{number} {title}&lt;/h3&gt;&lt;ul class=&quot;sidebar-control-list&quot;&gt;…&lt;/ul&gt;&lt;/section&gt;`.
-• Changed: **`9ff70ec11`** `[tests] test(question-list): control-group assertions for sidebar grouping` — adds Jest assertions covering group count, header content, and per-group question membership.
-• Changed: **`240b15a99`** `[tests] test(assessment-view): real-Neo4j integration for control-field surfacing` — un-mocked Cypher round-trip confirming the new payload shape.
-• Changed: **`1e3da4abd`** `[tests] test(model-inflate): DateTimeProperty round-trip lock-down` — carry-over from #420a smoke fixes; tightens the regression net for the neomodel datetime issue caught during smoke verification.
-• Changed: Group the SME assessment-page sidebar's flat 20-question list under its parent **TemplateControl** as sticky `&lt;h3&gt;` headers, so SMEs answering a multi-control audit retain the section context they'd see on any printed compliance questionnaire.
-• Changed: Plan: [`~/.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.5</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.5</link>
-      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.5</guid>
-      <description>• Changed: **Bug Fixes**
-• Changed: Automatically reloads the questionnaire editor after background tasks complete, ensuring users see up-to-date content without manual refresh.
-• Changed: Refined progress indicator behavior so it appears only while processing, reducing spurious or misleading progress displays.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: [ ] Upload a questionnaire file, navigate to its detail page while still processing
-• Changed: [ ] Verify the progress bar shows &quot;Processing questionnaire.
-• Changed: [ ] Wait for parsing to complete -- verify the page reloads automatically after ~1.
-• Changed: [ ] Verify &quot;Generate All Answers&quot; bulk generation still reloads correctly after completion
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: When a questionnaire is in &quot;processing&quot; state, the editor now subscribes to `TASK_COMPLETED` events and triggers a page reload when parsing finishes.
-• Changed: Previously only `STATUS_UPDATE` with `final_completion` (the bulk-generate pattern) triggered reloads.</description>
     </item>
   </channel>
 </rss>

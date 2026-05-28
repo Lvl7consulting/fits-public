@@ -57,6 +57,47 @@
 - Adds `self.
 - Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`
 
+## [v8.8.65] - 2026-05-28
+
+### Refactoring (200-line compliance)
+- `PolicyStatusMixin` extracted from `Policy` → `policy_status.
+- `forms.
+- `update.
+- [ ] `.
+- [ ] `.
+- [ ] `.
+- [ ] `.
+- [ ] Manual: upload a document in Policy Factory → policy creates successfully instead of returning 400
+
+### Code review fixes (3 passes of /simplify --fix)
+- `framework.
+- `await receive()` added to `MalformedWebSocketConsumer` before sending close (ASGI lifecycle consistency)
+- `try/finally` around temp-file cleanup in `_process_file_additions` (files leaked on processing exception)
+- `BasePolicyForm.
+- `SESSION_KEY` constant imported in `auth_middleware` instead of hardcoded string (rename-safe)
+- `_get_responses_manager()` helper extracted in `update_vector_store_ops` (identical 5-line block was duplicated)
+
+### Root fixes
+- **Policy creation crash** (`CardinalityViolation`): `Policy.
+- **WebSocket catch-all**: Unmatched WS paths raised `ValueError` leaking framework internals.
+- **WebSocket auth gate**: `WebSocketAuthMiddleware` between `AuthMiddlewareStack` and `URLRouter` closes unauthenticated connections with code 4003 before any consumer runs.
+
+## [v8.8.64] - 2026-05-27
+
+### Changed
+- [x] `.
+- [x] `python manage.
+- [x] `python manage.
+- 🤖 Generated with [Claude Code](https://claude.
+- `app/management/commands/_generate_gdpr/` — data files + builder + CSV writer
+- `app/management/commands/generate_gdpr_framework.
+- `app/management/commands/tests/test_generate_gdpr_framework.
+- `app/management/commands/migrate_system_frameworks.
+- Adds `generate_gdpr_framework` management command seeding all 99 GDPR articles across 11 chapters into Neo4j
+- Follows the same modular subpackage pattern as the EU AI Act seeder (`_generate_gdpr/` with split data files kept under 200 lines)
+- Registered in `migrate_system_frameworks.
+- 14 new unit tests, all passing; full suite (3,928 tests) green
+
 ## [v8.8.63] - 2026-05-27
 
 ### Changed
