@@ -57,6 +57,15 @@
 - Adds `self.
 - Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`
 
+## [v8.8.66] - 2026-05-28
+
+### Changed
+- [ ] `.
+- [ ] `fits-prepare-volumes` runs without chown errors on a server with pre-existing files
+- 🤖 Generated with [Claude Code](https://claude.
+- Adds `hz-deploy-demo.
+- Fixes `fits-prepare-volumes` to recursively remap ownership of pre-existing files inside each managed directory (not just the directory itself), fixing chown failures on servers migrated from a pre-userns-remap layout
+
 ## [v8.8.65] - 2026-05-28
 
 ### Refactoring (200-line compliance)
