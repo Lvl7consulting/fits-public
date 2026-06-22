@@ -5,7 +5,7 @@
     <link>https://Lvl7consulting.github.io/fits-public/</link>
     <description>FITS release notes and updates</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 May 2026 16:33:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 08:16:24 GMT</lastBuildDate>
     <item>
       <title>FITS v8.9.0</title>
       <link>https://Lvl7consulting.github.io/fits-public/#v8.9.0</link>
@@ -70,6 +70,90 @@
 • Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
 • Changed: Adds `self.
 • Changed: Fixes race condition where the Celery parsing task's stale in-memory copy of the questionnaire node overwrites a concurrently saved `selected_policy_uid` on `save()`</description>
+    </item>
+    <item>
+      <title>FITS v8.8.68</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.68</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.68</guid>
+      <description>• Changed: **Bug Fixes**
+• Changed: Improved security by implementing HTML sanitization across confirmation dialogs to prevent potential code injection vulnerabilities when displaying user and system-generated content.
+• Changed: **Tests**
+• Changed: Added comprehensive test coverage for XSS protection mechanisms in confirmation modals.
+• Changed: &lt;!-- review_stack_entry_start --&gt;
+• Changed: [![Review Change Stack](https://storage.
+• Changed: &lt;!-- review_stack_entry_end --&gt;
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Malformed input raises (does not silent-coerce)
+• Changed: [ ] Extreme size / depth handled or rejected explicitly
+• Changed: [ ] Injection / unicode edges
+• Changed: [ ] N/A — reason:
+• Changed: # Floor checks
+• Changed: [ ] `.
+• Changed: [ ] Combined `--cov-branch` on `local_publication` ≥ 99%.
+• Changed: [ ] Jest count not regressed.
+• Changed: [ ] No tests deleted / skipped / xfailed-without-justification.
+• Changed: [ ] No `--no-verify` on commit.
+• Changed: # Risk
+• Changed: &lt;!-- Anything reviewer should look at carefully: cross-slice impact, perf, migrations, etc.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: [ ] Keyboard navigation
+• Changed: [ ] Screen-reader (`role`, `aria-live`, `aria-label`)
+• Changed: [ ] Modified click (Cmd/Ctrl/middle-click preserves default)
+• Changed: [ ] Paste / extreme input
+• Changed: [ ] Disabled-state
+• Changed: [ ] N/A — reason:
+• Changed: [ ] Concurrent execution (uniqueness / lost-write)
+• Changed: [ ] Real-Neo4j integration test (`@pytest.
+• Changed: [ ] Transactional isolation
+• Changed: [ ] N/A — reason:
+• Changed: [ ] Success path
+• Changed: [ ] Transient failure (retryable)
+• Changed: [ ] Exhausted retry (final-failure tombstone)
+• Changed: [ ] Cleanup-after-error (`finally:` preserves original)
+• Changed: [ ] Idempotent re-run
+• Changed: [ ] N/A — reason:
+• Changed: [ ] Happy path
+• Changed: [ ] Invalid input
+• Changed: [ ] Auth-denied
+• Changed: [ ] Cross-tenant
+• Changed: [ ] Concurrent / idempotent submission
+• Changed: [ ] N/A — reason:
+• Changed: Adds a shared escapeHtml() helper and auto-escapes fields that should never contain HTML (title, button text, list items, and requireTextInput placeholder/requiredText) so call sites cannot accidentally introduce XSS via these fields.
+• Changed: Fields that intentionally allow rich HTML (message, section.
+• Changed: project-delete / scope-delete: replace brittle textContent-hack
+• Changed: tenant-admin-group-detail: escape group name and member email
+• Changed: base-delete-handler / delete-handler: escape entityName
+• Changed: reliable-scope-unpublish / reliable-project-unpublish: escape scope/project/space names
+• Changed: reliable-publisher/publish-mode-modal: escape object/space names
+• Changed: Adds 10 regression tests that pipe real &lt;img onerror&gt; and &lt;script&gt; payloads through the modal and assert no execution and no injected DOM nodes, plus a positive test that &lt;strong&gt; in section.
+• Changed: # Summary
+• Changed: &lt;!-- 1-3 sentences: what changed and why.
+• Changed: # Test plan
+• Changed: &lt;!-- Which test types apply to this change? Tick the boxes for the layer(s) you touched.
+• Changed: &lt;!-- Reference: 0-docs/test-charter.</description>
+    </item>
+    <item>
+      <title>FITS v8.8.67</title>
+      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.67</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>fits-v8.8.67</guid>
+      <description>• Changed: **Chores**
+• Changed: Updated pinned project dependencies to newer patch versions to improve stability and security.
+• Changed: Improved the dependency preparation process used for security auditing by normalizing certain requirement entries before audit generation.
+• Changed: Expanded the security audit ignore list to reduce false positives for selected advisories.
+• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
+• Changed: This PR edits `requirements.
+• Changed: 🤖 Generated with [Claude Code](https://claude.
+• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
+• Changed: | Package | Before | After | Advisories resolved |
+• Changed: |---------|--------|-------|---------------------|
+• Changed: | `PyJWT` | 2.
+• Changed: | `python-multipart` | 0.
+• Changed: | `tornado` | 6.
+• Changed: | `ujson` | 5.
+• Changed: All bumps are the versions pip-audit itself recommends.
+• Changed: The scheduled **pip-audit** workflow has been failing daily.</description>
     </item>
     <item>
       <title>FITS v8.8.66</title>
@@ -346,53 +430,6 @@
 • Security: **Deploy**: 8 root-owned `/usr/local/sbin/fits-*` helpers (`install-docker`, `stage-env`, `stage-compose`, `stage-ssl`, `stage-redis-password`, `issue-cert`, `prepare-volumes`, `rotate-neo4j-password`) invoked through narrow sudo.
 • Security: **TLS**: Phase 4 calls `fits-issue-cert &lt;fqdn&gt; &lt;email&gt;` which runs certbot standalone; live test box has a real Let's Encrypt cert.
 • Security: **E2E**: `scripts/e2e/full-stack-test.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.53</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.53</link>
-      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.53</guid>
-      <description>• Changed: **New Features**
-• Changed: Activate/Deactivate toggle for individual email providers with immediate UI feedback and page reload.
-• Changed: Inactive providers display a warning banner and disable the “Send Test Email” action.
-• Changed: Dev/test safety flag to force-null email routing (prevents real sends for safe runs).
-• Changed: **Bug Fixes**
-• Changed: Email routing enforces provider active state per priority level — no silent fallthrough.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: `.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.
-• Changed: [x] Unit: ~3,770 tests pass via `.
-• Changed: [ ] Manually flip Activate/Deactivate on a tenant email provider detail page and confirm the banner and greyed-out test button update without a server restart
-• Changed: [ ] Manually click Send Test Email with the provider active (and `EMAIL_FORCE_NULL_PROVIDER=false`) — verify a real test mail arrives at the operator's address
-• Changed: [ ] Manually click Send Test Email with the provider inactive — verify the 400 &quot;Activate this provider&quot; message
-• Changed: [ ] Run \`npm run test:e2e -- email-providers/email-provider-activation.
-• Changed: The branch went through a long planning loop before any code:
-• Changed: Spec at `docs/superpowers/specs/2026-05-10-email-provider-toggle-design.
-• Changed: 10 split implementation plans at `docs/superpowers/plans/2026-05-10-email-provider-toggle/` — cursor-agent (gpt-5.
-• Changed: 10 implementation commits, then a `/simplify` cleanup pass, a final cursor-agent correctness review, and three follow-up commits to land the remaining review findings on this branch (no separate PRs).
-• Changed: **Routing fix:** `UnifiedEmailService` no longer falls through to the system provider when a tenant has any configured provider but none active.
-• Changed: **Single-active invariant:** activating a tenant provider deactivates any sibling active providers, making routing deterministic.
-• Changed: **Cross-tenant ownership:** new `ProviderOwnershipMixin` enforces the owner check on detail / update / delete / test / activate / deactivate / assign / unassign — closing a pre-existing leak path.
-• Changed: **UI:** new primary header button with the toggle, yellow inactive banner (reusing `alert_banner.
-• Changed: **Template fix:** detail templates used `{% if provider.
-• Changed: Replaces the global `EMAIL_PROVIDER_ENABLED` env var with a per-provider `is_active` toggle exposed via Activate/Deactivate buttons on tenant-admin and super-admin email-provider detail pages — no more container restart to pause mail.
-• Changed: Closes the long-standing bypass where the **Send Test Email** button hit real providers even when global mail was disabled.
-• Changed: Adds a separate dev/CI safeguard `EMAIL_FORCE_NULL_PROVIDER` plus a server-side `/__test__/email-safety/` probe so Playwright runs cannot leak real mail under any model state.</description>
-    </item>
-    <item>
-      <title>FITS v8.8.52</title>
-      <link>https://Lvl7consulting.github.io/fits-public/#v8.8.52</link>
-      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-      <guid>fits-v8.8.52</guid>
-      <description>• Changed: **Chores**
-• Changed: Updated minimum langchain-core version requirement to &gt;= 1.
-• Changed: [![Review Change Stack](https://storage.
-• Changed: &lt;!-- end of auto-generated comment: release notes by coderabbit.
-• Changed: Adds CVE-2026-44843 to the pip-audit ignore list.
-• Changed: Cherry-picked from greenfield commit \`0aa5d5cbd\` so main's pip-audit goes green again.
-• Changed: 🤖 Generated with [Claude Code](https://claude.
-• Changed: &lt;!-- This is an auto-generated comment: release notes by coderabbit.</description>
     </item>
   </channel>
 </rss>
